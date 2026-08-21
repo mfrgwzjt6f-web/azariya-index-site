@@ -120,6 +120,72 @@
   }
   .back:hover{color:var(--gold)}
   .status{margin-top:1.1rem;font-size:.86rem;line-height:1.6;color:var(--gold-bright);min-height:1.2em}
+
+  /* ---- numeric dial ---- */
+  .dial{display:inline-flex;align-items:stretch;border:1px solid var(--line);border-radius:2px;
+    background:rgba(255,255,255,.03);overflow:hidden}
+  .dial button{
+    width:3rem;background:transparent;border:0;color:var(--gold);cursor:pointer;
+    font-family:"Jost",sans-serif;font-size:1.15rem;line-height:1;
+    transition:background .25s ease,color .25s ease;
+  }
+  .dial button:hover:not(:disabled),.dial button:focus-visible{background:rgba(216,178,76,.16);outline:none}
+  .dial button:disabled{color:var(--ivory-faint);cursor:not-allowed}
+  .dial input{
+    width:4.4rem;border:0;border-left:1px solid var(--line);border-right:1px solid var(--line);
+    background:transparent;color:var(--ivory);text-align:center;
+    font-family:"Cormorant Garamond",serif;font-size:1.5rem;padding:.5rem 0;
+    font-variant-numeric:tabular-nums;-moz-appearance:textfield;
+  }
+  .dial input::-webkit-outer-spin-button,.dial input::-webkit-inner-spin-button{
+    -webkit-appearance:none;margin:0}
+  .dial input:focus{outline:none;background:rgba(216,178,76,.08)}
+
+  /* ---- calendar ---- */
+  .cal{border:1px solid var(--line);border-radius:2px;background:rgba(11,11,13,.4);
+    padding:1rem;max-width:26rem}
+  .cal-head{display:flex;align-items:center;justify-content:space-between;gap:.6rem;
+    margin-bottom:.9rem}
+  .cal-head button{
+    width:2.2rem;height:2.2rem;background:transparent;border:1px solid var(--line);
+    border-radius:2px;color:var(--gold);cursor:pointer;font-size:1rem;line-height:1;
+    transition:background .25s ease}
+  .cal-head button:hover:not(:disabled),.cal-head button:focus-visible{
+    background:rgba(216,178,76,.16);outline:none}
+  .cal-head button:disabled{color:var(--ivory-faint);border-color:var(--line-soft);cursor:not-allowed}
+  .cal-title{font-family:"Cormorant Garamond",serif;font-size:1.15rem;letter-spacing:.02em}
+  .cal-dow,.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:2px}
+  .cal-dow span{text-align:center;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--ivory-faint);padding-bottom:.4rem}
+  .cal-grid button{
+    aspect-ratio:1;background:transparent;border:0;border-radius:2px;
+    color:var(--ivory-dim);font-family:"Jost",sans-serif;font-weight:300;font-size:.82rem;
+    cursor:pointer;font-variant-numeric:tabular-nums;
+    transition:background .2s ease,color .2s ease;
+  }
+  /* :not(.in) matters — ":hover:not(:disabled)" outranks ".start" on specificity,
+     so without it a just-clicked start cell keeps the hover tint instead of going gold */
+  .cal-grid button:hover:not(:disabled):not(.in){background:rgba(216,178,76,.14);color:var(--ivory)}
+  .cal-grid button.in:hover{filter:brightness(1.3)}
+  .cal-grid button:focus-visible{outline:1px solid var(--gold);outline-offset:-1px}
+  .cal-grid button:disabled{color:rgba(234,229,218,.16);cursor:not-allowed}
+  .cal-grid .pad{visibility:hidden}
+  /* a chosen period: ends rounded, middle square, so a run reads as one block */
+  .cal-grid button.in{background:rgba(216,178,76,.20);color:var(--ivory);border-radius:0}
+  .cal-grid button.start{background:var(--gold);color:var(--ink);font-weight:500;
+    border-radius:2px 0 0 2px}
+  .cal-grid button.end{border-radius:0 2px 2px 0}
+  .cal-grid button.start.end{border-radius:2px}
+
+  .chosen{margin-top:1rem;display:flex;flex-direction:column;gap:.5rem}
+  .chosen .row{display:flex;align-items:center;justify-content:space-between;gap:1rem;
+    border:1px solid var(--line-soft);border-radius:2px;padding:.6rem .8rem;font-size:.86rem;
+    color:var(--ivory-dim)}
+  .chosen .row button{background:transparent;border:0;color:var(--ivory-faint);cursor:pointer;
+    font-size:1rem;line-height:1;padding:0 .2rem;transition:color .25s ease}
+  .chosen .row button:hover,.chosen .row button:focus-visible{color:var(--gold);outline:none}
+  .cal-count{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);
+    display:block;margin-bottom:.7rem}
 </style>
 </head>
 <body>
@@ -158,6 +224,12 @@
       <p class="hint" id="role-hint"></p>
     </fieldset>
 
+    <fieldset id="f-brand" class="hidden">
+      <legend>Brand</legend>
+      <select id="brand"></select>
+      <p class="hint">Narrows the residence list — 48 properties across 15 brands.</p>
+    </fieldset>
+
     <fieldset id="f-prop" class="hidden">
       <legend id="prop-legend">Property</legend>
       <select id="prop"></select>
@@ -173,15 +245,38 @@
     <fieldset id="f-cover" class="hidden">
       <legend>Calendar coverage</legend>
       <select id="cover">
-        <option value="w1">One week</option>
-        <option value="m1">One month</option>
-        <option value="m2">Two months</option>
-        <option value="m3">Three months</option>
-        <option value="m6">Six months</option>
-        <option value="y1" selected>Full year — all 13 forward months</option>
+        <option value="w">Weeks</option>
+        <option value="m">Months</option>
+        <option value="y" selected>Full year — all 13 forward months</option>
       </select>
-      <p class="hint">Months float. You choose which ones, and you can change them each year as
-         your weeks move.</p>
+      <p class="hint" id="cover-hint"></p>
+    </fieldset>
+
+    <fieldset id="f-count" class="hidden">
+      <legend id="count-legend">How many</legend>
+      <div class="dial">
+        <button type="button" id="count-down" aria-label="One fewer">&minus;</button>
+        <input type="number" id="count" value="1" min="1" max="52" step="1" inputmode="numeric"
+               aria-label="How many periods">
+        <button type="button" id="count-up" aria-label="One more">+</button>
+      </div>
+      <p class="hint" id="count-hint"></p>
+    </fieldset>
+
+    <fieldset id="f-cal" class="hidden">
+      <legend id="cal-legend">Choose your dates</legend>
+      <span class="cal-count" id="cal-count"></span>
+      <div class="cal">
+        <div class="cal-head">
+          <button type="button" id="cal-prev" aria-label="Previous month">&lsaquo;</button>
+          <span class="cal-title" id="cal-title"></span>
+          <button type="button" id="cal-next" aria-label="Next month">&rsaquo;</button>
+        </div>
+        <div class="cal-dow" aria-hidden="true"><span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span></div>
+        <div class="cal-grid" id="cal-grid"></div>
+      </div>
+      <div class="chosen" id="cal-chosen"></div>
+      <p class="hint" id="cal-hint"></p>
     </fieldset>
 
     <fieldset id="f-scale" class="hidden">
@@ -227,30 +322,207 @@
      without the cap a six-month buyer pays more than a full-year buyer. The tier plan
      calls that out explicitly — "monotonic upgrades, no path where narrow+deep costs
      more than broad+shallow" — so the cap enforces it rather than trusting the options. */
+  /* ── PRICING ─────────────────────────────────────────────────────────────────
+     One place. These mirror _Market & Pricing Notes.md and the tier plan.
+     YEAR is a CAP, not a sum: 12 x MONTH would be $2,400 against a $1,100 year, so
+     without the cap a six-month buyer pays more than a full-year buyer. The tier plan
+     calls that out explicitly — "monotonic upgrades, no path where narrow+deep costs
+     more than broad+shallow" — so the cap enforces it rather than trusting the options. */
   var PRICE = { WEEK:49, MONTH:200, YEAR:1100, MANAGER:{2:7500,6:12000,16:18000}, AGENT:3500 };
-  var COVER = { w1:{label:'One week', mo:0, wk:1}, m1:{label:'One month', mo:1},
-                m2:{label:'Two months', mo:2}, m3:{label:'Three months', mo:3},
-                m6:{label:'Six months', mo:6}, y1:{label:'Full year', mo:13} };
+  var LEN   = { w:7,  m:30 };          /* days a chosen period covers */
+  var MAXN  = { w:52, m:12 };          /* beyond these the full year is always cheaper */
+  var NOUN  = { w:'week', m:'month' };
+  var WINDOW_MONTHS = 13;              /* the forward window we actually collect */
 
   var $ = function(id){ return document.getElementById(id); };
-  var props = [];
+  var props = [], brands = [];
 
+  /* Local dates only, everywhere. toISOString() is UTC and would shift the day for
+     anyone west of Greenwich, which is most of this roster. */
+  function day(d){ return new Date(d.getFullYear(), d.getMonth(), d.getDate()); }
+  function addDays(d,n){ return new Date(d.getFullYear(), d.getMonth(), d.getDate()+n); }
+  function key(d){ return d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2); }
+  function sameDay(a,b){ return key(a)===key(b); }
+
+  var TODAY   = day(new Date());
+  var WIN_END = addDays(new Date(TODAY.getFullYear(), TODAY.getMonth()+WINDOW_MONTHS, TODAY.getDate()), -1);
+
+  var mode  = 'y';   /* 'w' weeks | 'm' months | 'y' full year */
+  var count = 1;
+  var picks = [];    /* period start dates, ascending */
+  var viewY = TODAY.getFullYear(), viewM = TODAY.getMonth();
+
+  var MONTHS = ['January','February','March','April','May','June','July',
+                'August','September','October','November','December'];
+  function fmt(d){ return d.getDate()+' '+MONTHS[d.getMonth()].slice(0,3)+' '+d.getFullYear(); }
+  function money(n){ return '$' + n.toLocaleString('en-US'); }
+
+  /* ── inventory ─────────────────────────────────────────────────────────── */
   fetch('assets/inventory.json').then(function(r){ return r.json(); }).then(function(d){
     props = d.properties;
-    var sel = $('prop');
-    sel.innerHTML = '<option value="">Select a property</option>' + props.map(function(p, i){
-      return '<option value="' + i + '">' + p.name + '</option>';
-    }).join('');
+    brands = [];
+    props.forEach(function(p){ if (brands.indexOf(p.display_brand) < 0) brands.push(p.display_brand); });
+    brands.sort(function(a,b){ return a.localeCompare(b,'en'); });
+    $('brand').innerHTML = '<option value="">Select a brand</option>'
+      + brands.map(function(b){
+          var n = props.filter(function(p){ return p.display_brand === b; }).length;
+          return '<option value="'+b+'">'+b+' · '+n+'</option>';
+        }).join('');
+    setBrand();
   }).catch(function(){
     $('prop-hint').textContent = 'Property list unavailable — please tell us in the email field which residence you follow.';
   });
 
-  function unitPrice(){
-    var c = COVER[$('cover').value] || COVER.y1;
-    if (c.wk) return PRICE.WEEK * c.wk;
-    return Math.min(c.mo * PRICE.MONTH, PRICE.YEAR);   /* the cap */
+  function setBrand(){
+    var b = $('brand').value, sel = $('prop');
+    var list = b ? props.filter(function(p){ return p.display_brand === b; }) : [];
+    if (!b) {
+      sel.innerHTML = '<option value="">Choose a brand first</option>';
+      sel.disabled = true;
+    } else {
+      list.sort(function(x,y){ return x.name.localeCompare(y.name,'en'); });
+      sel.disabled = false;
+      sel.innerHTML = '<option value="">Select a residence</option>'
+        + list.map(function(p){ return '<option value="'+props.indexOf(p)+'">'+p.name+'</option>'; }).join('');
+    }
+    setUnits();
   }
-  function money(n){ return '$' + n.toLocaleString('en-US'); }
+
+  /* ── periods ───────────────────────────────────────────────────────────── */
+  function periodEnd(start){ return addDays(start, LEN[mode]-1); }
+  function inWindow(d){ return d >= TODAY && d <= WIN_END; }
+  function fits(start){ return inWindow(start) && periodEnd(start) <= WIN_END; }
+
+  function coveringPick(d){
+    for (var i=0;i<picks.length;i++){
+      if (d >= picks[i] && d <= periodEnd(picks[i])) return i;
+    }
+    return -1;
+  }
+  function overlaps(start){
+    var e = periodEnd(start);
+    return picks.some(function(p){ return start <= periodEnd(p) && e >= p; });
+  }
+
+  function clampPicks(){
+    /* the dial can be turned down below what is already chosen */
+    while (picks.length > count) picks.pop();
+  }
+
+  /* ── calendar ──────────────────────────────────────────────────────────── */
+  function drawCal(){
+    var first = new Date(viewY, viewM, 1);
+    var lead  = first.getDay();
+    var days  = new Date(viewY, viewM+1, 0).getDate();
+    $('cal-title').textContent = MONTHS[viewM] + ' ' + viewY;
+
+    var minM = TODAY.getFullYear()*12 + TODAY.getMonth();
+    var maxM = WIN_END.getFullYear()*12 + WIN_END.getMonth();
+    var curM = viewY*12 + viewM;
+    $('cal-prev').disabled = curM <= minM;
+    $('cal-next').disabled = curM >= maxM;
+
+    var html = '';
+    for (var i=0;i<lead;i++) html += '<button type="button" class="pad" tabindex="-1" disabled></button>';
+    for (var n=1;n<=days;n++){
+      var d = new Date(viewY, viewM, n);
+      var idx = coveringPick(d);
+      var cls = [];
+      if (idx >= 0) {
+        cls.push('in');
+        if (sameDay(d, picks[idx])) cls.push('start');
+        if (sameDay(d, periodEnd(picks[idx]))) cls.push('end');
+      }
+      /* clickable if it could start a period, or if it sits inside one (to remove it) */
+      var usable = idx >= 0 || (fits(d) && !overlaps(d) && picks.length < count);
+      html += '<button type="button" data-d="'+key(d)+'"'
+            + (cls.length ? ' class="'+cls.join(' ')+'"' : '')
+            + (usable ? '' : ' disabled')
+            + ' aria-label="'+fmt(d)+'">'+n+'</button>';
+    }
+    $('cal-grid').innerHTML = html;
+
+    $('cal-count').textContent = picks.length + ' of ' + count + ' ' +
+      NOUN[mode] + (count>1?'s':'') + ' chosen';
+
+    $('cal-chosen').innerHTML = picks.map(function(p,i){
+      return '<div class="row"><span>'+fmt(p)+' → '+fmt(periodEnd(p))+'</span>'
+           + '<button type="button" data-rm="'+i+'" aria-label="Remove this '+NOUN[mode]+'">×</button></div>';
+    }).join('');
+
+    $('cal-hint').textContent = picks.length >= count
+      ? 'That is all ' + count + '. Remove one, or raise the count above, to choose a different date.'
+      : 'Click a date to take the ' + LEN[mode] + ' days from it. Periods cannot overlap, and must '
+        + 'finish inside the ' + WINDOW_MONTHS + '-month window (to ' + fmt(WIN_END) + ').';
+  }
+
+  $('cal-grid').addEventListener('click', function(e){
+    var b = e.target.closest('button[data-d]');
+    if (!b || b.disabled) return;
+    var parts = b.getAttribute('data-d').split('-');
+    var d = new Date(+parts[0], +parts[1]-1, +parts[2]);
+    var idx = coveringPick(d);
+    if (idx >= 0) picks.splice(idx,1);              /* click inside a period removes it */
+    else if (picks.length < count && fits(d) && !overlaps(d)) picks.push(d);
+    picks.sort(function(a,b2){ return a-b2; });
+    drawCal(); render();
+  });
+  $('cal-chosen').addEventListener('click', function(e){
+    var b = e.target.closest('button[data-rm]');
+    if (!b) return;
+    picks.splice(+b.getAttribute('data-rm'),1);
+    drawCal(); render();
+  });
+  $('cal-prev').addEventListener('click', function(){
+    if (--viewM < 0){ viewM = 11; viewY--; } drawCal();
+  });
+  $('cal-next').addEventListener('click', function(){
+    if (++viewM > 11){ viewM = 0; viewY++; } drawCal();
+  });
+
+  /* ── dial ──────────────────────────────────────────────────────────────── */
+  function setCount(n){
+    if (mode === 'y') return;
+    count = Math.max(1, Math.min(MAXN[mode], n|0 || 1));
+    $('count').value = count;
+    $('count').max = MAXN[mode];
+    $('count-down').disabled = count <= 1;
+    $('count-up').disabled   = count >= MAXN[mode];
+    clampPicks();
+    drawCal(); render();
+  }
+  $('count-down').addEventListener('click', function(){ setCount(count-1); });
+  $('count-up').addEventListener('click',   function(){ setCount(count+1); });
+  $('count').addEventListener('change', function(){ setCount(+$('count').value); });
+
+  /* ── coverage mode ─────────────────────────────────────────────────────── */
+  function setCover(){
+    mode = $('cover').value;
+    picks = [];
+    var timed = mode !== 'y';
+    $('f-count').classList.toggle('hidden', !timed);
+    $('f-cal').classList.toggle('hidden', !timed);
+    $('cover-hint').textContent = timed
+      ? 'Your ' + NOUN[mode] + 's float — you pick which, and you can move them each year as your weeks move.'
+      : 'All 13 forward months, updated nightly.';
+    if (timed) {
+      $('count-legend').textContent = 'How many ' + NOUN[mode] + 's';
+      $('cal-legend').textContent = 'Choose your ' + NOUN[mode] + (count>1?'s':'');
+      $('count-hint').textContent = mode === 'w'
+        ? 'Each week is 7 nights. ' + money(PRICE.WEEK) + ' per week, per unit type.'
+        : 'Each month is 30 nights. ' + money(PRICE.MONTH) + ' per month, per unit type.';
+      viewY = TODAY.getFullYear(); viewM = TODAY.getMonth();
+      setCount(count);
+    } else { render(); }
+  }
+  $('cover').addEventListener('change', setCover);
+
+  /* ── total ─────────────────────────────────────────────────────────────── */
+  function unitPrice(){
+    if (mode === 'y') return PRICE.YEAR;
+    var gross = (mode === 'w' ? PRICE.WEEK : PRICE.MONTH) * count;
+    return Math.min(gross, PRICE.YEAR);            /* the cap */
+  }
 
   function render(){
     var role = $('role').value;
@@ -258,14 +530,28 @@
 
     if (role === 'owner' || role === 'buyer') {
       var picked = Array.prototype.filter.call($('units').options, function(o){ return o.selected; });
-      var per = unitPrice(), c = COVER[$('cover').value] || COVER.y1;
+      var per = unitPrice();
       total = per * picked.length;
       if (picked.length) {
-        lines.push(['' + picked.length + ' unit type' + (picked.length > 1 ? 's' : '') + ' × ' + c.label, money(per) + ' each']);
-        var full = PRICE.YEAR * picked.length;
-        if (c.mo && c.mo < 13 && total >= full) note = 'The full year costs the same or less — worth taking instead.';
-        else if (c.mo && c.mo >= 3 && c.mo < 13) note = 'The full year is ' + money(full) + '. ' +
-          (full - total > 0 ? 'Another ' + money(full - total) + ' covers the remaining ' + (13 - c.mo) + ' months.' : '');
+        var span = mode === 'y' ? 'Full year'
+                 : count + ' ' + NOUN[mode] + (count>1?'s':'');
+        lines.push([picked.length + ' unit type' + (picked.length>1?'s':'') + ' × ' + span,
+                    money(per) + ' each']);
+        if (mode !== 'y' && picks.length < count) {
+          lines.push([(count - picks.length) + ' ' + NOUN[mode] +
+                      (count - picks.length > 1 ? 's' : '') + ' still to place on the calendar', '']);
+        }
+        if (mode === 'w') {
+          var asMonths = Math.ceil(count*7/30);
+          if (PRICE.WEEK*count >= asMonths*PRICE.MONTH && asMonths <= MAXN.m)
+            note = asMonths + ' month' + (asMonths>1?'s':'') + ' costs ' +
+                   money(asMonths*PRICE.MONTH) + ' and covers more of the calendar.';
+        } else if (mode === 'm') {
+          var gross = PRICE.MONTH*count;
+          if (gross >= PRICE.YEAR) note = 'Capped at the full-year rate — you are getting the whole calendar for this.';
+          else note = 'The full year is ' + money(PRICE.YEAR) + ' — another ' +
+                      money(PRICE.YEAR - gross) + ' covers the rest of it.';
+        }
       }
     } else if (role === 'manager') {
       var band = $('scale').value;
@@ -280,7 +566,7 @@
 
     $('fig').innerHTML = total ? money(total) + '<span class="per">per year</span>' : '&mdash;';
     $('breakdown').innerHTML = lines.map(function(l){
-      return '<div><span class="k">' + l[0] + '</span><span class="v">' + l[1] + '</span></div>';
+      return '<div><span class="k">'+l[0]+'</span><span class="v">'+l[1]+'</span></div>';
     }).join('');
     $('note').textContent = note;
   }
@@ -296,9 +582,12 @@
   function setRole(){
     var role = $('role').value;
     var isHolder = role === 'owner' || role === 'buyer';
+    $('f-brand').classList.toggle('hidden', !isHolder);
     $('f-prop').classList.toggle('hidden', !isHolder);
     $('f-units').classList.toggle('hidden', !isHolder);
     $('f-cover').classList.toggle('hidden', !isHolder);
+    $('f-count').classList.toggle('hidden', !isHolder || mode === 'y');
+    $('f-cal').classList.toggle('hidden',   !isHolder || mode === 'y');
     $('f-scale').classList.toggle('hidden', role !== 'manager');
     $('prop-legend').textContent = role === 'buyer' ? 'Property you are evaluating' : 'Property';
     $('role-hint').textContent = ROLE_HINT[role] || '';
@@ -312,19 +601,20 @@
     var i = $('prop').value, u = $('units');
     if (i === '' || !props[i]) { u.innerHTML = ''; render(); return; }
     u.innerHTML = props[i].units.map(function(x){
-      return '<option value="' + x.code + '">' + x.name + '</option>';
+      return '<option value="'+x.code+'">'+x.name+'</option>';
     }).join('');
     render();
   }
 
   $('units-hint').textContent = (TOUCH
     ? 'Tap each type you need. '
-    : 'Hold \u2318 or Ctrl to choose more than one. ')
-    + 'Access is per unit type \u2014 two units of the same type need only one entitlement.';
+    : 'Hold ⌘ or Ctrl to choose more than one. ')
+    + 'Access is per unit type — two units of the same type need only one entitlement.';
 
   $('role').addEventListener('change', setRole);
+  $('brand').addEventListener('change', setBrand);
   $('prop').addEventListener('change', setUnits);
-  ['units','cover','scale'].forEach(function(id){ $(id).addEventListener('change', render); });
+  ['units','scale'].forEach(function(id){ $(id).addEventListener('change', render); });
 
   /* SUBMIT — there is no backend yet. Say so plainly rather than pretending to enrol
      someone. Replace this whole handler when the OTP Worker exists. */
@@ -332,13 +622,13 @@
     e.preventDefault();
     var email = $('email').value.trim();
     if (!email) return;
-    // No backend yet: say nothing was submitted rather than implying it was captured.
-    $('status').textContent = 'Nothing was submitted \u2014 this form is not connected yet. '
+    $('status').textContent = 'Nothing was submitted — this form is not connected yet. '
       + 'Access opens with the first full year of data in September 2027, and registration '
       + 'opens well before then.';
-    $('reg').querySelector('button').disabled = true;
+    $('reg').querySelector('button[type=submit]').disabled = true;
   });
 
+  setCover();
   render();
 })();
 </script>
