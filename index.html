@@ -17,6 +17,8 @@
     --ink:#0b0b0d; --ivory:#eae5da; --ivory-dim:rgba(234,229,218,.62);
     --ivory-faint:rgba(234,229,218,.38); --gold:#d8b24c; --gold-bright:#ecc85f;
     /* one shared clock: the light descends the rule, then sweeps the text */
+    /* the controls sit on moving video, so they carry their own ground */
+    --panel:rgba(11,11,13,.55);
     --cycle:5.2s;
     --start:1.6s;
   }
@@ -124,7 +126,7 @@
     opacity:0;animation:fadein 1.8s ease 1.7s forwards;
   }
   .act{
-    min-width:11rem;background:transparent;color:var(--ivory);
+    min-width:11rem;background:var(--panel);color:var(--ivory);
     border:1px solid rgba(216,178,76,.45);border-radius:2px;
     font-family:"Jost",sans-serif;font-weight:400;font-size:.7rem;
     letter-spacing:.26em;text-transform:uppercase;padding:.95rem 1.7rem;
@@ -141,7 +143,7 @@
   .signin.open{max-height:14rem;opacity:1;margin-top:1.4rem}
   .signin form{display:inline-flex;gap:.6rem;flex-wrap:wrap;justify-content:center}
   .signin input{
-    background:rgba(255,255,255,.04);border:1px solid rgba(216,178,76,.35);border-radius:2px;
+    background:var(--panel);border:1px solid rgba(216,178,76,.35);border-radius:2px;
     color:var(--ivory);font-family:"Jost",sans-serif;font-weight:300;
     font-size:.8rem;letter-spacing:.06em;padding:.85rem 1rem;width:min(72vw,17rem);
     outline:none;transition:border-color .35s ease;
@@ -149,7 +151,7 @@
   .signin input::placeholder{color:var(--ivory-faint);letter-spacing:.14em}
   .signin input:focus{border-color:rgba(216,178,76,.8)}
   .signin .go{
-    background:transparent;color:var(--gold);border:1px solid rgba(216,178,76,.45);border-radius:2px;
+    background:var(--panel);color:var(--gold);border:1px solid rgba(216,178,76,.45);border-radius:2px;
     font-family:"Jost",sans-serif;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;
     padding:.85rem 1.3rem;cursor:pointer;transition:background .35s ease,color .35s ease;
   }
