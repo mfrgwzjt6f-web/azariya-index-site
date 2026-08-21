@@ -101,8 +101,9 @@
   }
 
   /* The travelling light now lives only on the hairline (.rule::after / @keyframes descend).
-     The descriptor is a plain static line — .5em tracking suited the previous 22-character line; at 66 it needs to come in and sit inside a measure so the wrap is chosen, not
-     accidental. */
+       The descriptor is a plain static line. The previous 22-character line carried .5em
+       tracking; at 66 characters that has to come in, and sit inside a measure, so the
+       wrap is a chosen one rather than wherever the viewport happens to fall. */
   .line{
     margin:2.1rem auto 0;
     /* rem, not ch — the ch unit measures the "0" glyph and ignores letter-spacing, so 46ch
