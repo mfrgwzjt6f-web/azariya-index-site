@@ -1,0 +1,93 @@
+/* Azariya Index — the top nav, and nothing else.
+
+   Every page links this file, including the home page, whose own inline styles
+   would otherwise collide with a general stylesheet. All tokens it needs are
+   declared on .nav itself rather than :root, so a page that defines --line or
+   --panel differently cannot reach in and change the nav.  */
+
+.nav :focus-visible{outline:1px solid var(--nav-gold);outline-offset:3px}
+
+.nav{
+  --nav-h:4.6rem;
+  --nav-ivory:#eae5da;
+  --nav-dim:rgba(234,229,218,.66);
+  --nav-gold:#d8b24c;
+  --nav-line:rgba(216,178,76,.20);
+  --nav-line-soft:rgba(234,229,218,.10);
+}
+
+/* ─────────────────────────── nav ─────────────────────────── */
+
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:40;height:var(--nav-h);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 clamp(1.2rem,4vw,2.6rem);
+  /* content scrolls under this, so the bar has to carry enough ground that
+     page text never reads through the links */
+  background:linear-gradient(to bottom, rgba(11,11,13,.95), rgba(11,11,13,.88) 62%, rgba(11,11,13,.35) 88%, transparent);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+}
+.nav-brand{
+  display:inline-flex;align-items:baseline;gap:.42rem;
+  text-decoration:none;color:var(--nav-ivory);line-height:1;
+}
+.nav-brand svg{width:.78em;height:.9em;color:var(--nav-gold);align-self:center;
+  position:relative;top:.02em;overflow:visible}
+.nav-brand .wm{
+  font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;
+  font-size:1.16rem;letter-spacing:.10em;
+}
+.nav-brand .idx{
+  font-family:"Jost",sans-serif;font-weight:300;color:var(--nav-gold);
+  font-size:1.16rem;letter-spacing:.12em;text-transform:uppercase;
+  /* Jost's cap height runs short of Cormorant's; scale to match the A */
+  transform:scale(.893);transform-origin:left baseline;
+}
+
+.nav-links{display:flex;align-items:center;gap:clamp(1.1rem,2.6vw,2.2rem)}
+.nav-links a{
+  color:var(--nav-dim);text-decoration:none;
+  font-size:.72rem;letter-spacing:.20em;text-transform:uppercase;font-weight:400;
+  padding:.4rem 0;position:relative;transition:color .3s ease;white-space:nowrap;
+}
+.nav-links a::after{
+  content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;
+  background:var(--nav-gold);transition:right .35s ease;
+}
+.nav-links a:hover,.nav-links a:focus-visible{color:var(--nav-ivory)}
+.nav-links a:hover::after,.nav-links a:focus-visible::after{right:0}
+.nav-links a[aria-current="page"]{color:var(--nav-gold)}
+.nav-links a[aria-current="page"]::after{right:0}
+
+.nav-toggle{
+  display:none;background:none;border:0;cursor:pointer;padding:.6rem;
+  width:2.6rem;height:2.6rem;color:var(--nav-ivory);
+}
+.nav-toggle span{display:block;height:1px;background:currentColor;margin:5px 0;
+  transition:transform .3s ease,opacity .25s ease}
+.nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+.nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+
+@media (max-width: 800px){
+  .nav-toggle{display:block}
+  .nav-links{
+    position:fixed;top:var(--nav-h);left:0;right:0;
+    flex-direction:column;align-items:stretch;gap:0;
+    background:rgba(11,11,13,.97);
+    border-top:1px solid var(--nav-line);
+    /* padding has to collapse too — max-height:0 caps the content box only,
+       so padding alone would leave a 30px invisible strip under the bar */
+    padding:0 clamp(1.2rem,4vw,2.6rem);
+    max-height:0;overflow:hidden;opacity:0;pointer-events:none;
+    transition:max-height .4s ease,opacity .3s ease,padding .4s ease;
+  }
+  .nav-links.open{max-height:22rem;opacity:1;pointer-events:auto;
+    padding-top:.4rem;padding-bottom:1.4rem}
+  /* text-align is set explicitly: it would otherwise inherit from the host
+     page, which differs (the home page centres, the audience pages do not) */
+  .nav-links a{padding:1.05rem 0;border-bottom:1px solid var(--nav-line-soft);
+    font-size:.78rem;text-align:center}
+  .nav-links a:last-child{border-bottom:0}
+  .nav-links a::after{display:none}
+}

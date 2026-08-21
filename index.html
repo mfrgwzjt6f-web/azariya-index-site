@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/nav.css">
 <link rel="icon" href="assets/favicon.svg">
 <link rel="alternate icon" href="assets/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/favicon-180.png">
@@ -176,6 +177,19 @@
 </head>
 <body>
 
+  <nav class="nav">
+    <span aria-hidden="true"></span>
+    <button class="nav-toggle" type="button" aria-expanded="false"
+            aria-controls="nav-links" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="nav-links">
+      <a href="/owners">For Owners</a>
+      <a href="/buyers-agents">For Buyers and Agents</a>
+      <a href="/managers">For Managers</a>
+    </div>
+  </nav>
+
   <div class="bg" aria-hidden="true"></div>
   <div class="scrim" aria-hidden="true"></div>
   <div class="vig" aria-hidden="true"></div>
@@ -203,6 +217,8 @@
 
 
   <p class="foot">&copy; 2026 Azariya LLC</p>
+
+  <script src="/assets/site.js"></script>
 
   <script>
   // ---- background rotator: pick one clip at random; graded via CSS filter ----

@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/nav.css">
 <link rel="icon" href="assets/favicon.svg">
 <link rel="alternate icon" href="assets/favicon-32.png">
 <style>
@@ -23,7 +24,8 @@
     background:radial-gradient(120% 80% at 50% 0%, #14141a 0%, var(--ink) 65%) fixed;
     color:var(--ivory);font-family:"Jost",sans-serif;font-weight:300;
     -webkit-font-smoothing:antialiased;
-    padding:clamp(2rem,5vw,4rem) clamp(1.1rem,4vw,2rem) 5rem;
+    /* 4.6rem clears the fixed nav; the clamp is the breathing room below it */
+    padding:calc(4.6rem + clamp(2rem,5vw,4rem)) clamp(1.1rem,4vw,2rem) 5rem;
   }
   .wrap{max-width:52rem;margin:0 auto}
 
@@ -123,9 +125,20 @@
 <body>
 <div class="wrap">
 
-  <a class="brand" href="/" aria-label="Azariya Index">
-    <svg viewBox="28.5 24.5 71 81" aria-hidden="true"><path d="M30 104 L64 26 L98 104" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><line x1="46" y1="74" x2="82" y2="74" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><line x1="41" y1="86" x2="87" y2="86" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" opacity="0.75"/><line x1="36" y1="98" x2="92" y2="98" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" opacity="0.5"/></svg><span class="wm">ZARIYA</span><span class="idx">Index</span>
-  </a>
+  <nav class="nav">
+    <a class="nav-brand" href="/" aria-label="Azariya Index">
+      <svg viewBox="28.5 24.5 71 81" aria-hidden="true"><path d="M30 104 L64 26 L98 104" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><line x1="46" y1="74" x2="82" y2="74" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><line x1="41" y1="86" x2="87" y2="86" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" opacity="0.75"/><line x1="36" y1="98" x2="92" y2="98" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" opacity="0.5"/></svg><span class="wm">ZARIYA</span><span class="idx">Index</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false"
+            aria-controls="nav-links" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="nav-links">
+      <a href="/owners">For Owners</a>
+      <a href="/buyers-agents">For Buyers and Agents</a>
+      <a href="/managers">For Managers</a>
+    </div>
+  </nav>
 
   <h1>Request access</h1>
   <p class="sub">Tell us which residences you follow and how much of the calendar you need.
@@ -203,6 +216,8 @@
 
   <a class="back" href="/">&larr; Back</a>
 </div>
+
+<script src="/assets/site.js"></script>
 
 <script>
 (function(){

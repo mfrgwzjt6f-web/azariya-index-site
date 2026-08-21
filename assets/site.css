@@ -1,0 +1,174 @@
+/* Azariya Index — shared chrome for the audience pages.
+   The home page keeps its own inline styles (it is a full-viewport hero and
+   shares almost nothing with these); what it takes from here is the nav. */
+
+:root{
+  --ink:#0b0b0d;
+  --ink-lift:#101015;
+  --ivory:#eae5da;
+  --ivory-dim:rgba(234,229,218,.66);
+  --ivory-faint:rgba(234,229,218,.40);
+  --gold:#d8b24c;
+  --gold-bright:#ecc85f;
+  --line:rgba(216,178,76,.20);
+  --line-soft:rgba(234,229,218,.10);
+  --panel:rgba(11,11,13,.55);
+  /* nav.css scopes its own copy to .nav; this one is for main's top padding */
+  --nav-h:4.6rem;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  min-height:100%;
+  /* base colour under the fixed gradient: a fixed background paints only the
+     viewport box, so anything past it needs a ground of its own */
+  background-color:var(--ink);
+  background-image:radial-gradient(120% 70% at 50% 0%, var(--ink-lift) 0%, var(--ink) 62%);
+  background-attachment:fixed;
+  background-repeat:no-repeat;
+  color:var(--ivory);
+  font-family:"Jost",system-ui,-apple-system,sans-serif;
+  font-weight:300;
+  -webkit-font-smoothing:antialiased;
+  line-height:1.65;
+}
+::selection{background:rgba(216,178,76,.28)}
+:focus-visible{outline:1px solid var(--gold);outline-offset:3px}
+
+/* ─────────────────────────── page shell ─────────────────────────── */
+
+.wrap{max-width:64rem;margin:0 auto;padding:0 clamp(1.2rem,5vw,2.6rem)}
+main{padding-top:calc(var(--nav-h) + clamp(3rem,9vw,6rem));padding-bottom:clamp(4rem,10vw,7rem)}
+section{margin-top:clamp(3.4rem,8vw,5.6rem)}
+
+.eyebrow{
+  font-size:.7rem;letter-spacing:.30em;text-transform:uppercase;
+  color:var(--gold);font-weight:400;
+}
+h1{
+  font-family:"Cormorant Garamond",Georgia,serif;font-weight:400;
+  font-size:clamp(2.4rem,6.5vw,4rem);line-height:1.08;letter-spacing:.01em;
+  margin-top:1.1rem;text-wrap:balance;max-width:20ch;
+}
+h2{
+  font-family:"Cormorant Garamond",Georgia,serif;font-weight:400;
+  font-size:clamp(1.6rem,3.6vw,2.3rem);line-height:1.2;
+  text-wrap:balance;margin-bottom:1.4rem;
+}
+h3{
+  font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;
+  font-weight:500;color:var(--gold);margin-bottom:1rem;
+}
+.lede{
+  font-size:clamp(1rem,2.1vw,1.14rem);color:var(--ivory-dim);
+  margin-top:1.5rem;max-width:46ch;line-height:1.72;
+}
+p{max-width:62ch}
+p + p{margin-top:1rem}
+.dim{color:var(--ivory-dim)}
+.rule-h{height:1px;background:var(--line);border:0;margin:0}
+
+/* ───────────────────── today / later honesty block ───────────────────── */
+
+.split{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
+@media (max-width: 760px){ .split{grid-template-columns:1fr} }
+.card{
+  border:1px solid var(--line);border-radius:2px;
+  background:rgba(216,178,76,.035);
+  padding:clamp(1.4rem,3.2vw,1.9rem);
+}
+.card.later{background:rgba(234,229,218,.025);border-color:var(--line-soft)}
+.card.later h3{color:var(--ivory-faint)}
+.card ul{list-style:none;display:flex;flex-direction:column;gap:.85rem}
+.card li{
+  position:relative;padding-left:1.4rem;font-size:.94rem;
+  color:var(--ivory-dim);line-height:1.6;
+}
+.card li::before{
+  content:"";position:absolute;left:0;top:.62em;width:.5rem;height:1px;background:var(--gold);
+}
+.card.later li::before{background:var(--ivory-faint)}
+.stamp{
+  display:inline-block;margin-top:1.3rem;font-size:.7rem;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--ivory-faint);
+}
+
+/* ─────────────────────────── pricing ─────────────────────────── */
+
+.tiers{display:grid;gap:1.4rem;margin-top:2rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}
+/* a lone tier should not stretch the full measure — auto-fit would give it 64rem */
+.tiers.single{grid-template-columns:minmax(0,27rem)}
+.tier{
+  border:1px solid var(--line);border-radius:2px;padding:1.7rem 1.5rem;
+  display:flex;flex-direction:column;background:rgba(11,11,13,.4);
+}
+.tier.feature{border-color:rgba(216,178,76,.5);background:rgba(216,178,76,.055)}
+.tier .name{
+  font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--gold);font-weight:500;
+}
+.tier .price{
+  font-family:"Cormorant Garamond",Georgia,serif;font-weight:400;
+  font-size:2.5rem;line-height:1;margin:.9rem 0 .2rem;
+  font-variant-numeric:tabular-nums;letter-spacing:.01em;
+}
+.tier .per{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ivory-faint)}
+.tier .desc{font-size:.9rem;color:var(--ivory-dim);margin-top:1.1rem;line-height:1.6;flex:1}
+.tier .fine{font-size:.78rem;color:var(--ivory-faint);margin-top:1.1rem;line-height:1.55}
+
+/* ─────────────────────────── notes & CTA ─────────────────────────── */
+
+.note{
+  border-left:2px solid var(--gold);padding:.2rem 0 .2rem 1.3rem;
+  color:var(--ivory-dim);font-size:.95rem;max-width:58ch;
+}
+.note strong{color:var(--ivory);font-weight:400}
+
+.figures{
+  display:grid;gap:1.2rem;grid-template-columns:repeat(auto-fit,minmax(9rem,1fr));
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  padding:1.9rem 0;
+}
+.fig .n{
+  font-family:"Cormorant Garamond",Georgia,serif;font-size:2.1rem;line-height:1;
+  font-variant-numeric:tabular-nums;
+}
+.fig .l{
+  display:block;margin-top:.55rem;font-size:.68rem;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--ivory-faint);
+}
+
+.cta{
+  margin-top:clamp(3rem,7vw,4.5rem);
+  border:1px solid var(--line);border-radius:2px;
+  padding:clamp(1.8rem,4.5vw,2.8rem);
+  background:rgba(216,178,76,.04);
+  text-align:center;
+}
+.cta h2{margin-bottom:.9rem}
+.cta p{margin:0 auto;color:var(--ivory-dim)}
+.btn{
+  display:inline-block;margin-top:1.7rem;
+  background:var(--panel);color:var(--ivory);
+  border:1px solid rgba(216,178,76,.45);border-radius:2px;
+  font-family:"Jost",sans-serif;font-weight:400;font-size:.72rem;
+  letter-spacing:.26em;text-transform:uppercase;
+  padding:.95rem 2.2rem;text-decoration:none;cursor:pointer;
+  transition:background .35s ease,color .35s ease,border-color .35s ease;
+}
+.btn:hover,.btn:focus-visible{background:var(--gold);color:var(--ink);border-color:var(--gold)}
+
+.foot{
+  border-top:1px solid var(--line-soft);margin-top:clamp(3rem,8vw,5rem);
+  padding-top:1.8rem;display:flex;justify-content:space-between;
+  gap:1rem;flex-wrap:wrap;
+  font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ivory-faint);
+}
+.foot a{color:var(--ivory-faint);text-decoration:none;transition:color .3s ease}
+.foot a:hover{color:var(--gold)}
+
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *{transition-duration:.01ms !important;animation-duration:.01ms !important}
+}
