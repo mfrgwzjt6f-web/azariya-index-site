@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register — Azariya Index</title>
+<meta name="description" content="Request access to nightly rental performance for branded residences around the world.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="assets/favicon.svg">
+<link rel="alternate icon" href="assets/favicon-32.png">
+<style>
+  :root{
+    --ink:#0b0b0d; --ivory:#eae5da; --ivory-dim:rgba(234,229,218,.62);
+    --ivory-faint:rgba(234,229,218,.38); --gold:#d8b24c; --gold-bright:#ecc85f;
+    --line:rgba(216,178,76,.28);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    min-height:100%;
+    background:radial-gradient(120% 80% at 50% 0%, #14141a 0%, var(--ink) 65%) fixed;
+    color:var(--ivory);font-family:"Jost",sans-serif;font-weight:300;
+    -webkit-font-smoothing:antialiased;
+    padding:clamp(2rem,5vw,4rem) clamp(1.1rem,4vw,2rem) 5rem;
+  }
+  .wrap{max-width:52rem;margin:0 auto}
+
+  /* ---- masthead: the lockup, quieter than the home page ---- */
+  .brand{
+    display:inline-flex;align-items:baseline;white-space:nowrap;
+    font-family:"Cormorant Garamond",serif;font-weight:500;
+    font-size:clamp(1.5rem,4vw,2rem);line-height:1;color:var(--ivory);
+    text-decoration:none;
+  }
+  .brand svg{height:.66em;width:auto;margin-right:.055em;color:var(--gold)}
+  .brand .wm{letter-spacing:.0571em}
+  .brand .idx{
+    font-family:"Jost",sans-serif;font-weight:300;font-size:.8929em;
+    letter-spacing:.16em;text-transform:uppercase;
+    margin-left:.20em;margin-right:-.16em;color:var(--gold);
+  }
+  h1{
+    font-family:"Cormorant Garamond",serif;font-weight:400;
+    font-size:clamp(1.9rem,5vw,2.7rem);line-height:1.15;margin:2.4rem 0 .7rem;
+    letter-spacing:.01em;
+  }
+  .sub{color:var(--ivory-dim);font-size:1rem;line-height:1.7;max-width:40rem}
+
+  /* ---- form ---- */
+  form{margin-top:2.8rem;display:flex;flex-direction:column;gap:2rem}
+  fieldset{border:none}
+  legend,.lbl{
+    display:block;font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;
+    color:var(--gold);font-weight:400;margin-bottom:.85rem;
+  }
+  .hint{font-size:.82rem;color:var(--ivory-faint);line-height:1.6;margin-top:.6rem}
+
+  select,input[type=email],input[type=text]{
+    width:100%;background:rgba(255,255,255,.03);color:var(--ivory);
+    border:1px solid var(--line);border-radius:2px;
+    font-family:"Jost",sans-serif;font-weight:300;font-size:.95rem;
+    padding:.85rem .95rem;outline:none;
+    transition:border-color .3s ease,background .3s ease;
+    appearance:none;-webkit-appearance:none;
+  }
+  select{
+    background-image:linear-gradient(45deg,transparent 50%,var(--gold) 50%),linear-gradient(135deg,var(--gold) 50%,transparent 50%);
+    background-position:calc(100% - 20px) calc(1.15rem),calc(100% - 14px) calc(1.15rem);
+    background-size:6px 6px,6px 6px;background-repeat:no-repeat;
+    padding-right:2.6rem;
+  }
+  select:focus,input:focus{border-color:rgba(216,178,76,.75);background:rgba(255,255,255,.055)}
+  select option{background:#14141a;color:var(--ivory)}
+  select[multiple]{padding:.5rem;min-height:12rem;background-image:none}
+  select[multiple] option{padding:.5rem .6rem;border-radius:2px}
+  select[multiple] option:checked{background:rgba(216,178,76,.22);color:var(--gold-bright)}
+
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
+  @media (max-width:640px){ .row{grid-template-columns:1fr} }
+  .hidden{display:none}
+
+  /* ---- live total ---- */
+  .total{
+    margin-top:.5rem;border:1px solid var(--line);border-radius:2px;
+    background:rgba(216,178,76,.05);padding:1.5rem 1.6rem;
+  }
+  .total-head{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap}
+  .total-lbl{font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+  .total-fig{
+    font-family:"Cormorant Garamond",serif;font-weight:500;
+    font-size:clamp(2rem,6vw,2.8rem);line-height:1;color:var(--ivory);
+    font-variant-numeric:tabular-nums;
+  }
+  .total-fig .per{font-family:"Jost",sans-serif;font-size:.8rem;font-weight:300;
+    letter-spacing:.18em;text-transform:uppercase;color:var(--ivory-faint);margin-left:.5rem}
+  .breakdown{margin-top:1.1rem;border-top:1px solid rgba(216,178,76,.16);padding-top:1rem;
+    font-size:.85rem;color:var(--ivory-dim);line-height:1.9}
+  .breakdown div{display:flex;justify-content:space-between;gap:1rem}
+  .breakdown .k{color:var(--ivory-faint)}
+  .breakdown .v{font-variant-numeric:tabular-nums;white-space:nowrap}
+  .note{margin-top:.9rem;font-size:.8rem;color:var(--gold);line-height:1.6}
+
+  /* ---- buttons ---- */
+  .btn{
+    display:inline-block;width:100%;text-align:center;cursor:pointer;
+    background:transparent;color:var(--ivory);
+    border:1px solid var(--gold);border-radius:2px;
+    font-family:"Jost",sans-serif;font-weight:400;font-size:.72rem;
+    letter-spacing:.26em;text-transform:uppercase;padding:1.05rem 1rem;
+    transition:background .35s ease,color .35s ease;
+  }
+  .btn:hover,.btn:focus-visible{background:var(--gold);color:var(--ink);outline:none}
+  .back{
+    display:inline-block;margin-top:2.6rem;font-size:.68rem;letter-spacing:.24em;
+    text-transform:uppercase;color:var(--ivory-faint);text-decoration:none;
+  }
+  .back:hover{color:var(--gold)}
+  .status{margin-top:1.1rem;font-size:.86rem;line-height:1.6;color:var(--gold-bright);min-height:1.2em}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <a class="brand" href="index.html" aria-label="Azariya Index">
+    <svg viewBox="28.5 24.5 71 81" aria-hidden="true"><path d="M30 104 L64 26 L98 104" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><line x1="46" y1="74" x2="82" y2="74" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><line x1="41" y1="86" x2="87" y2="86" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" opacity="0.75"/><line x1="36" y1="98" x2="92" y2="98" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" opacity="0.5"/></svg><span class="wm">ZARIYA</span><span class="idx">Index</span>
+  </a>
+
+  <h1>Request access</h1>
+  <p class="sub">Tell us which residences you follow and how much of the calendar you need.
+     The annual rate updates as you choose.</p>
+
+  <form id="reg" autocomplete="off">
+
+    <fieldset>
+      <legend>I am a</legend>
+      <select id="role" required>
+        <option value="">Select one</option>
+        <option value="owner">Owner</option>
+        <option value="buyer">Buyer</option>
+        <option value="manager">Property manager</option>
+        <option value="agent">Real-estate agent</option>
+      </select>
+      <p class="hint" id="role-hint"></p>
+    </fieldset>
+
+    <fieldset id="f-prop" class="hidden">
+      <legend id="prop-legend">Property</legend>
+      <select id="prop"></select>
+      <p class="hint" id="prop-hint"></p>
+    </fieldset>
+
+    <fieldset id="f-units" class="hidden">
+      <legend>Unit type<span id="units-plural">s</span></legend>
+      <select id="units" multiple size="8"></select>
+      <p class="hint" id="units-hint"></p>
+    </fieldset>
+
+    <fieldset id="f-cover" class="hidden">
+      <legend>Calendar coverage</legend>
+      <select id="cover">
+        <option value="w1">One week</option>
+        <option value="m1">One month</option>
+        <option value="m2">Two months</option>
+        <option value="m3">Three months</option>
+        <option value="m6">Six months</option>
+        <option value="y1" selected>Full year — all 13 forward months</option>
+      </select>
+      <p class="hint">Months float. You choose which ones, and you can change them each year as
+         your weeks move.</p>
+    </fieldset>
+
+    <fieldset id="f-scale" class="hidden">
+      <legend id="scale-legend">Portfolio size</legend>
+      <select id="scale">
+        <option value="2">2 – 5 units</option>
+        <option value="6">6 – 15 units</option>
+        <option value="16">16 or more units</option>
+      </select>
+      <p class="hint" id="scale-hint"></p>
+    </fieldset>
+
+    <div class="total" id="total" aria-live="polite">
+      <div class="total-head">
+        <span class="total-lbl">Annual rate</span>
+        <span class="total-fig" id="fig">&mdash;</span>
+      </div>
+      <div class="breakdown" id="breakdown"></div>
+      <p class="note" id="note"></p>
+    </div>
+
+    <fieldset>
+      <legend>Email</legend>
+      <input type="email" id="email" placeholder="you@example.com" required>
+    </fieldset>
+
+    <div>
+      <button class="btn" type="submit">Request access</button>
+      <p class="status" id="status"></p>
+    </div>
+  </form>
+
+  <a class="back" href="index.html">&larr; Back</a>
+</div>
+
+<script>
+(function(){
+  /* ── PRICING ─────────────────────────────────────────────────────────────────
+     One place. These mirror _Market & Pricing Notes.md and the tier plan.
+     YEAR is a CAP, not a sum: 12 x MONTH would be $2,400 against a $1,100 year, so
+     without the cap a six-month buyer pays more than a full-year buyer. The tier plan
+     calls that out explicitly — "monotonic upgrades, no path where narrow+deep costs
+     more than broad+shallow" — so the cap enforces it rather than trusting the options. */
+  var PRICE = { WEEK:49, MONTH:200, YEAR:1100, MANAGER:{2:7500,6:12000,16:18000}, AGENT:3500 };
+  var COVER = { w1:{label:'One week', mo:0, wk:1}, m1:{label:'One month', mo:1},
+                m2:{label:'Two months', mo:2}, m3:{label:'Three months', mo:3},
+                m6:{label:'Six months', mo:6}, y1:{label:'Full year', mo:13} };
+
+  var $ = function(id){ return document.getElementById(id); };
+  var props = [];
+
+  fetch('assets/inventory.json').then(function(r){ return r.json(); }).then(function(d){
+    props = d.properties;
+    var sel = $('prop');
+    sel.innerHTML = '<option value="">Select a property</option>' + props.map(function(p, i){
+      return '<option value="' + i + '">' + p.name + '</option>';
+    }).join('');
+  }).catch(function(){
+    $('prop-hint').textContent = 'Property list unavailable — please tell us in the email field which residence you follow.';
+  });
+
+  function unitPrice(){
+    var c = COVER[$('cover').value] || COVER.y1;
+    if (c.wk) return PRICE.WEEK * c.wk;
+    return Math.min(c.mo * PRICE.MONTH, PRICE.YEAR);   /* the cap */
+  }
+  function money(n){ return '$' + n.toLocaleString('en-US'); }
+
+  function render(){
+    var role = $('role').value;
+    var lines = [], total = 0, note = '';
+
+    if (role === 'owner' || role === 'buyer') {
+      var picked = Array.prototype.filter.call($('units').options, function(o){ return o.selected; });
+      var per = unitPrice(), c = COVER[$('cover').value] || COVER.y1;
+      total = per * picked.length;
+      if (picked.length) {
+        lines.push(['' + picked.length + ' unit type' + (picked.length > 1 ? 's' : '') + ' × ' + c.label, money(per) + ' each']);
+        var full = PRICE.YEAR * picked.length;
+        if (c.mo && c.mo < 13 && total >= full) note = 'The full year costs the same or less — worth taking instead.';
+        else if (c.mo && c.mo >= 3 && c.mo < 13) note = 'The full year is ' + money(full) + '. ' +
+          (full - total > 0 ? 'Another ' + money(full - total) + ' covers the remaining ' + (13 - c.mo) + ' months.' : '');
+      }
+    } else if (role === 'manager') {
+      var band = $('scale').value;
+      total = PRICE.MANAGER[band];
+      lines.push([({'2':'2 – 5 units','6':'6 – 15 units','16':'16 or more units'})[band] + ' under management', money(total)]);
+      note = 'Managing a single unit? An owner subscription is the cheaper route.';
+    } else if (role === 'agent') {
+      total = PRICE.AGENT;
+      lines.push(['Unlimited comp reports, one market', money(total)]);
+      note = 'Includes the detailed unit report you can hand to a buyer as the evidence behind a comp.';
+    }
+
+    $('fig').innerHTML = total ? money(total) + '<span class="per">per year</span>' : '&mdash;';
+    $('breakdown').innerHTML = lines.map(function(l){
+      return '<div><span class="k">' + l[0] + '</span><span class="v">' + l[1] + '</span></div>';
+    }).join('');
+    $('note').textContent = note;
+  }
+
+  var TOUCH = window.matchMedia('(hover:none)').matches;
+  var ROLE_HINT = {
+    owner:   'You own a residence in a rental programme.',
+    buyer:   'You are evaluating a purchase.',
+    manager: 'You manage a portfolio of residences.',
+    agent:   'You list and sell residences.'
+  };
+
+  function setRole(){
+    var role = $('role').value;
+    var isHolder = role === 'owner' || role === 'buyer';
+    $('f-prop').classList.toggle('hidden', !isHolder);
+    $('f-units').classList.toggle('hidden', !isHolder);
+    $('f-cover').classList.toggle('hidden', !isHolder);
+    $('f-scale').classList.toggle('hidden', role !== 'manager');
+    $('prop-legend').textContent = role === 'buyer' ? 'Property you are evaluating' : 'Property';
+    $('role-hint').textContent = ROLE_HINT[role] || '';
+    $('prop-hint').textContent = role === 'buyer'
+      ? 'Evaluating more than one? Register the first here and tell us the others in a reply — comparisons across properties are priced together.'
+      : 'The residence your unit sits in.';
+    render();
+  }
+
+  function setUnits(){
+    var i = $('prop').value, u = $('units');
+    if (i === '' || !props[i]) { u.innerHTML = ''; render(); return; }
+    u.innerHTML = props[i].units.map(function(x){
+      return '<option value="' + x.code + '">' + x.name + '</option>';
+    }).join('');
+    render();
+  }
+
+  $('units-hint').textContent = (TOUCH
+    ? 'Tap each type you need. '
+    : 'Hold \u2318 or Ctrl to choose more than one. ')
+    + 'Access is per unit type \u2014 two units of the same type need only one entitlement.';
+
+  $('role').addEventListener('change', setRole);
+  $('prop').addEventListener('change', setUnits);
+  ['units','cover','scale'].forEach(function(id){ $(id).addEventListener('change', render); });
+
+  /* SUBMIT — there is no backend yet. Say so plainly rather than pretending to enrol
+     someone. Replace this whole handler when the OTP Worker exists. */
+  $('reg').addEventListener('submit', function(e){
+    e.preventDefault();
+    var email = $('email').value.trim();
+    if (!email) return;
+    $('status').textContent = 'Thank you — access opens with the first full year of data in September 2027. '
+      + 'We have noted your interest and will write to ' + email + ' before then.';
+    $('reg').querySelector('button').disabled = true;
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>

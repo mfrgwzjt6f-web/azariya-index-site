@@ -29,7 +29,7 @@
     display:flex;flex-direction:column;align-items:center;justify-content:center;
     text-align:center;padding:2rem;
     -webkit-font-smoothing:antialiased;
-    position:relative;overflow:hidden;
+    position:relative;overflow-x:hidden;overflow-y:auto;
   }
 
   /* ---- cinematic background: one of nine clips, graded dark + saturated ---- */
@@ -49,7 +49,9 @@
   }
   /* grade layers: darken + cool so the gold owns the frame */
   .scrim{position:fixed;inset:0;z-index:-2;
-    background:linear-gradient(to bottom, rgba(11,11,13,.62), rgba(11,11,13,.5) 45%, rgba(11,11,13,.72));}
+    background:
+      radial-gradient(62% 48% at 50% 48%, rgba(11,11,13,.42) 0%, rgba(11,11,13,.22) 58%, transparent 100%),
+      linear-gradient(to bottom, rgba(11,11,13,.62), rgba(11,11,13,.5) 45%, rgba(11,11,13,.72));}
   .vig{position:fixed;inset:0;z-index:-1;
     background:radial-gradient(115% 90% at 50% 42%, transparent 42%, rgba(5,5,7,.78) 100%);}
 
@@ -106,15 +108,53 @@
        wrap is a chosen one rather than wherever the viewport happens to fall. */
   .line{
     margin:2.1rem auto 0;
-    /* rem, not ch — the ch unit measures the "0" glyph and ignores letter-spacing, so 46ch
-       collapsed to ~318px and wrapped on desktop too. 42rem holds the line at .26em tracking. */
-    max-width:min(88vw,42rem);
-    font-size:.72rem;font-weight:400;
-    letter-spacing:.26em;text-indent:.26em;text-transform:uppercase;
-    line-height:2.1;text-wrap:balance;
+    /* rem, not ch — the ch unit measures the "0" glyph and ignores letter-spacing, so a
+       ch-based measure collapses far narrower than expected. 34rem at .18em reads as a block. */
+    max-width:min(90vw,34rem);
+    font-size:clamp(.85rem,2.4vw,1.02rem);font-weight:400;
+    letter-spacing:.18em;text-indent:.18em;text-transform:uppercase;
+    line-height:1.95;text-wrap:balance;
     color:var(--ivory-dim);
     opacity:0;animation:fadein 1.8s ease 1.2s forwards;
   }
+
+  /* ---- register / login ---- */
+  .actions{
+    margin-top:2.7rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;
+    opacity:0;animation:fadein 1.8s ease 1.7s forwards;
+  }
+  .act{
+    min-width:11rem;background:transparent;color:var(--ivory);
+    border:1px solid rgba(216,178,76,.45);border-radius:2px;
+    font-family:"Jost",sans-serif;font-weight:400;font-size:.7rem;
+    letter-spacing:.26em;text-transform:uppercase;padding:.95rem 1.7rem;
+    text-decoration:none;cursor:pointer;line-height:1;
+    transition:background .35s ease,color .35s ease,border-color .35s ease;
+  }
+  .act:hover,.act:focus-visible{background:var(--gold);color:var(--ink);border-color:var(--gold);outline:none}
+  .act[aria-expanded="true"]{background:var(--gold);color:var(--ink);border-color:var(--gold)}
+
+  /* The field stays in the DOM so it can animate open and so a keyboard user meets it in
+     reading order, rather than having it appear from nowhere on click. */
+  .signin{max-height:0;overflow:hidden;opacity:0;
+    transition:max-height .45s ease,opacity .35s ease,margin-top .45s ease}
+  .signin.open{max-height:14rem;opacity:1;margin-top:1.4rem}
+  .signin form{display:inline-flex;gap:.6rem;flex-wrap:wrap;justify-content:center}
+  .signin input{
+    background:rgba(255,255,255,.04);border:1px solid rgba(216,178,76,.35);border-radius:2px;
+    color:var(--ivory);font-family:"Jost",sans-serif;font-weight:300;
+    font-size:.8rem;letter-spacing:.06em;padding:.85rem 1rem;width:min(72vw,17rem);
+    outline:none;transition:border-color .35s ease;
+  }
+  .signin input::placeholder{color:var(--ivory-faint);letter-spacing:.14em}
+  .signin input:focus{border-color:rgba(216,178,76,.8)}
+  .signin .go{
+    background:transparent;color:var(--gold);border:1px solid rgba(216,178,76,.45);border-radius:2px;
+    font-family:"Jost",sans-serif;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;
+    padding:.85rem 1.3rem;cursor:pointer;transition:background .35s ease,color .35s ease;
+  }
+  .signin .go:hover,.signin .go:focus-visible{background:var(--gold);color:var(--ink);outline:none}
+  .signin .msg{margin:.9rem auto 0;font-size:.78rem;line-height:1.6;color:var(--gold-bright);max-width:26rem}
 
   .foot{
     position:fixed;bottom:2rem;left:0;right:0;
@@ -145,6 +185,19 @@
   </div>
 
   <p class="line">Nightly rental performance for branded residences around the world</p>
+
+  <div class="actions">
+    <a class="act" href="register.html">Register</a>
+    <button class="act" id="loginBtn" type="button" aria-expanded="false" aria-controls="signin">Login</button>
+  </div>
+
+  <div class="signin" id="signin">
+    <form id="signinForm" autocomplete="on">
+      <input type="email" id="signinEmail" name="email" placeholder="Email" aria-label="Email address" required>
+      <button class="go" type="submit">Send code</button>
+    </form>
+    <p class="msg" id="signinMsg" role="status"></p>
+  </div>
 
 
   <p class="foot">&copy; 2026 Azariya LLC</p>
@@ -220,5 +273,30 @@
 
   </script>
 
+  <script>
+  (function(){
+    var btn = document.getElementById('loginBtn');
+    var box = document.getElementById('signin');
+    var msg = document.getElementById('signinMsg');
+    if (!btn || !box) return;
+
+    btn.addEventListener('click', function(){
+      var open = box.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      if (open) setTimeout(function(){ document.getElementById('signinEmail').focus(); }, 320);
+    });
+
+    /* NO OTP WORKER YET. Say so rather than implying a code is on its way — a sign-in form that
+       silently does nothing is worse than one that admits it is not open. Replace this handler
+       with the POST to the Worker when it exists. */
+    document.getElementById('signinForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      var email = document.getElementById('signinEmail').value.trim();
+      if (!email) return;
+      msg.textContent = 'Sign-in is not open yet. We have noted ' + email + ' and will write when it is.';
+      e.target.querySelector('.go').disabled = true;
+    });
+  })();
+  </script>
 </body>
 </html>
