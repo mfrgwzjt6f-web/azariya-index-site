@@ -332,8 +332,10 @@
     e.preventDefault();
     var email = $('email').value.trim();
     if (!email) return;
-    $('status').textContent = 'Thank you — access opens with the first full year of data in September 2027. '
-      + 'We have noted your interest and will write to ' + email + ' before then.';
+    // No backend yet: say nothing was submitted rather than implying it was captured.
+    $('status').textContent = 'Nothing was submitted \u2014 this form is not connected yet. '
+      + 'Access opens with the first full year of data in September 2027, and registration '
+      + 'opens well before then.';
     $('reg').querySelector('button').disabled = true;
   });
 

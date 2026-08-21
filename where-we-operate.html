@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Where We Operate · Azariya Index</title>
+<meta name="description" content="The 48 branded residences under nightly collection, by brand — and how to request one we do not yet cover.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/nav.css">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="icon" href="/assets/favicon.svg">
+<link rel="alternate icon" href="/assets/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/favicon-180.png">
+<style>
+  /* roster-only styles; everything else comes from site.css */
+  /* columns, not grid: a grid row is as tall as its tallest cell, so a
+     one-residence brand beside a seven-residence one opens a hole */
+  .roster{columns:2;column-gap:3.2rem;margin-top:2.4rem}
+  @media (max-width:760px){ .roster{columns:1} }
+  .brand{break-inside:avoid;margin-bottom:2.6rem}
+  .brand-head{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;
+    border-bottom:1px solid var(--line);padding-bottom:.7rem;margin-bottom:1rem;flex-wrap:wrap}
+  .brand-head h3{margin-bottom:0}
+  .brand-count{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--ivory-faint);white-space:nowrap;font-variant-numeric:tabular-nums}
+  .brand-list{list-style:none;display:flex;flex-direction:column;gap:.6rem}
+  .brand-list li{display:flex;align-items:baseline;justify-content:space-between;gap:.9rem;
+    font-size:.94rem;color:var(--ivory-dim);line-height:1.45}
+  .brand-list .ut{font-size:.72rem;color:var(--ivory-faint);font-variant-numeric:tabular-nums;
+    white-space:nowrap}
+
+  /* the coverage timeline — what is readable when */
+  .phases{display:grid;gap:1.4rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));margin-top:2rem}
+  .phase{border:1px solid var(--line);border-radius:2px;padding:1.6rem 1.5rem;
+    background:rgba(11,11,13,.4);display:flex;flex-direction:column}
+  .phase .when{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--gold);font-weight:500}
+  .phase .what{font-family:"Cormorant Garamond",Georgia,serif;font-size:1.35rem;
+    line-height:1.25;margin:.8rem 0 .9rem}
+  .phase p{font-size:.88rem;color:var(--ivory-dim);line-height:1.6;margin:0}
+
+  /* request form */
+  .req{border:1px solid var(--line);border-radius:2px;background:rgba(216,178,76,.04);
+    padding:clamp(1.6rem,4vw,2.4rem);margin-top:2rem}
+  .req .grid{display:grid;gap:1.3rem;grid-template-columns:1fr 1fr;margin-top:1.6rem}
+  @media (max-width:640px){ .req .grid{grid-template-columns:1fr} }
+  .req label{display:block;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--gold);margin-bottom:.6rem}
+  .req input,.req select,.req textarea{
+    width:100%;background:var(--panel);color:var(--ivory);
+    border:1px solid var(--line);border-radius:2px;
+    font-family:"Jost",sans-serif;font-weight:300;font-size:.92rem;
+    padding:.8rem .9rem;outline:none;transition:border-color .3s ease;
+  }
+  .req textarea{min-height:5.5rem;resize:vertical;line-height:1.55}
+  .req input:focus,.req select:focus,.req textarea:focus{border-color:rgba(216,178,76,.75)}
+  .req select option{background:#14141a;color:var(--ivory)}
+  .req .full{grid-column:1/-1}
+  .req .status{margin-top:1.2rem;font-size:.88rem;line-height:1.6;color:var(--gold-bright);
+    min-height:1.2em;max-width:60ch}
+</style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a class="nav-brand" href="/" aria-label="Azariya Index">
+      <svg viewBox="28.5 24.5 71 81" aria-hidden="true"><path d="M30 104 L64 26 L98 104" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><line x1="46" y1="74" x2="82" y2="74" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><line x1="41" y1="86" x2="87" y2="86" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" opacity="0.75"/><line x1="36" y1="98" x2="92" y2="98" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" opacity="0.5"/></svg><span class="wm">ZARIYA</span><span class="idx">Index</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false"
+            aria-controls="nav-links" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="nav-links">
+      <a href="/owners">For Owners</a>
+      <a href="/buyers-agents">For Buyers and Agents</a>
+      <a href="/managers">For Managers</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="wrap">
+      <span class="eyebrow">Coverage</span>
+      <h1>Where we operate</h1>
+      <p class="lede">Every residence below is checked nightly — every unit type, every night,
+         thirteen months forward. The list grows on request, and the section beneath it explains
+         what happens, and when, once a property is added.</p>
+
+      <section>
+        <div class="figures">
+          <div class="fig"><span class="n">48</span><span class="l">Residences</span></div>
+          <div class="fig"><span class="n">15</span><span class="l">Brands</span></div>
+          <div class="fig"><span class="n">403</span><span class="l">Unit types</span></div>
+          <div class="fig"><span class="n">13</span><span class="l">Forward months</span></div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Under collection</h2>
+        <p class="dim">Alphabetical by brand, then by residence. The figure beside each is the
+           number of distinct unit types we track there.</p>
+        <div class="roster">
+      <div class="brand">
+        <div class="brand-head">
+          <h3>Auberge</h3>
+          <span class="brand-count">7 residences &middot; 73 unit types</span>
+        </div>
+        <ul class="brand-list">
+          <li>Auberge Chileno Bay<span class="ut">24</span></li>
+          <li>Auberge Element 52, Telluride<span class="ut">9</span></li>
+          <li>Auberge Esperanza<span class="ut">12</span></li>
+          <li>Auberge Goldener Hirsch, Deer Valley<span class="ut">13</span></li>
+          <li>Auberge Madeline, Telluride<span class="ut">11</span></li>
+          <li>Auberge Mauna Lani<span class="ut">2</span></li>
+          <li>Auberge Stanly Ranch, Napa<span class="ut">2</span></li>
+        </ul>
+      </div>
+      <div class="brand">
+        <div class="brand-head">
+          <h3>Fairmont Heritage Place</h3>
+          <span class="brand-count">2 residences &middot; 6 unit types</span>
+        </div>
+        <ul class="brand-list">
+          <li>Fairmont Heritage Place Franz Klammer, Telluride<span class="ut">2</span></li>
+          <li>Fairmont Heritage Place Mayakoba<span class="ut">4</span></li>
+        </ul>
+      </div>
+      <div class="brand">
+        <div class="brand-head">
+          <h3>Four Seasons</h3>
+          <span class="brand-count">10 residences &middot; 55 unit types</span>
+        </div>
+        <ul class="brand-list">
+          <li>Four Seasons Anguilla<span class="ut">11</span></li>
+          <li>Four Seasons Aviara<span class="ut">3</span></li>
+          <li>Four Seasons Cabo Del Sol<span class="ut">8</span></li>
+          <li>Four Seasons Jackson Hole<span class="ut">6</span></li>
+          <li>Four Seasons Kyoto<span class="ut">7</span></li>
+          <li>Four Seasons Los Cabos<span class="ut">5</span></li>
+          <li>Four Seasons Papagayo<span class="ut">2</span></li>
+          <li>Four Seasons Puerto Rico<span class="ut">7</span></li>
+          <li>Four Seasons Punta Mita<span class="ut">2</span></li>
+          <li>Four Seasons Whistler<span class="ut">4</span></li>
+        </ul>
+      </div>
+      <div class="brand">
+        <div class="brand-head">
+          <h3>Marriott</h3>
+          <span class="brand-count">3 residences &middot; 18 unit types</span>
+        </div>
+        <ul class="brand-list">
+          <li>Marriott Grand Residence Club Lake Tahoe<span class="ut">2</span></li>
+          <li>Marriott Grand Residences London (47 Park Street)<span class="ut">3</span></li>
+          <li>Marriott Kapalua Bay<span class="ut">13</span></li>
+        </ul>
+      </div>
+      <div class="brand">
+        <div class="brand-head">
+          <h3>Montage</h3>
+          <span class="brand-count">4 residences &middot; 58 unit types</span>
+        </div>
+        <ul class="brand-list">
+          <li>Montage Big Sky<span class="ut">33</span></li>
+          <li>Montage Deer Valley<span class="ut">11</span></li>
+          <li>Montage Healdsburg<span class="ut">2</span></li>
+          <li>Montage Los Cabos<span class="ut">12</span></li>
+        </ul>
+      </div>
+      <div class="brand">
+        <div class="brand-head">
+          <h3>Nobu</h3>
+          <span class="brand-count">1 residence &middot; 5 unit types</span>
+        </div>
+        <ul class="brand-list">
+          <li>Nobu Los Cabos<span class="ut">5</span></li>
+        </ul>
+      </div>
+      <div class="brand">
+        <div class="brand-head">
+          <h3>Pendry</h3>
+          <span class="brand-count">1 residence &middot; 47 unit types</span>
+        </div>
+        <ul class="brand-list">
+          <li>Pendry Park City<span class="ut">47</span></li>
+        </ul>
+      </div>
+      <div class="brand">
+        <div class="brand-head">
+          <h3>Ritz-Carlton</h3>
+          <span class="brand-count">7 residences &middot; 29 unit types</span>
+        </div>
+        <ul class="brand-list">
+          <li>Ritz-Carlton Bachelor Gulch<span class="ut">4</span></li>
+          <li>Ritz-Carlton Club Lake Tahoe<span class="ut">3</span></li>
+          <li>Ritz-Carlton Club Vail<span class="ut">2</span></li>
+          <li>Ritz-Carlton Kapalua<span class="ut">2</span></li>
+          <li>Ritz-Carlton Orlando Grande Lakes<span class="ut">2</span></li>
+          <li>Ritz-Carlton Residences Waikiki<span class="ut">13</span></li>
+          <li>Ritz-Carlton Turks &amp; Caicos<span class="ut">3</span></li>
+        </ul>
+      </div>
+      <div class="brand">
+        <div class="brand-head">
+          <h3>Six Senses</h3>
+          <span class="brand-count">3 residences &middot; 22 unit types</span>
+        </div>
+        <ul class="brand-list">
+          <li>Six Senses Con Dao<span class="ut">4</span></li>
+          <li>Six Senses Courchevel<span class="ut">10</span></li>
+          <li>Six Senses Fiji<span class="ut">8</span></li>
+        </ul>
+      </div>
+      <div class="brand">
+        <div class="brand-head">
+          <h3>St. Regis</h3>
+          <span class="brand-count">2 residences &middot; 5 unit types</span>
+        </div>
+        <ul class="brand-list">
+          <li>St. Regis Residence Club Aspen<span class="ut">2</span></li>
+          <li>St. Regis Residence Club New York/5th &amp; 55th<span class="ut">3</span></li>
+        </ul>
+      </div>
+      <div class="brand">
+        <div class="brand-head">
+          <h3>Stein Eriksen</h3>
+          <span class="brand-count">1 residence &middot; 24 unit types</span>
+        </div>
+        <ul class="brand-list">
+          <li>Stein Eriksen Deer Valley<span class="ut">24</span></li>
+        </ul>
+      </div>
+      <div class="brand">
+        <div class="brand-head">
+          <h3>The Little Nell</h3>
+          <span class="brand-count">1 residence &middot; 3 unit types</span>
+        </div>
+        <ul class="brand-list">
+          <li>The Little Nell Aspen<span class="ut">3</span></li>
+        </ul>
+      </div>
+      <div class="brand">
+        <div class="brand-head">
+          <h3>The Luxury Collection</h3>
+          <span class="brand-count">1 residence &middot; 2 unit types</span>
+        </div>
+        <ul class="brand-list">
+          <li>Luxury Collection The Phoenician, Scottsdale<span class="ut">2</span></li>
+        </ul>
+      </div>
+      <div class="brand">
+        <div class="brand-head">
+          <h3>Timbers</h3>
+          <span class="brand-count">4 residences &middot; 25 unit types</span>
+        </div>
+        <ul class="brand-list">
+          <li>Timbers Jupiter<span class="ut">2</span></li>
+          <li>Timbers Kaua'i (Hokuala)<span class="ut">14</span></li>
+          <li>Timbers The Orchard at Carneros, Napa<span class="ut">1</span></li>
+          <li>Timbers The Sebastian, Vail<span class="ut">8</span></li>
+        </ul>
+      </div>
+      <div class="brand">
+        <div class="brand-head">
+          <h3>Viceroy</h3>
+          <span class="brand-count">1 residence &middot; 31 unit types</span>
+        </div>
+        <ul class="brand-list">
+          <li>Viceroy Snowmass<span class="ut">31</span></li>
+        </ul>
+      </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Do not see yours?</h2>
+        <p class="dim">We add properties on request. Adding one is not instant and it is not
+           slow either — it is worth being precise about which parts of the subscription are
+           readable straight away and which have to be earned by watching.</p>
+
+        <div class="phases">
+          <div class="phase">
+            <span class="when">First collection</span>
+            <span class="what">The forward picture</span>
+            <p>The nightly ask for every unit type, thirteen months out; which nights are already
+               sold out; and the minimum-stay regime. All three are readable in the very first
+               night's collection, so a newly added property is useful immediately.</p>
+          </div>
+          <div class="phase">
+            <span class="when">Within weeks</span>
+            <span class="what">Movement</span>
+            <p>Rate changes and confirmed bookings — units we watch go from available to gone.
+               We cannot show that a price moved until we have watched it move, so this fills in
+               over the first weeks rather than appearing at once.</p>
+          </div>
+          <div class="phase">
+            <span class="when">After twelve months</span>
+            <span class="what">Outcomes</span>
+            <p>Booking probability, realised rates, and year-over-year comparison. These need the
+               same calendar night observed in two different years, so for a property added today
+               they arrive a year from today. There is no way to shorten this.</p>
+          </div>
+        </div>
+
+        <p class="note" style="margin-top:2rem">Put plainly: a property added today gives you the
+           comparison set <strong>tonight</strong>, price movement <strong>within weeks</strong>,
+           and the full outcome picture <strong>in twelve months</strong>. We would rather tell you
+           that now than have you discover it after subscribing.</p>
+
+        <div class="req">
+          <h3 style="margin-bottom:.4rem">Request coverage</h3>
+          <p class="dim" style="font-size:.92rem">Tell us the residence and we will tell you
+             whether it can be collected and when we would start. The form is not connected yet
+             &mdash; it opens alongside subscriptions.</p>
+          <form id="cov" autocomplete="off">
+            <div class="grid">
+              <div class="full">
+                <label for="cov-prop">Residence</label>
+                <input type="text" id="cov-prop" name="property" required
+                       placeholder="Property name, and city or region">
+              </div>
+              <div>
+                <label for="cov-role">You are</label>
+                <select id="cov-role" name="role" required>
+                  <option value="">Select one</option>
+                  <option value="owner">An owner</option>
+                  <option value="buyer">A buyer</option>
+                  <option value="manager">A property manager</option>
+                  <option value="agent">A real-estate agent</option>
+                  <option value="other">Something else</option>
+                </select>
+              </div>
+              <div>
+                <label for="cov-email">Email</label>
+                <input type="email" id="cov-email" name="email" required placeholder="you@example.com">
+              </div>
+              <div class="full">
+                <label for="cov-note">Anything else</label>
+                <textarea id="cov-note" name="note"
+                          placeholder="Unit type, how many units, whether it rents through the hotel — anything that helps us find it."></textarea>
+              </div>
+            </div>
+            <button class="btn" type="submit" style="margin-top:1.6rem">Request coverage</button>
+            <p class="status" id="cov-status" role="status"></p>
+          </form>
+        </div>
+      </section>
+
+      <div class="cta">
+        <h2>Join the partner phase</h2>
+        <p>Subscriptions opening ahead of the September 2027 full-value release. Partner
+           rates are locked for two years, and partner feedback shapes what gets built.</p>
+        <a class="btn" href="/register">Request access</a>
+      </div>
+
+      <div class="foot">
+        <span>&copy; 2026 Azariya LLC</span>
+        <span><a href="/">Home</a></span>
+      </div>
+    </div>
+  </main>
+
+  <script src="/assets/site.js"></script>
+  <script>
+  (function () {
+    /* No backend yet. Say so rather than showing a success state that did not happen. */
+    var f = document.getElementById('cov');
+    f.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var prop = document.getElementById('cov-prop').value.trim();
+      var mail = document.getElementById('cov-email').value.trim();
+      if (!prop || !mail) return;
+      document.getElementById('cov-status').textContent =
+        'Nothing was sent \u2014 this form is not connected yet. Coverage requests open ' +
+        'alongside subscriptions, and \u201c' + prop + '\u201d is exactly the kind of ' +
+        'request we want. Please check back.';
+      f.querySelector('button[type=submit]').disabled = true;
+    });
+  })();
+  </script>
+</body>
+</html>

@@ -310,7 +310,8 @@
       e.preventDefault();
       var email = document.getElementById('signinEmail').value.trim();
       if (!email) return;
-      msg.textContent = 'Sign-in is not open yet. We have noted ' + email + ' and will write when it is.';
+      // No backend: do not claim the address was stored, because it was not.
+      msg.textContent = 'Sign-in is not open yet, and this form is not connected \u2014 nothing was sent.';
       e.target.querySelector('.go').disabled = true;
     });
   })();
