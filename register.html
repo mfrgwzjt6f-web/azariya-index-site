@@ -247,7 +247,7 @@
       <select id="cover">
         <option value="w">Weeks</option>
         <option value="m">Months</option>
-        <option value="y" selected>Full year — all 13 forward months</option>
+        <option value="y" selected>Full year</option>
       </select>
       <p class="hint" id="cover-hint"></p>
     </fieldset>
@@ -332,7 +332,10 @@
   var LEN   = { w:7,  m:30 };          /* days a chosen period covers */
   var MAXN  = { w:52, m:12 };          /* beyond these the full year is always cheaper */
   var NOUN  = { w:'week', m:'month' };
-  var WINDOW_MONTHS = 13;              /* the forward window we actually collect */
+  /* How far ahead we are collecting TODAY. This is an advisory horizon, not a bound:
+     the calendar runs indefinitely forward, because a week in 2029 is a legitimate
+     thing to hold — it enters collection as the window rolls toward it. */
+  var HORIZON_MONTHS = 13;
 
   var $ = function(id){ return document.getElementById(id); };
   var props = [], brands = [];
@@ -345,7 +348,7 @@
   function sameDay(a,b){ return key(a)===key(b); }
 
   var TODAY   = day(new Date());
-  var WIN_END = addDays(new Date(TODAY.getFullYear(), TODAY.getMonth()+WINDOW_MONTHS, TODAY.getDate()), -1);
+  var HORIZON = addDays(new Date(TODAY.getFullYear(), TODAY.getMonth()+HORIZON_MONTHS, TODAY.getDate()), -1);
 
   var mode  = 'y';   /* 'w' weeks | 'm' months | 'y' full year */
   var count = 1;
@@ -390,8 +393,8 @@
 
   /* ── periods ───────────────────────────────────────────────────────────── */
   function periodEnd(start){ return addDays(start, LEN[mode]-1); }
-  function inWindow(d){ return d >= TODAY && d <= WIN_END; }
-  function fits(start){ return inWindow(start) && periodEnd(start) <= WIN_END; }
+  function fits(start){ return start >= TODAY; }   /* forward is unbounded */
+  function beyondHorizon(start){ return periodEnd(start) > HORIZON; }
 
   function coveringPick(d){
     for (var i=0;i<picks.length;i++){
@@ -417,10 +420,9 @@
     $('cal-title').textContent = MONTHS[viewM] + ' ' + viewY;
 
     var minM = TODAY.getFullYear()*12 + TODAY.getMonth();
-    var maxM = WIN_END.getFullYear()*12 + WIN_END.getMonth();
     var curM = viewY*12 + viewM;
-    $('cal-prev').disabled = curM <= minM;
-    $('cal-next').disabled = curM >= maxM;
+    $('cal-prev').disabled = curM <= minM;   /* nothing to buy in the past */
+    $('cal-next').disabled = false;          /* forward runs as far as anyone wants */
 
     var html = '';
     for (var i=0;i<lead;i++) html += '<button type="button" class="pad" tabindex="-1" disabled></button>';
@@ -450,10 +452,20 @@
            + '<button type="button" data-rm="'+i+'" aria-label="Remove this '+NOUN[mode]+'">×</button></div>';
     }).join('');
 
-    $('cal-hint').textContent = picks.length >= count
-      ? 'That is all ' + count + '. Remove one, or raise the count above, to choose a different date.'
-      : 'Click a date to take the ' + LEN[mode] + ' days from it. Periods cannot overlap, and must '
-        + 'finish inside the ' + WINDOW_MONTHS + '-month window (to ' + fmt(WIN_END) + ').';
+    var far = picks.filter(beyondHorizon).length;
+    var done = picks.length >= count;
+    $('cal-hint').textContent = (done
+      ? (count === 1
+          ? 'That is your ' + NOUN[mode] + '. Remove it, or raise the count above, to choose another date.'
+          : 'That is all ' + count + '. Remove one, or raise the count above, to choose another date.')
+      : 'Click a date to take the ' + LEN[mode] + ' days from it. Periods cannot overlap. '
+        + 'Choose any date from today onward \u2014 there is no limit on how far ahead.')
+      + (far
+          ? ' We are collecting to ' + fmt(HORIZON) + ' so far, so '
+            + (far > 1
+                ? 'those later ' + NOUN[mode] + 's fill in as the calendar rolls toward them.'
+                : 'that later ' + NOUN[mode] + ' fills in as the calendar rolls toward it.')
+          : '');
   }
 
   $('cal-grid').addEventListener('click', function(e){
@@ -504,7 +516,7 @@
     $('f-cal').classList.toggle('hidden', !timed);
     $('cover-hint').textContent = timed
       ? 'Your ' + NOUN[mode] + 's float — you pick which, and you can move them each year as your weeks move.'
-      : 'All 13 forward months, updated nightly.';
+      : 'The whole calendar year ahead, updated nightly.';
     if (timed) {
       $('count-legend').textContent = 'How many ' + NOUN[mode] + 's';
       $('cal-legend').textContent = 'Choose your ' + NOUN[mode] + (count>1?'s':'');
