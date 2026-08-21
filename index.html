@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Azariya LLC</title>
+<meta name="description" content="Azariya LLC">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="assets/favicon.svg">
+<link rel="alternate icon" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/favicon-180.png">
+<style>
+  :root{
+    --ink:#0b0b0d; --ivory:#eae5da; --ivory-dim:rgba(234,229,218,.62);
+    --ivory-faint:rgba(234,229,218,.38); --gold:#d8b24c; --gold-bright:#ecc85f;
+    /* one shared clock: the light descends the rule, then sweeps the text */
+    --cycle:5.2s;
+    --start:1.6s;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    background:radial-gradient(120% 90% at 50% 10%, #14141a 0%, var(--ink) 70%);
+    color:var(--ivory);
+    font-family:"Jost",sans-serif;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;padding:2rem;
+    -webkit-font-smoothing:antialiased;
+    position:relative;overflow:hidden;
+  }
+
+  /* ---- cinematic background: one of nine clips, graded dark + saturated ---- */
+  .bg{position:fixed;inset:0;z-index:-3;overflow:hidden;background:var(--ink)}
+  .bg video{
+    position:absolute;top:50%;left:50%;
+    min-width:100%;min-height:100%;width:auto;height:auto;
+    transform:translate(-50%,-50%) scale(1.02);
+    object-fit:cover;
+    opacity:0;transition:opacity 1.7s ease;
+    animation:drift 46s ease-in-out infinite alternate;
+  }
+  .bg video.on{opacity:1}
+  @keyframes drift{
+    from{transform:translate(-50%,-50%) scale(1.02)}
+    to{transform:translate(-50%,-50%) scale(1.09)}
+  }
+  /* grade layers: darken + cool so the gold owns the frame */
+  .scrim{position:fixed;inset:0;z-index:-2;
+    background:linear-gradient(to bottom, rgba(11,11,13,.62), rgba(11,11,13,.5) 45%, rgba(11,11,13,.72));}
+  .vig{position:fixed;inset:0;z-index:-1;
+    background:radial-gradient(115% 90% at 50% 42%, transparent 42%, rgba(5,5,7,.78) 100%);}
+
+  @media (prefers-reduced-motion: reduce){
+    .bg{display:none}
+  }
+
+  /* hairline rule — light descends during the first quarter of the cycle */
+  .rule{
+    width:1px;height:64px;position:relative;overflow:hidden;
+    background:linear-gradient(to bottom, transparent, rgba(216,178,76,.45));
+    opacity:0;animation:fadein 1.6s ease .2s forwards;
+  }
+  .rule::after{
+    content:"";position:absolute;left:0;width:100%;height:42%;top:-45%;
+    background:linear-gradient(to bottom, transparent, var(--gold-bright));
+    animation:descend var(--cycle) linear var(--start) infinite;
+  }
+  /* 0–25% of the cycle: travel down; then hold out of view */
+  @keyframes descend{
+    0%{top:-45%;opacity:1}
+    34%{top:105%;opacity:1}
+    35%,100%{top:105%;opacity:0}
+  }
+
+  .brand{
+    margin-top:2.4rem;
+    display:inline-flex;align-items:baseline;white-space:nowrap;
+    font-family:"Cormorant Garamond",serif;font-weight:500;
+    font-size:clamp(2.6rem, 9vw, 4.6rem);line-height:1;color:var(--ivory);
+    opacity:0;animation:risein 1.8s cubic-bezier(.22,1,.36,1) .5s forwards;
+  }
+  .brand svg{height:.66em;width:auto;vertical-align:baseline;margin-right:.055em;color:var(--gold)}
+  /* .0571em, not .09 — derived by measuring the original lockup raster (ZARIYA ink width /
+     cap height = 6.157) against Cormorant Garamond's own cap ratio of .625. The site had been
+     tracking wider than the logo files; see Branding/Logo/_Azariya Index lockup spec.txt */
+  .brand .wm{letter-spacing:.0571em}
+  /* INDEX at the SAME CAP HEIGHT as the wordmark. Cormorant's capital fills .625 of its em and
+     Jost's fills .700, so Jost must be set SMALLER — .625/.700 = .8929 — for the tops to align.
+     Weight 300 because a uniform-stroke sans reads heavier than Cormorant at equal height. */
+  .brand .idx{
+    font-family:"Jost",sans-serif;font-weight:300;
+    font-size:.8929em;letter-spacing:.16em;
+    /* ALL CAPS — the .8929 ratio matches Jost's CAP height to Cormorant's. Title case would put
+       lowercase x-height beside the wordmark's capitals and the alignment logic no longer holds. */
+    text-transform:uppercase;
+    margin-left:.20em;margin-right:-.16em;
+    color:var(--gold);
+  }
+
+  /* The travelling light now lives only on the hairline (.rule::after / @keyframes descend).
+     The descriptor is a plain static line — .5em tracking suited "Coveted the World Over" at 22
+     characters; at 66 it needs to come in and sit inside a measure so the wrap is chosen, not
+     accidental. */
+  .line{
+    margin:2.1rem auto 0;
+    /* rem, not ch — the ch unit measures the "0" glyph and ignores letter-spacing, so 46ch
+       collapsed to ~318px and wrapped on desktop too. 42rem holds the line at .26em tracking. */
+    max-width:min(88vw,42rem);
+    font-size:.72rem;font-weight:400;
+    letter-spacing:.26em;text-indent:.26em;text-transform:uppercase;
+    line-height:2.1;text-wrap:balance;
+    color:var(--ivory-dim);
+    opacity:0;animation:fadein 1.8s ease 1.2s forwards;
+  }
+
+  .foot{
+    position:fixed;bottom:2rem;left:0;right:0;
+    font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--ivory-faint);
+    opacity:0;animation:fadein 1.8s ease 1.8s forwards;
+  }
+
+  @keyframes fadein{to{opacity:1}}
+  @keyframes risein{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+
+  @media (prefers-reduced-motion: reduce){
+    .rule,.brand,.line,.foot{animation:none;opacity:1}
+    .rule::after{animation:none;opacity:0}
+  }
+</style>
+</head>
+<body>
+
+  <div class="bg" aria-hidden="true"></div>
+  <div class="scrim" aria-hidden="true"></div>
+  <div class="vig" aria-hidden="true"></div>
+
+  <div class="rule"></div>
+
+  <div class="brand" aria-label="Azariya Index">
+    <svg viewBox="28.5 24.5 71 81" aria-hidden="true"><path d="M30 104 L64 26 L98 104" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><line x1="46" y1="74" x2="82" y2="74" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><line x1="41" y1="86" x2="87" y2="86" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" opacity="0.75"/><line x1="36" y1="98" x2="92" y2="98" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" opacity="0.5"/></svg><span class="wm">ZARIYA</span><span class="idx">Index</span>
+  </div>
+
+  <p class="line">Nightly rental performance for branded residences around the world</p>
+
+
+  <p class="foot">&copy; 2026 Azariya LLC</p>
+
+  <script>
+  // ---- background rotator: pick one clip at random; graded via CSS filter ----
+  (function(){
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    // grade = CSS filter applied to the video; tweak per clip if one misbehaves
+    var G = 'saturate(1.35) contrast(1.07) brightness(0.7)';
+    // Clips are pre-processed: slowed to 0.4x with motion interpolation baked in,
+    // self-hosted in /media. Play at normal rate — slowness is in the file.
+    var CLIPS = [
+      {src:'media/az01-bali-temple.mp4',      grade:G},
+      {src:'media/az02-overwater-villas.mp4', grade:G},
+      {src:'media/az03-murano.mp4',           grade:G},
+      {src:'media/az04-hallstatt.mp4',        grade:G},
+      {src:'media/az05-sunrise-beach.mp4',    grade:'saturate(1.3) contrast(1.06) brightness(0.66) hue-rotate(-6deg)'},
+      {src:'media/az06-lantern-street.mp4',   grade:'saturate(1.25) contrast(1.08) brightness(0.62)'},
+      {src:'media/az07-machu-picchu.mp4',     grade:G},
+      {src:'media/az08-weilburg-gardens.mp4', grade:G},
+      {src:'media/az09-durham-cathedral.mp4', grade:'saturate(1.2) contrast(1.08) brightness(0.68)'}
+    ];
+    var bg = document.querySelector('.bg');
+    // Clips no longer loop individually: each plays once, fades to ink, and the
+    // NEXT clip fades in — an endless chain through the whole collection.
+    // Order is shuffled fresh on every page load (Fisher–Yates).
+    var order = CLIPS.slice();
+    for (var s = order.length - 1; s > 0; s--) {
+      var j = Math.floor(Math.random() * (s + 1));
+      var t = order[s]; order[s] = order[j]; order[j] = t;
+    }
+
+    var FADE_MS = 1700;    // matches the CSS opacity transition
+    var HOLD_MS = 450;     // beat of pure ink between clips
+    var idx = 0, fails = 0;
+
+    function playNext(){
+      if (fails >= order.length) return;         // every clip failed: quiet ink remains
+      var c = order[idx % order.length]; idx++;
+      var v = document.createElement('video');
+      v.muted = true; v.autoplay = true;         // no loop: 'ended' hands off to the next
+      v.setAttribute('playsinline','');
+      v.style.filter = c.grade;
+      v.src = c.src;
+      var handed = false;
+      function handoff(){
+        if (handed) return; handed = true;
+        v.classList.remove('on');                // fade to ink
+        setTimeout(function(){
+          v.remove();
+          playNext();                            // next clip fades in after a beat
+        }, FADE_MS + HOLD_MS);
+      }
+      v.addEventListener('error', function(){
+        fails++; if (handed) return; handed = true;
+        v.remove(); playNext();
+      });
+      v.addEventListener('canplay', function(){
+        fails = 0;
+        v.classList.add('on');
+      });
+      // begin the fade so it completes right as the clip ends
+      v.addEventListener('timeupdate', function(){
+        if (v.duration && (v.duration - v.currentTime) * 1000 <= FADE_MS) handoff();
+      });
+      v.addEventListener('ended', handoff);      // backstop
+      bg.appendChild(v);
+      var p = v.play(); if (p && p.catch) p.catch(function(){});
+    }
+    playNext();
+  })();
+
+  </script>
+
+</body>
+</html>
