@@ -327,7 +327,7 @@
      calls that out explicitly — "monotonic upgrades, no path where narrow+deep costs
      more than broad+shallow" — so the cap enforces it rather than trusting the options. */
   var PRICE = { WEEK:49, MONTH:200, YEAR:1100, MANAGER:{2:7500,6:12000,16:18000}, AGENT:3500 };
-  var LEN   = { w:7,  m:30 };          /* days a chosen period covers */
+  var LEN   = { w:7,  m:30 };          /* a week is 7 nights; a month is CALENDAR, see periodEnd */
   var MAXN  = { w:52, m:12 };          /* beyond these the full year is always cheaper */
   var NOUN  = { w:'week', m:'month' };
   /* How far ahead we are collecting TODAY. This is an advisory horizon, not a bound:
@@ -390,7 +390,19 @@
   }
 
   /* ── periods ───────────────────────────────────────────────────────────── */
-  function periodEnd(start){ return addDays(start, LEN[mode]-1); }
+  /* A MONTH IS A CALENDAR MONTH, NOT 30 DAYS (23 Aug 2026). Picking 1 February used to buy
+     1 Feb – 2 Mar, which is not what anyone means by "February", and picking 1 March bought
+     30 of its 31 nights. So: a month that STARTS on the 1st runs to the last day of that
+     month, whatever its length — 28, 29, 30 or 31 nights, all for the same $200. Starting
+     mid-month still gives 30 nights, because "a month from the 12th" has no calendar answer. */
+  function periodEnd(start){
+    if (mode === 'm' && start.getDate() === 1)
+      return new Date(start.getFullYear(), start.getMonth() + 1, 0);   // day 0 = last of this month
+    return addDays(start, LEN[mode]-1);
+  }
+  function periodNights(start){
+    return Math.round((periodEnd(start) - start) / 864e5) + 1;
+  }
   function fits(start){ return start >= TODAY; }   /* forward is unbounded */
   function beyondHorizon(start){ return periodEnd(start) > HORIZON; }
 
@@ -446,7 +458,8 @@
       NOUN[mode] + (count>1?'s':'') + ' chosen';
 
     $('cal-chosen').innerHTML = picks.map(function(p,i){
-      return '<div class="row"><span>'+fmt(p)+' → '+fmt(periodEnd(p))+'</span>'
+      return '<div class="row"><span>'+fmt(p)+' → '+fmt(periodEnd(p))+
+           '<span style="color:var(--ivory-faint);font-size:.78rem"> · '+periodNights(p)+' nights</span></span>'
            + '<button type="button" data-rm="'+i+'" aria-label="Remove this '+NOUN[mode]+'">×</button></div>';
     }).join('');
 
@@ -456,7 +469,10 @@
       ? (count === 1
           ? 'That is your ' + NOUN[mode] + '. Remove it, or raise the count above, to choose another date.'
           : 'That is all ' + count + '. Remove one, or raise the count above, to choose another date.')
-      : 'Click a date to take the ' + LEN[mode] + ' days from it. Periods cannot overlap. '
+      : (mode === 'm'
+          ? 'Click the 1st of a month to take that whole calendar month, however many nights it has. '
+            + 'Any other date takes the 30 days from it. Periods cannot overlap. '
+          : 'Click a date to take the 7 nights from it. Periods cannot overlap. ')
         + 'Choose any date from today onward \u2014 there is no limit on how far ahead.')
       + (far
           ? ' We are collecting to ' + fmt(HORIZON) + ' so far, so '
