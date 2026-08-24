@@ -8,7 +8,7 @@
 .nav :focus-visible{outline:1px solid var(--nav-gold);outline-offset:3px}
 
 .nav{
-  --nav-h:4.6rem;
+  --nav-h:3.1rem;
   --nav-ivory:#eae5da;
   --nav-dim:rgba(234,229,218,.66);
   --nav-gold:#d8b24c;
@@ -24,25 +24,18 @@
   padding:0 clamp(1.2rem,4vw,2.6rem);
   /* content scrolls under this, so the bar has to carry enough ground that
      page text never reads through the links */
-  background:linear-gradient(to bottom, rgba(11,11,13,.95), rgba(11,11,13,.88) 62%, rgba(11,11,13,.35) 88%, transparent);
-  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  /* Solid, not a fade. The gradient existed so page text would not read through a translucent
+     bar; a solid ground does that better and needs no blur, which also drops a compositing
+     layer on every scroll. Height is now sized to the links rather than three times them. */
+  background:#000;
 }
-.nav-brand{
-  display:inline-flex;align-items:baseline;gap:.42rem;
-  text-decoration:none;color:var(--nav-ivory);line-height:1;
-}
-.nav-brand svg{width:.78em;height:.9em;color:var(--nav-gold);align-self:center;
-  position:relative;top:.02em;overflow:visible}
-.nav-brand .wm{
-  font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;
-  font-size:1.16rem;letter-spacing:.10em;
-}
-.nav-brand .idx{
-  font-family:"Jost",sans-serif;font-weight:300;color:var(--nav-gold);
-  font-size:1.16rem;letter-spacing:.12em;text-transform:uppercase;
-  /* Jost's cap height runs short of Cormorant's; scale to match the A */
-  transform:scale(.893);transform-origin:left baseline;
-}
+/* PRODUCTION LOCKUP, one image. This was three independently-scaled parts — the A as strokes,
+   ZARIYA as Cormorant text, INDEX as Jost text with a hand-tuned .893 transform to reconcile the
+   cap heights. It looked right only at the size it was tuned at. The real file is true outlines
+   with that already resolved, so it cannot drift. Source: Branding/Logo/lockup-index-on-dark.svg */
+.nav-brand{display:block;flex-shrink:0;text-decoration:none;line-height:0}
+.nav-brand svg{height:19px;width:auto;display:block}
+@media(max-width:800px){ .nav-brand svg{height:16px} }
 
 .nav-links{display:flex;align-items:center;gap:clamp(1.1rem,2.6vw,2.2rem)}
 .nav-links a{
