@@ -1,0 +1,29 @@
+# Cloudflare Pages cache policy.
+#
+# The default for /assets/* was `max-age=14400` — four hours during which a browser will not
+# even ask whether the stylesheet changed. That is why a deploy could land, serve the correct
+# file to a cold fetch, and still show the previous bar to anyone who had loaded the site
+# earlier in the day. The HTML was never the problem; it already revalidates every request.
+#
+# CSS and JS now revalidate too. That is not "no caching" — the browser keeps its copy and
+# sends an If-None-Match, and Cloudflare answers 304 with no body when nothing changed. The
+# cost is one conditional request per file per load; the benefit is that a deploy is visible
+# the moment it finishes, with no hard-reload and no version-stamped filenames to remember to
+# bump.
+
+/assets/*.css
+  Cache-Control: public, max-age=0, must-revalidate
+
+/assets/*.js
+  Cache-Control: public, max-age=0, must-revalidate
+
+/assets/inventory.json
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Fonts and logo art are content-stable: the files only change if the brand changes, and then
+# they change name. These keep the long immutable cache so the 113KB of woff2 is fetched once.
+/assets/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/logo/*
+  Cache-Control: public, max-age=31536000, immutable
