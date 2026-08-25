@@ -121,14 +121,54 @@ section > p,.cta p{max-width:74ch}
   display:flex;flex-direction:column;background:rgba(11,11,13,.4);
   /* the card is a link: strip the anchor defaults and let it react as a control */
   text-decoration:none;color:inherit;cursor:pointer;
-  transition:transform .35s cubic-bezier(.22,1,.36,1),border-color .35s ease,box-shadow .35s ease;
+  transition:transform .5s cubic-bezier(.34,1.42,.5,1),border-color .4s ease,box-shadow .45s ease;
 }
+/* A 3px nudge on a card this large was barely perceptible. The card now lifts properly and
+   scales a touch, a gold rule wipes across the top edge, and the price brightens — three
+   things moving together, on a spring easing so it arrives rather than slides. :active presses
+   it back down, which is what makes it read as a button rather than a decorated panel. */
+a.tier{position:relative;overflow:hidden;will-change:transform}
+a.tier::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,var(--gold),var(--gold-bright));
+  transform:scaleX(0);transform-origin:left;
+  transition:transform .5s cubic-bezier(.22,1,.36,1);
+}
+a.tier:hover::before,a.tier:focus-visible::before{transform:scaleX(1)}
+a.tier .price{transition:color .4s ease}
 a.tier:hover,a.tier:focus-visible{
-  transform:translateY(-3px);
-  border-color:var(--gold);
-  box-shadow:0 10px 34px rgba(0,0,0,.45);
+  transform:translateY(-10px) scale(1.018);
+  border-color:var(--gold-bright);
+  box-shadow:0 22px 55px rgba(0,0,0,.62), 0 0 0 1px rgba(216,178,76,.30);
+  z-index:1;
 }
-@media (prefers-reduced-motion:reduce){ a.tier:hover,a.tier:focus-visible{transform:none} }
+a.tier:hover .price,a.tier:focus-visible .price{color:var(--gold-bright)}
+
+/* A gold rule on a gold card is invisible, so the accent climbs as the ground does: gold on
+   the black step, bright gold on the middle one, ivory on the top one — each highlight picked
+   to contrast with what it sits on rather than with the page. The ground brightens on hover
+   too, so every card gains the same amount of light even though no two start alike. */
+a.tier:hover,a.tier:focus-visible{background:rgba(216,178,76,.09)}
+
+a.tier.t2::before{background:linear-gradient(90deg,var(--gold-bright),#f7e6b4)}
+a.tier.t2:hover,a.tier.t2:focus-visible{
+  background:rgba(216,178,76,.26);border-color:#f7e6b4;
+  box-shadow:0 22px 55px rgba(0,0,0,.62), 0 0 0 1px rgba(247,230,180,.40);
+}
+
+a.tier.t3::before{background:linear-gradient(90deg,#f7e6b4,var(--ivory))}
+a.tier.t3:hover,a.tier.t3:focus-visible{
+  background:rgba(216,178,76,.46);border-color:var(--ivory);
+  box-shadow:0 22px 55px rgba(0,0,0,.62), 0 0 0 1px rgba(234,229,218,.45);
+}
+a.tier.t3:hover .price,a.tier.t3:focus-visible .price{color:#fffaf0}
+a.tier:active{transform:translateY(-3px) scale(1.004);transition-duration:.09s}
+
+@media (prefers-reduced-motion:reduce){
+  a.tier,a.tier::before,a.tier .price{transition:none}
+  a.tier:hover,a.tier:focus-visible,a.tier:active{transform:none}
+  a.tier:hover::before,a.tier:focus-visible::before{transform:scaleX(1)}
+}
 /* THREE STEPS, NOT TWO (24 Aug 2026). The ladder is the argument: a week is a look, a month
    is a commitment, the year is the product. Ground and border warm together so the eye reads
    the sequence before it reads the prices. Text stays ivory throughout — the tint sits under
