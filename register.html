@@ -6,8 +6,8 @@
 <title>Register — Azariya Index</title>
 <meta name="description" content="Request access to nightly rental performance for branded residences around the world.">
 <meta name="robots" content="noindex">
-<link rel="stylesheet" href="/assets/fonts.css?v=12">
-<link rel="stylesheet" href="/assets/nav.css?v=12">
+<link rel="stylesheet" href="/assets/fonts.css?v=13">
+<link rel="stylesheet" href="/assets/nav.css?v=13">
 <link rel="icon" href="assets/favicon.svg">
 <link rel="alternate icon" href="assets/favicon-32.png">
 <style>
@@ -318,13 +318,17 @@
      without the cap a six-month buyer pays more than a full-year buyer. The tier plan
      calls that out explicitly — "monotonic upgrades, no path where narrow+deep costs
      more than broad+shallow" — so the cap enforces it rather than trusting the options. */
-  /* ── PRICING ─────────────────────────────────────────────────────────────────
-     One place. These mirror _Market & Pricing Notes.md and the tier plan.
-     YEAR is a CAP, not a sum: 12 x MONTH would be $2,400 against a $1,100 year, so
-     without the cap a six-month buyer pays more than a full-year buyer. The tier plan
-     calls that out explicitly — "monotonic upgrades, no path where narrow+deep costs
-     more than broad+shallow" — so the cap enforces it rather than trusting the options. */
-  var PRICE = { WEEK:49, MONTH:200, YEAR:1100, MANAGER:{2:7500,6:12000,16:18000}, AGENT:3500 };
+    /* TWO SCHEDULES. LIST is the September 2027 go-forward price; PARTNER is the introductory
+       rate, and it is reached only through the Request Partner Access button, which appends
+       ?partner=1. That is presentation, not enforcement — there is no backend to enforce
+       against yet — but it keeps the published tiers and this page telling the same story. */
+    var LIST    = { WEEK:99, MONTH:349, YEAR:2999 };
+    var PARTNER = { WEEK:49, MONTH:200, YEAR:1100 };
+    var isPartner = new URLSearchParams(location.search).get('partner') === '1';
+    var PRICE = { MANAGER:{2:7500,6:12000,16:18000}, AGENT:3500 };
+    PRICE.WEEK  = (isPartner ? PARTNER : LIST).WEEK;
+    PRICE.MONTH = (isPartner ? PARTNER : LIST).MONTH;
+    PRICE.YEAR  = (isPartner ? PARTNER : LIST).YEAR;
   var LEN   = { w:7,  m:30 };          /* a week is 7 nights; a month is CALENDAR, see periodEnd */
   var MAXN  = { w:52, m:12 };          /* beyond these the full year is always cheaper */
   var NOUN  = { w:'week', m:'month' };
