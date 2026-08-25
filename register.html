@@ -6,8 +6,8 @@
 <title>Register — Azariya Index</title>
 <meta name="description" content="Request access to nightly rental performance for branded residences around the world.">
 <meta name="robots" content="noindex">
-<link rel="stylesheet" href="/assets/fonts.css?v=4">
-<link rel="stylesheet" href="/assets/nav.css?v=4">
+<link rel="stylesheet" href="/assets/fonts.css?v=5">
+<link rel="stylesheet" href="/assets/nav.css?v=5">
 <link rel="icon" href="assets/favicon.svg">
 <link rel="alternate icon" href="assets/favicon-32.png">
 <style>
@@ -651,6 +651,14 @@
       + 'opens well before then.';
     $('reg').querySelector('button[type=submit]').disabled = true;
   });
+
+    /* Arriving from a pricing card on /owners: ?plan=w|m|y preselects that coverage before the
+       first render, so the page opens on the plan the visitor clicked rather than the default.
+       Anything else in the parameter is ignored — the select keeps its own default. */
+    (function(){
+      var plan = new URLSearchParams(location.search).get('plan');
+      if (plan && /^[wmy]$/.test(plan)) $('cover').value = plan;
+    })();
 
   setCover();
   render();

@@ -76,7 +76,10 @@ p + p{margin-top:1rem}
 
 /* ───────────────────── today / later honesty block ───────────────────── */
 
-.split{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
+/* The two cards never hold the same amount: today's list runs six bullets and a button, the
+   2027 list runs three. An equal grid stretched the shorter card to match and left a third of
+   it empty. Start-aligned and weighted, each card is only as tall and as wide as it needs. */
+.split{display:grid;grid-template-columns:1.18fr .82fr;gap:1.4rem;align-items:start}
 @media (max-width: 760px){ .split{grid-template-columns:1fr} }
 .card{
   border:1px solid var(--line);border-radius:2px;
@@ -110,7 +113,16 @@ p + p{margin-top:1rem}
 .tier{
   border:1px solid var(--line);border-radius:2px;padding:1.7rem 1.5rem;
   display:flex;flex-direction:column;background:rgba(11,11,13,.4);
+  /* the card is a link: strip the anchor defaults and let it react as a control */
+  text-decoration:none;color:inherit;cursor:pointer;
+  transition:transform .35s cubic-bezier(.22,1,.36,1),border-color .35s ease,box-shadow .35s ease;
 }
+a.tier:hover,a.tier:focus-visible{
+  transform:translateY(-3px);
+  border-color:var(--gold);
+  box-shadow:0 10px 34px rgba(0,0,0,.45);
+}
+@media (prefers-reduced-motion:reduce){ a.tier:hover,a.tier:focus-visible{transform:none} }
 /* THREE STEPS, NOT TWO (24 Aug 2026). The ladder is the argument: a week is a look, a month
    is a commitment, the year is the product. Ground and border warm together so the eye reads
    the sequence before it reads the prices. Text stays ivory throughout — the tint sits under
@@ -172,10 +184,12 @@ p + p{margin-top:1rem}
   border:1px solid var(--line);border-radius:2px;
   padding:clamp(1.8rem,4.5vw,2.8rem);
   background:rgba(216,178,76,.04);
-  text-align:center;
 }
-.cta h2{margin-bottom:.9rem}
-.cta p{margin:0 auto;max-width:58ch;color:var(--ivory-dim)}
+.cta h2{margin-bottom:.7rem}
+/* was centred at 58ch, which stacked four short lines in a wide box. Full measure, left
+   aligned like every other paragraph on the page — same words, roughly half the height. */
+.cta p{margin:0;color:var(--ivory-dim)}
+.cta .btn{margin-top:1.3rem}
 .btn{
   display:inline-block;margin-top:1.7rem;
   background:var(--panel);color:var(--ivory);
