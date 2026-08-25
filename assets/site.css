@@ -68,6 +68,13 @@ p + p{margin-top:1rem}
 .dim{color:var(--ivory-dim)}
 section > p,.cta p{max-width:74ch}
 
+/* A link inside running copy: gold, with a rule that fills in on hover rather than an
+   always-on underline, so it reads as part of the sentence until you reach for it. */
+.ilink{color:var(--gold);text-decoration:none;
+  border-bottom:1px solid rgba(216,178,76,.38);
+  transition:color .3s ease,border-color .3s ease}
+.ilink:hover,.ilink:focus-visible{color:var(--gold-bright);border-bottom-color:var(--gold-bright)}
+
 /* The lockup set in running prose. Height is tied to the em so it tracks the surrounding type
    at every breakpoint, and the baseline nudge lines the wordmark's own baseline up with the
    text's rather than with the SVG's bounding box. It carries its own <title>, so a screen
