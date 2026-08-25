@@ -6,8 +6,8 @@
 <title>Register — Azariya Index</title>
 <meta name="description" content="Request access to nightly rental performance for branded residences around the world.">
 <meta name="robots" content="noindex">
-<link rel="stylesheet" href="/assets/fonts.css?v=13">
-<link rel="stylesheet" href="/assets/nav.css?v=13">
+<link rel="stylesheet" href="/assets/fonts.css?v=14">
+<link rel="stylesheet" href="/assets/nav.css?v=14">
 <link rel="icon" href="assets/favicon.svg">
 <link rel="alternate icon" href="assets/favicon-32.png">
 <style>
@@ -322,8 +322,8 @@
        rate, and it is reached only through the Request Partner Access button, which appends
        ?partner=1. That is presentation, not enforcement — there is no backend to enforce
        against yet — but it keeps the published tiers and this page telling the same story. */
-    var LIST    = { WEEK:99, MONTH:349, YEAR:2999 };
-    var PARTNER = { WEEK:49, MONTH:200, YEAR:1100 };
+    var LIST    = { WEEK:99, MONTH:349, YEAR:1999 };
+    var PARTNER = { WEEK:49, MONTH:174, YEAR:999 };
     var isPartner = new URLSearchParams(location.search).get('partner') === '1';
     var PRICE = { MANAGER:{2:7500,6:12000,16:18000}, AGENT:3500 };
     PRICE.WEEK  = (isPartner ? PARTNER : LIST).WEEK;
