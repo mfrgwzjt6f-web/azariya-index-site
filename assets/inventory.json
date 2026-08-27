@@ -1,1 +1,2084 @@
-{"properties":[{"key":"auberge_chileno_bay","name":"Auberge Chileno Bay","brand":"Auberge","units":[{"code":"BF6V","name":"Brisa Del Mar Six Bedroom Oceanfront Villa"},{"code":"GV2V","name":"Two Bedroom Garden View Villa"},{"code":"OV3PV","name":"Three Bedroom Oceanview Villa with Pool"},{"code":"PNT3V","name":"Three Bedroom Sky Villa"},{"code":"VBF3","name":"Three Bedroom Oceanfront Villa"},{"code":"VBF3P","name":"Three Bedroom Oceanfront Villa with Pool"},{"code":"VBF4","name":"Four Bedroom Oceanfront Villa"},{"code":"VBF4P","name":"Four Bedroom Oceanfront Villa with Pool"},{"code":"VGV1","name":"One Bedroom Garden View Villa with Hot Tub"},{"code":"VGV1P","name":"One Bedroom Pool View Villa"},{"code":"VGV2P","name":"Two Bedroom Garden View Villa with Pool"},{"code":"VGV3","name":"Three Bedroom Garden View Villa"},{"code":"VGV3P","name":"Three Bedroom Pool View Villa"},{"code":"VGV4","name":"Four Bedroom Garden View Villa"},{"code":"VGV4P","name":"Four Bedroom Pool View Villa"},{"code":"VGVD3P","name":"Three Bedroom Loft Villa with Pool"},{"code":"VGVD4P","name":"Four Bedroom Loft Villa with Pool"},{"code":"VJV2","name":"Two Bedroom Garden View Villa with Hot Tub"},{"code":"VJV2P","name":"Two Bedroom Pool View Villa with Hot Tub"},{"code":"VOV3","name":"Three Bedroom Oceanview Villa"},{"code":"VOV4","name":"Four Bedroom Oceanview Villa"},{"code":"VOV4P","name":"Four Bedroom Oceanview Villa with Pool"},{"code":"VPNT4","name":"Four Bedroom Sky Villa"},{"code":"VPNT5R","name":"Five Bedroom Signature Sky Villa"}],"display_brand":"Auberge"},{"key":"auberge_element52","name":"Auberge Element 52, Telluride","brand":"Auberge","units":[{"code":"AGG_2_bedroom_residence_riverside","name":"Riverside 2 Bedroom Residence"},{"code":"AGG_2_bedroom_residence_slopeside","name":"Slopeside 2 Bedroom Residence"},{"code":"AGG_3_bedroom_house_river_slopeside","name":"Slopeside 3 Bedroom River House"},{"code":"AGG_3_bedroom_residence_riverside","name":"Riverside 3 Bedroom Residence"},{"code":"AGG_3_bedroom_residence_slopeside","name":"Slopeside 3 Bedroom Residence"},{"code":"AGG_4_bedroom_residence_slopeside","name":"Slopeside 4 Bedroom Residence"},{"code":"AGG_5_bedroom_residence_riverside","name":"Riverside 5 Bedroom Residence"},{"code":"AGG_5_bedroom_residence_slopeside","name":"Slopeside 5 Bedroom Residence"},{"code":"AGG_6_bedroom_residence_slopeside","name":"Slopeside 6 Bedroom Residence"}],"display_brand":"Auberge"},{"key":"auberge_esperanza","name":"Auberge Esperanza","brand":"Auberge","units":[{"code":"F2EOK","name":"Two Bedroom Oceanview Villa"},{"code":"F2GJ","name":"Two Bedroom Garden View Villa with Plunge Pool"},{"code":"F2GK","name":"Two Bedroom Garden View Villa"},{"code":"F2OJ","name":"Two Bedroom Oceanview Villa with Plunge Pool"},{"code":"F3EOK","name":"Three Bedroom Oceanview Villa"},{"code":"F3GJ","name":"Three Bedroom Garden View Villa with Pool"},{"code":"F3GK","name":"Three Bedroom Garden View Villa"},{"code":"F3OJ","name":"Three Bedroom Oceanview Villa with Plunge Pool"},{"code":"F4GP","name":"Four Bedroom Garden View Villa with Hot Tub"},{"code":"F4OJ","name":"Four Bedroom Oceanview Villa with Hot Tub"},{"code":"H2SBK","name":"Two Bedroom Oceanfront Villa with Pool and Hot Tub"},{"code":"H3SBK","name":"Three Bedroom Oceanfront Villa with Pool"}],"display_brand":"Auberge"},{"key":"auberge_goldener_hirsch","name":"Auberge Goldener Hirsch, Deer Valley","brand":"Auberge","units":[{"code":"AGG_accessible_bedroom_goldener_king_mobility_one_queen_residence_two_two","name":"Goldener Two Bedroom Residence Mobility Accessible | One King Two Queen"},{"code":"AGG_bedroom_goldener_king_one_one_residence","name":"Goldener One Bedroom Residence | One King"},{"code":"AGG_bedroom_goldener_king_one_queen_residence_two_two","name":"Goldener Two Bedroom Residence | One King Two Queen"},{"code":"AGG_bedroom_goldener_king_queen_residence_three_two_two","name":"Goldener Three Bedroom Residence | Two King Two Queen"},{"code":"AGG_bedroom_goldener_king_residence_three_three","name":"Goldener Three Bedroom Residence | Three King"},{"code":"AGG_bedroom_goldener_king_residence_two_two","name":"Goldener Two Bedroom Residence | Two King"},{"code":"R1BDK","name":"Goldener One Bedroom Residence | One King"},{"code":"R2B2K","name":"Goldener Two Bedroom Residence | Two King"},{"code":"R2BK2Q","name":"Goldener Two Bedroom Residence | One King Two Queen"},{"code":"R32K2Q","name":"Goldener Three Bedroom Residence  | Two King Two Queen"},{"code":"R32K2QL","name":"Goldener Three Bedroom Residence  | Two King Two Queen"},{"code":"R32K2QN","name":"Goldener Three Bedroom Residence  | Two King Two Queen"},{"code":"R3B3K","name":"Goldener Three Bedroom Residence | Three King"}],"display_brand":"Auberge"},{"key":"auberge_madeline","name":"Auberge Madeline, Telluride","brand":"Auberge","units":[{"code":"1BC","name":"Classic One Bedroom Residence"},{"code":"1BCV","name":"Classic One Bedroom Residence Village View"},{"code":"2BC","name":"Classic Two Bedroom Residence"},{"code":"2BCM","name":"Classic Two Bedroom Residence Mountain View"},{"code":"2BCV","name":"Classic Two Bedroom Residence Village View"},{"code":"2BV","name":"Two Bedroom Residence Village View"},{"code":"4BC","name":"Classic Four Bedroom Residence Mountain View"},{"code":"Q1B","name":"One Bedroom Residence"},{"code":"Q2B","name":"Two Bedroom Residence Mountain View"},{"code":"Q2BA","name":"2 Bedroom Residence Mobility/Hearing Accessible w/RI Shower"},{"code":"Q3B","name":"Three Bedroom Residence Mountain View"}],"display_brand":"Auberge"},{"key":"auberge_mauna_lani","name":"Auberge Mauna Lani","brand":"Auberge","units":[{"code":"OF2BDB","name":"Oceanfront Two-Bedroom Residence"},{"code":"OV2BDB","name":"Ocean View Two-Bedroom Residence"}],"display_brand":"Auberge"},{"key":"auberge_stanly_ranch","name":"Auberge Stanly Ranch, Napa","brand":"Auberge","units":[{"code":"V1KQ","name":"Two Bedroom Terrace Villa"},{"code":"V2KQ","name":"Two Bedroom Sky Villa"}],"display_brand":"Auberge"},{"key":"fairmont_telluride","name":"Fairmont Heritage Place Franz Klammer, Telluride","brand":"Accor","units":[{"code":"AGG_2_bedroom_residence","name":"2 Bedroom Residence"},{"code":"AGG_3_bedroom_residence","name":"3 Bedroom Residence"}],"display_brand":"Fairmont Heritage Place"},{"key":"fairmont_mayakoba","name":"Fairmont Heritage Place Mayakoba","brand":"Accor","units":[{"code":"V3A","name":"3 bedroom villa penthouse"},{"code":"V3B","name":"3 bedroom villa with garden"},{"code":"V3C","name":"3 bedroom villa on the middle floor"},{"code":"V4A","name":"4 Bedroom Penthouse Villa"}],"display_brand":"Fairmont Heritage Place"},{"key":"AXA708","name":"Four Seasons Anguilla","brand":"Four Seasons","units":[{"code":"an1ov","name":"One-Bedroom Ocean-View Residence"},{"code":"an2ov","name":"Two-Bedroom Ocean-View Residence"},{"code":"an3oft","name":"Three-Bedroom Oceanfront Townhome"},{"code":"an3ov","name":"Three-Bedroom Ocean-View Residence"},{"code":"an3ovp","name":"Three-Bedroom Ocean-View Penthouse"},{"code":"an4bf","name":"Four-Bedroom Beachfront Villa"},{"code":"an4of","name":"Four-Bedroom Oceanfront Villa"},{"code":"an4oft","name":"Four-Bedroom Oceanfront Townhome"},{"code":"an4ov","name":"Four-Bedroom Ocean-View Villa"},{"code":"an4ovh","name":"Four-Bedroom Ocean-View Hilltop Villa"},{"code":"an5bf","name":"Five-Bedroom Beachfront Villa"}],"display_brand":"Four Seasons"},{"key":"SAN633","name":"Four Seasons Aviara","brand":"Four Seasons","units":[{"code":"av1","name":"Aviara One Bedroom Resort Residence"},{"code":"av1p","name":"Aviara One Bedroom Premier Resort Residence"},{"code":"av2","name":"Aviara Two Bedroom Resort Residence"}],"display_brand":"Four Seasons"},{"key":"SJD245","name":"Four Seasons Cabo Del Sol","brand":"Four Seasons","units":[{"code":"cd2r","name":"Ocean-View Two-Bedroom Residence"},{"code":"cd4v","name":"Ocean-View Four-Bedroom Villa"},{"code":"cd4vr","name":"Ocean-View Four-Bedroom Rooftop Villa"},{"code":"cd5rp","name":"Oceanfront Five-Bedroom Residence with Pool"},{"code":"cd5rpp","name":"Oceanfront Five-Bedroom Residence with Plunge Pool"},{"code":"cd5v","name":"Ocean-View Five-Bedroom Rooftop Villa"},{"code":"cd6e","name":"Ocean-View Six-Bedroom Estate"},{"code":"cd7e","name":"Ocean-View Seven-Bedroom Estate"}],"display_brand":"Four Seasons"},{"key":"JAC980","name":"Four Seasons Jackson Hole","brand":"Four Seasons","units":[{"code":"jh2m","name":"Jackson Hole Two-Bedroom Resort Residence Mountain View"},{"code":"jh2m_q","name":"Two-Bedroom Resort Residence – Mountain View (alt)"},{"code":"jh2v","name":"Jackson Hole Two-Bedroom Resort Residence Valley View"},{"code":"jh2v_q","name":"Two-Bedroom Resort Residence – Valley View (alt)"},{"code":"jh3m","name":"Jackson Hole Three-Bedroom Resort Residence Mountain View"},{"code":"jh3v","name":"Jackson Hole Three-Bedroom Resort Residence Valley View"}],"display_brand":"Four Seasons"},{"key":"UKY640","name":"Four Seasons Kyoto","brand":"Four Seasons","units":[{"code":"ky1","name":"One-Bedroom Residence"},{"code":"ky1_d","name":"One-Bedroom Residence (Double)"},{"code":"ky1hg","name":"One-Bedroom Heritage Garden Residence"},{"code":"ky1hg_d","name":"One-Bedroom Heritage Garden Residence (Double)"},{"code":"ky2hg","name":"Two-Bedroom Heritage Garden Residence"},{"code":"ky2ky","name":"Two-Bedroom Kyoto Residence"},{"code":"ky2ta","name":"Two-Bedroom Tatami Residence"}],"display_brand":"Four Seasons"},{"key":"SJD694","name":"Four Seasons Los Cabos","brand":"Four Seasons","units":[{"code":"lc_mr2","name":"Marina Ocean-View Two-Bedroom Residence"},{"code":"lc_mr3","name":"Marina Ocean-View Three-Bedroom Residence"},{"code":"lc_mr4","name":"Marina Ocean-View Four-Bedroom Residence"},{"code":"lc_ov3","name":"Ocean-View Three-Bedroom Residence"},{"code":"lc_ov4","name":"Ocean-View Four-Bedroom Residence"}],"display_brand":"Four Seasons"},{"key":"LIR646","name":"Four Seasons Papagayo","brand":"Four Seasons","units":[{"code":"pp2","name":"Papagayo Two-Bedroom Canopy Villa"},{"code":"pp3","name":"Papagayo Three-Bedroom Canopy Villa"}],"display_brand":"Four Seasons"},{"key":"SJU662","name":"Four Seasons Puerto Rico","brand":"Four Seasons","units":[{"code":"pr3of","name":"Three-Bedroom Oceanfront Residence"},{"code":"pr3ofp","name":"Three-Bedroom Oceanfront Residence with Pool"},{"code":"pr4od","name":"Four-Bedroom Ocean Drive Residence"},{"code":"pr4of","name":"Four-Bedroom Oceanfront Residence"},{"code":"pr4ofip","name":"Four-Bedroom Oceanfront Infinity Pool Residence"},{"code":"pr4ofrp","name":"Four-Bedroom Oceanfront Rooftop Pool Residence"},{"code":"pr5pp","name":"Five-Bedroom Penthouse with Pool"}],"display_brand":"Four Seasons"},{"key":"PVR380","name":"Four Seasons Punta Mita","brand":"Four Seasons","units":[{"code":"pm3","name":"Punta Mita Ocean Residence Three Bedroom"},{"code":"pm4","name":"Punta Mita Ocean Penthouse Four Bedroom"}],"display_brand":"Four Seasons"},{"key":"YWS199","name":"Four Seasons Whistler","brand":"Four Seasons","units":[{"code":"ws2","name":"Two-Bedroom Resort Residence"},{"code":"ws3","name":"Three-Bedroom Resort Residence"},{"code":"ws3d","name":"Three-Bedroom and Den Resort Residence"},{"code":"ws4d","name":"Four-Bedroom and Den Resort Residence"}],"display_brand":"Four Seasons"},{"key":"phoenician","name":"Luxury Collection The Phoenician, Scottsdale","brand":"Marriott","units":[{"code":"2 Bedroom Residence","name":"2 Bedroom Residence"},{"code":"3 Bedroom Residence","name":"3 Bedroom Residence"}],"display_brand":"The Luxury Collection"},{"key":"grand_res_tahoe","name":"Marriott Grand Residence Club Lake Tahoe","brand":"Marriott","units":[{"code":"1 Bedroom Residence","name":"1 Bedroom Residence"},{"code":"2 Bedroom Residence","name":"2 Bedroom Residence"}],"display_brand":"Marriott"},{"key":"grand_res_mayfair","name":"Marriott Grand Residences London (47 Park Street)","brand":"Marriott","units":[{"code":"AGG_1_bedroom_executive_suite","name":"1 Bedroom Executive Suite"},{"code":"AGG_deluxe","name":"Deluxe"},{"code":"AGG_premium","name":"Premium"}],"display_brand":"Marriott"},{"key":"kapalua_bay","name":"Marriott Kapalua Bay","brand":"Marriott","units":[{"code":"AGG_1_bedroom_garden_view","name":"Garden View 1 Bedroom"},{"code":"AGG_1_bedroom_ocean_view","name":"Ocean View 1 Bedroom"},{"code":"AGG_2_bedroom_garden_view","name":"Garden View 2 Bedroom"},{"code":"AGG_2_bedroom_ocean_premier","name":"Premier Ocean 2 Bedroom"},{"code":"AGG_2_bedroom_ocean_view","name":"Ocean View 2 Bedroom"},{"code":"AGG_3_bedroom_garden_grand","name":"Garden Grand 3 Bedroom"},{"code":"AGG_3_bedroom_garden_pool","name":"Garden 3 Bedroom & Pool"},{"code":"AGG_3_bedroom_garden_view","name":"Garden View 3 Bedroom"},{"code":"AGG_3_bedroom_grand_ocean","name":"Ocean Grand 3 Bedroom"},{"code":"AGG_3_bedroom_ocean_premier","name":"Premier Ocean 3 Bedroom"},{"code":"AGG_3_bedroom_ocean_view","name":"Ocean View 3 Bedroom"},{"code":"AGG_4_bedroom_grand","name":"Grand 4 Bedroom"},{"code":"AGG_4_bedroom_ocean_premier","name":"Premier Ocean 4 Bedroom"}],"display_brand":"Marriott"},{"key":"montage_big_sky","name":"Montage Big Sky","brand":"Montage Int'l","units":[{"code":"AGG_accessible_bedroom_four_inn_residence_view_vista","name":"Inn Accessible Vista View Four Bedroom Residence"},{"code":"AGG_accessible_bedroom_inn_residence_resort_three_view","name":"Inn Accessible Resort View Three Bedroom Residence"},{"code":"AGG_accessible_bedroom_inn_residence_resort_two_view","name":"Inn Accessible Resort View Two Bedroom Residence"},{"code":"AGG_accessible_bedroom_inn_residence_three_view_vista","name":"Inn Accessible Vista View Three Bedroom Residence"},{"code":"AGG_bedroom_deluxe_four_grand_inn_residence_view_vista","name":"Inn Vista View Grand Deluxe  Four Bedroom Residence"},{"code":"AGG_bedroom_deluxe_four_inn_residence_view_vista","name":"Inn Vista View Deluxe Four Bedroom Residence"},{"code":"AGG_bedroom_deluxe_inn_residence_three_view_vista","name":"Inn Vista View Deluxe Three Bedroom Residence"},{"code":"AGG_bedroom_five_grand_peak_residence","name":"Peak Five Bedroom Grand Residence"},{"code":"AGG_bedroom_five_grand_residence_vista","name":"Vista Five Bedroom Grand Residence"},{"code":"AGG_bedroom_five_peak_residence","name":"Peak Five Bedroom Residence"},{"code":"AGG_bedroom_five_residence_vista","name":"Vista Five Bedroom Residence"},{"code":"AGG_bedroom_four_grand_peak_residence","name":"Peak Four Bedroom Grand Residence"},{"code":"AGG_bedroom_four_grand_residence_vista","name":"Vista Four Bedroom Grand Residence"},{"code":"AGG_bedroom_four_inn_residence_resort_view","name":"Inn Resort View Four Bedroom Residence"},{"code":"AGG_bedroom_four_inn_residence_view_vista","name":"Inn Vista View Four Bedroom Residence"},{"code":"AGG_bedroom_four_peak_residence","name":"Peak Four Bedroom Residence"},{"code":"AGG_bedroom_four_residence_vista","name":"Vista Four Bedroom Residence"},{"code":"AGG_bedroom_grand_peak_residence_six","name":"Peak Six Bedroom Grand Residence"},{"code":"AGG_bedroom_grand_peak_residence_three","name":"Peak Three Bedroom Grand Residence"},{"code":"AGG_bedroom_grand_peak_residence_two","name":"Peak Two Bedroom Grand Residence"},{"code":"AGG_bedroom_grand_residence_six_vista","name":"Vista Six-Bedroom Grand Residence"},{"code":"AGG_bedroom_grand_residence_three_vista","name":"Vista Three Bedroom Grand Residence"},{"code":"AGG_bedroom_grand_residence_two_vista","name":"Vista Two Bedroom Grand Residence"},{"code":"AGG_bedroom_inn_residence_resort_three_view","name":"Inn Resort View Three Bedroom Residence"},{"code":"AGG_bedroom_inn_residence_resort_two_view","name":"Inn Resort View Two Bedroom Residence"},{"code":"AGG_bedroom_inn_residence_three_view_vista","name":"Inn Vista View Three Bedroom Residence"},{"code":"AGG_bedroom_inn_residence_two_view_vista","name":"Inn Vista View Two Bedroom Residence"},{"code":"AGG_bedroom_one_residence_vista","name":"Vista One Bedroom Residence"},{"code":"AGG_bedroom_peak_residence_three","name":"Peak Three Bedroom Residence"},{"code":"AGG_bedroom_peak_residence_two","name":"Peak Two Bedroom Residence"},{"code":"AGG_bedroom_residence_six_vista","name":"Vista Six-Bedroom Residence"},{"code":"AGG_bedroom_residence_three_vista","name":"Vista Three Bedroom Residence"},{"code":"AGG_bedroom_residence_two_vista","name":"Vista Two Bedroom Residence"}],"display_brand":"Montage"},{"key":"montage_deer_valley","name":"Montage Deer Valley","brand":"Montage Int'l","units":[{"code":"AGG_bedroom_four_peak_residence_view","name":"Peak View Four Bedroom Residence"},{"code":"AGG_bedroom_four_penthouse_residence_summit_view","name":"Summit View Four Bedroom Penthouse Residence"},{"code":"AGG_bedroom_four_residence_resort_view","name":"Resort View Four Bedroom Residence"},{"code":"AGG_bedroom_four_residence_view_vista","name":"Vista View Four Bedroom Residence"},{"code":"AGG_bedroom_one_residence_view_vista","name":"Vista View One Bedroom Residence"},{"code":"AGG_bedroom_peak_residence_three_view","name":"Peak View Three Bedroom Residence"},{"code":"AGG_bedroom_peak_residence_two_view","name":"Peak View Two Bedroom Residence"},{"code":"AGG_bedroom_residence_resort_three_view","name":"Resort View Three Bedroom Residence"},{"code":"AGG_bedroom_residence_resort_two_view","name":"Resort View Two Bedroom Residence"},{"code":"AGG_bedroom_residence_three_view_vista","name":"Vista View Three Bedroom Residence"},{"code":"AGG_bedroom_residence_two_view_vista","name":"Vista View Two Bedroom Residence"}],"display_brand":"Montage"},{"key":"montage_healdsburg","name":"Montage Healdsburg","brand":"Montage Int'l","units":[{"code":"R3RE","name":"Harvest Home Residence 3 Bedroom"},{"code":"R4REX","name":"Harvest Home Residence 4 Bedroom"}],"display_brand":"Montage"},{"key":"montage_los_cabos","name":"Montage Los Cabos","brand":"Montage Int'l","units":[{"code":"R1CP","name":"Coastal View One Bedroom Residence with Pool"},{"code":"R1OV","name":"Ocean View One Bedroom Residence"},{"code":"R2CB","name":"Coastal View Two Bedroom Residence with Pool - One King and Bunks"},{"code":"R2CP","name":"Coastal View Two Bedroom King Residence with Pool"},{"code":"R2CQ","name":"Coastal View Two Bedroom Residence"},{"code":"R2OB","name":"Ocean View Two Bedroom Residence with One King and Bunks"},{"code":"R2OQ","name":"Ocean View Two Bedroom Queen Residence"},{"code":"R2OV","name":"Ocean View Two Bedroom Residence"},{"code":"R3CB","name":"Coastal View Three Bedroom Residence with Pool - Two Kings and Bunks"},{"code":"R3CP","name":"Coastal View Three Bedroom Residence with Pool"},{"code":"R3OB","name":"Ocean View Three Bedroom Residence with Two Kings and Bunks"},{"code":"R3OV","name":"Ocean View Three Bedroom Residence"}],"display_brand":"Montage"},{"key":"nobu_los_cabos","name":"Nobu Los Cabos","brand":"Nobu","units":[{"code":"PZ3G2","name":"Asahi - Two Bedrooms at Nobu Residences"},{"code":"PZ3S2","name":"Asahi - Two Bedrooms w/pool at Nobu Residences"},{"code":"RZ5G3","name":"Sakyu - Three Bedrooms at Nobu Residences"},{"code":"SK1G1","name":"Hikari - One Bedroom at Nobu Residences"},{"code":"VZ7O4","name":"Kogane Penthouse - Four bedrooms at Nobu Residences"}],"display_brand":"Nobu"},{"key":"pendry_park_city","name":"Pendry Park City","brand":"Montage Int'l","units":[{"code":"AP2B","name":"Two Bedroom Peak King/Bunks Accessible Residence"},{"code":"AP3B","name":"Accessible Three Bedroom Peak 2 King/Bunk Residence"},{"code":"AP4B","name":"Accessible Four Bedroom Peak Residence with 3 Kings and 2 Bunks"},{"code":"AP4BX","name":"Four Bedroom Peak 3 Kings/Bunks Accessible Residence"},{"code":"AR1R","name":"One Bedroom Resort Accessible Residence"},{"code":"AR3B","name":"Accessible Three Bedroom Resort Residence with 2 Kings and 2 Bunks"},{"code":"AR3BX","name":"Three Bedroom Resort 2 Kings/Bunks Accessible Residence"},{"code":"AV1R","name":"One Bedroom Vista Accessible Residence"},{"code":"AV2R","name":"Accessible Two Bedroom Vista King Residence"},{"code":"AV2RX","name":"Two Bedroom Vista King Accessible Residence"},{"code":"P1DR","name":"One Bedroom Deluxe Peak Residence"},{"code":"P1RE","name":"One Bedroom Peak King Residence"},{"code":"P2BR","name":"Two Bedroom Peak King/Bunks Residence"},{"code":"P2DR","name":"Two Bedroom Deluxe Peak King Residence"},{"code":"P2DRX","name":"Two Bedroom Deluxe Peak Residence"},{"code":"P2PH","name":"Penthouse Residence"},{"code":"P2PHX","name":"Penthouse Residence"},{"code":"P2RE","name":"Two Bedroom Peak King Residence"},{"code":"P2REX","name":"Two Bedroom Peak King Residence"},{"code":"P3BR","name":"Three Bedroom Peak 2 Kings/Bunks Residence"},{"code":"P3BRX","name":"Three Bedroom Peak 2 Kings/Bunks Residence"},{"code":"P3QB","name":"Three Bedroom Peak Residence with 1 King 1 Double and 2 Bunks"},{"code":"P3RE","name":"Three Bedroom Peak King Residence"},{"code":"P4BKX","name":"Four Bedroom Peak 3 Kings/Bunks Residence"},{"code":"P4BR","name":"Four Bedroom Peak Residence with 3 Kings and 2 Bunks"},{"code":"P4BRX","name":"Four Bedroom Peak 3 Kings/Bunks Residence"},{"code":"PEND","name":"The Pendry Residence (Two Bedroom)"},{"code":"PENDX","name":"The Pendry Residence (Four Bedroom)"},{"code":"R1RE","name":"One Bedroom Resort King Residence"},{"code":"R2BR","name":"Two Bedroom Resort King/Bunks Residence"},{"code":"R2DRX","name":"Two Bedroom Resort King/Doubles Residence"},{"code":"R2QR","name":"Two Bedroom Resort Residence with 1 King and 2 Doubles"},{"code":"R2RE","name":"Two Bedroom Resort King Residence"},{"code":"R2REX","name":"Two Bedroom Resort King Residence"},{"code":"R3BR","name":"Three Bedroom Resort 2 King/Bunks Residence"},{"code":"R3BRX","name":"Three Bedroom Resort 2 Kings/Bunks Residence"},{"code":"R3DBX","name":"Three Bedroom Resort 1 King/2 Doubles/Bunks Residence"},{"code":"R4DBX","name":"Four Bedroom Resort 2 Kings/2 Doubles/Bunks Residence"},{"code":"R4QB","name":"Four Bedroom Resort Residence with 2 Kings 2 Doubles and 2 Bunks"},{"code":"RJ1S","name":"Resort Junior One Bedroom Residence"},{"code":"V1RE","name":"One Bedroom Vista King Residence"},{"code":"V2BR","name":"Two Bedroom Vista King/Bunks Residence"},{"code":"V2DRX","name":"Two Bedroom Vista King/Doubles Residence"},{"code":"V3BR","name":"Three Bedroom Vista 2 Kings/Bunks Residence"},{"code":"V3BRX","name":"Three Bedroom Vista 2 Kings/Bunks Residence"},{"code":"V4BR","name":"Four Bedroom Vista Residence with 3 Kings and 2 Bunks"},{"code":"V4BRX","name":"Four Bedroom Vista 3 Kings/Bunks Residence"}],"display_brand":"Pendry"},{"key":"rc_bachelor_gulch","name":"Ritz-Carlton Bachelor Gulch","brand":"Marriott","units":[{"code":"AGG_1_bedroom_residential_suite","name":"1 Bedroom Residential Suite"},{"code":"AGG_2_bedroom_residential_suite","name":"2 Bedroom Residential Suite"},{"code":"AGG_3_bedroom_penthouse_suite","name":"3 Bedroom Penthouse Suite"},{"code":"AGG_4_bedroom_penthouse_suite","name":"4 Bedroom Penthouse Suite"}],"display_brand":"Ritz-Carlton"},{"key":"rc_tahoe","name":"Ritz-Carlton Club Lake Tahoe","brand":"Marriott","units":[{"code":"AGG_2_bedroom_residence","name":"2 Bedroom Residence"},{"code":"AGG_3_bedroom_residence","name":"3 Bedroom Residence"},{"code":"AGG_4_bedroom_residence","name":"4 Bedroom Residence"}],"display_brand":"Ritz-Carlton"},{"key":"rc_vail","name":"Ritz-Carlton Club Vail","brand":"Marriott","units":[{"code":"2 Bedroom Residence","name":"2 Bedroom Residence"},{"code":"3 Bedroom Residence","name":"3 Bedroom Residence"}],"display_brand":"Ritz-Carlton"},{"key":"rc_kapalua_res","name":"Ritz-Carlton Kapalua","brand":"Marriott","units":[{"code":"1 Bedroom Residential Suite","name":"1 Bedroom Residential Suite"},{"code":"2 Bedroom Residential Suite","name":"2 Bedroom Residential Suite"}],"display_brand":"Ritz-Carlton"},{"key":"rc_orlando","name":"Ritz-Carlton Orlando Grande Lakes","brand":"Marriott","units":[{"code":"3 Bedroom Residence","name":"3 Bedroom Residence"},{"code":"4 Bedroom Residence","name":"4 Bedroom Residence"}],"display_brand":"Ritz-Carlton"},{"key":"rc_waikiki","name":"Ritz-Carlton Residences Waikiki","brand":"Marriott","units":[{"code":"AGG_2_bedroom_deluxe_ocean","name":"2-Bedroom Deluxe Ocean"},{"code":"AGG_2_bedroom_grand_ocean","name":"2-Bedroom Grand Ocean"},{"code":"AGG_2_bedroom_ocean_premier","name":"2-Bedroom Premier Ocean"},{"code":"AGG_3_bedroom_grand_ocean","name":"3-Bedroom Grand Ocean"},{"code":"AGG_3_bedroom_ocean_premier","name":"3-Bedroom Premier Ocean"},{"code":"AGG_carlton_ritz_suite_the","name":"The Ritz-Carlton Suite"},{"code":"AGG_city_corner_ocean","name":"City Ocean Corner"},{"code":"AGG_corner_ocean_suite_view","name":"Ocean View Corner Suite"},{"code":"AGG_deluxe_ocean_suite_view","name":"Deluxe Ocean View Suite"},{"code":"AGG_deluxe_ocean_view","name":"Deluxe Ocean View"},{"code":"AGG_grand_ocean_suite_view","name":"Grand Ocean View Suite"},{"code":"AGG_grand_ocean_view","name":"Grand Ocean View"},{"code":"AGG_ocean_view","name":"Ocean View"}],"display_brand":"Ritz-Carlton"},{"key":"rc_turks","name":"Ritz-Carlton Turks & Caicos","brand":"Marriott","units":[{"code":"AGG_1_bedroom_residence","name":"1 Bedroom Residence"},{"code":"AGG_2_bedroom_residence","name":"2 Bedroom Residence"},{"code":"AGG_3_bedroom_residence","name":"3 Bedroom Residence"}],"display_brand":"Ritz-Carlton"},{"key":"six_senses_condao","name":"Six Senses Con Dao","brand":"IHG","units":[{"code":"beachfront_four_bedroom_pool_villa","name":"Beachfront Four-Bedroom Pool Villa"},{"code":"beachfront_three_bedroom_pool_villa","name":"Beachfront Three-Bedroom Pool Villa"},{"code":"ocean_view_four_bedroom_pool_villa","name":"Ocean View Four-Bedroom Pool Villa"},{"code":"ocean_view_three_bedroom_pool_villa","name":"Ocean View Three-Bedroom Pool Villa"}],"display_brand":"Six Senses"},{"key":"six_senses_courchevel","name":"Six Senses Courchevel","brand":"IHG","units":[{"code":"five_bedroom_prestige_penthouse","name":"Five-Bedroom Prestige Penthouse"},{"code":"five_bedroom_prestige_residence","name":"Five-Bedroom Prestige Residence"},{"code":"four_bedroom_deluxe_residence","name":"Four-Bedroom Deluxe Residence"},{"code":"four_bedroom_prestige_residence","name":"Four-Bedroom Prestige Residence"},{"code":"three_bedroom_deluxe_family_apartment","name":"Three-Bedroom Deluxe Family Apartment"},{"code":"three_bedroom_prestige_apartment","name":"Three-Bedroom Prestige Apartment"},{"code":"three_bedroom_prestige_family_apartment","name":"Three-Bedroom Prestige Family Apartment"},{"code":"three_bedroom_prestige_residence","name":"Three-Bedroom Prestige Residence"},{"code":"two_bedroom_apartment_courtyard_view","name":"Two-Bedroom Apartment Courtyard View"},{"code":"two_bedroom_apartment_mountain_view","name":"Two-Bedroom Apartment Mountain View"}],"display_brand":"Six Senses"},{"key":"six_senses_fiji","name":"Six Senses Fiji","brand":"IHG","units":[{"code":"five_bedroom_beachfront_pool_residence","name":"Five-Bedroom Beachfront Pool Residence"},{"code":"five_bedroom_marina_pool_residence","name":"Five-Bedroom Marina Pool Residence"},{"code":"five_bedroom_oceanview_pool_residence","name":"Five-Bedroom Oceanview Pool Residence"},{"code":"four_bedroom_beachfront_pool_residence","name":"Four-Bedroom Beachfront Pool Residence"},{"code":"four_bedroom_oceanview_pool_residence","name":"Four-Bedroom Oceanview Pool Residence"},{"code":"six_bedroom_beachfront_pool_residence","name":"Six-Bedroom Beachfront Pool Residence"},{"code":"three_bedroom_beachfront_pool_residence","name":"Three-Bedroom Beachfront Pool Residence"},{"code":"three_bedroom_marina_pool_residence","name":"Three-Bedroom Marina Pool Residence"}],"display_brand":"Six Senses"},{"key":"st_regis_aspen","name":"St. Regis Residence Club Aspen","brand":"Marriott","units":[{"code":"2 Bedroom Residence","name":"2 Bedroom Residence"},{"code":"3 Bedroom Residence","name":"3 Bedroom Residence"}],"display_brand":"St. Regis"},{"key":"fifth_and_55th","name":"St. Regis Residence Club New York/5th & 55th","brand":"Marriott","units":[{"code":"1BDSG","name":"One Bedroom Signature Residence"},{"code":"2BDSG","name":"Two Bedroom Signature Residence"},{"code":"STDDLX","name":"Studio Deluxe"}],"display_brand":"St. Regis"},{"key":"stein_eriksen_residences","name":"Stein Eriksen Deer Valley","brand":"Stein Collection","units":[{"code":"10","name":"Platinum Junior Two Bedroom"},{"code":"11","name":"Resort Two Bedroom"},{"code":"12","name":"Premium Two Bedroom"},{"code":"13","name":"Platinum Two Bedroom"},{"code":"14","name":"Two Bedroom Penthouse"},{"code":"15","name":"Premium Junior Three Bedroom"},{"code":"17","name":"Resort Three Bedroom Suite"},{"code":"19","name":"Platinum Three Bedroom"},{"code":"20","name":"Three Bedroom Penthouse"},{"code":"21","name":"Platinum Four Bedroom Suite"},{"code":"22","name":"Four Bedroom Penthouse"},{"code":"23","name":"Premium Five Bedroom Suite"},{"code":"25","name":"Five Bedroom Penthouse"},{"code":"32","name":"Premium Three Bedroom"},{"code":"36","name":"Premium Two Bedroom Suite"},{"code":"38","name":"Premium Three Bedroom Suite"},{"code":"39","name":"Premium Three Bedroom Suite with Three Twins"},{"code":"40","name":"Premium Three Bedroom Suite with Two Twins"},{"code":"41","name":"Platinum Four Bedroom Suite with 2 Bunks"},{"code":"42","name":"Premium Five Bedroom King Suite"},{"code":"44","name":"Resort Three Bedroom Queen Suite"},{"code":"49","name":"Resort One Bedroom"},{"code":"57","name":"Premium Two Bedroom Private Suite"},{"code":"9","name":"Premium One Bedroom"}],"display_brand":"Stein Eriksen"},{"key":"the_little_nell","name":"The Little Nell Aspen","brand":"Aspen Hospitality","units":[{"code":"AGG_2_bedroom_residence","name":"2 Bedroom Residence"},{"code":"AGG_3_bedroom_residence","name":"3 Bedroom Residence"},{"code":"AGG_4_bedroom_residence","name":"4 Bedroom Residence"}],"display_brand":"The Little Nell"},{"key":"timbers_jupiter","name":"Timbers Jupiter","brand":"Timbers","units":[{"code":"TJUP2B","name":"Two Bedroom Residence"},{"code":"TJUP4B","name":"Four Bedroom Residence"}],"display_brand":"Timbers"},{"key":"timbers_kauai","name":"Timbers Kaua'i (Hokuala)","brand":"Timbers","units":[{"code":"TK3DSG","name":"Kaiholo 3-Bedroom Ocean Front Residence"},{"code":"TK3SG","name":"Kaiholo 3-Bedroom Signature Residence"},{"code":"TK3SP","name":"Kaiholo 3-Bedroom Superior Residence"},{"code":"TK4SG","name":"Kaiholo 4-Bedroom Signature Residence"},{"code":"TK4SP","name":"Kaiholo 4-Bedroom Superior Residence"},{"code":"TL3SG","name":"Laola 3-Bedroom Townhouse"},{"code":"TL4SG","name":"Laola 4-Bedroom Townhouse"},{"code":"TLN4SG","name":"Laola Nani 4-Bedroom Signature Residence"},{"code":"TM2SG","name":"Maliula 2-Bedroom Signature Residence"},{"code":"TM2SP","name":"Maliula 2-Bedroom Superior Residence"},{"code":"TM3P","name":"Maliula 3-Bedroom Premier Residence"},{"code":"TM3SG","name":"Maliula 3-Bedroom Signature Residence"},{"code":"TM3SP","name":"Maliula 3-Bedroom Superior Residence"},{"code":"TMO3SG","name":"Maliula 3-Bedroom Owner Designed Residence"}],"display_brand":"Timbers"},{"key":"orchard_carneros","name":"Timbers The Orchard at Carneros, Napa","brand":"—","units":[{"code":"IOR","name":"Carneros Residence 2 King"}],"display_brand":"Timbers"},{"key":"timbers_sebastian_vail","name":"Timbers The Sebastian, Vail","brand":"Timbers","units":[{"code":"O1","name":"One Bedroom Residence"},{"code":"O1B1A","name":"One Bedroom Residence"},{"code":"O2","name":"Two Bedroom Residence"},{"code":"O2B2A","name":"Two Bedroom Residence"},{"code":"O3","name":"Three Bedroom Residence"},{"code":"O3B3A","name":"Three Bedroom Residence"},{"code":"O4","name":"Four Bedroom Residence"},{"code":"O4B4A","name":"Four Bedroom Residence"}],"display_brand":"Timbers"},{"key":"viceroy_snowmass","name":"Viceroy Snowmass","brand":"Viceroy","units":[{"code":"1BR","name":"Pinnacle One Bedroom Residence"},{"code":"1BRADA","name":"Mobility Accessible Pinnacle One Bedroom Residence Roll-in Shower"},{"code":"1BRD","name":"Pinnacle One Bedroom plus Den Residence"},{"code":"1BRPH","name":"One Bedroom Penthouse"},{"code":"2BR","name":"Pinnacle Two Bedroom Residence with King & Queen"},{"code":"2BRADA","name":"Mobility Accessible Pinnacle Two Bedroom Residence with King & Queen"},{"code":"2BRPH","name":"Pinnacle Two Bedroom Premium Residence"},{"code":"2BRT","name":"Pinnacle Two Bedroom Residence, King & 2 Twin Beds"},{"code":"3BR","name":"Pinnacle Three Bedroom Residence"},{"code":"3BRPHB","name":"Three Bedroom Penthouse with bunk beds"},{"code":"3BRPHT","name":"Pinnacle Three Bedroom Penthouse"},{"code":"C1BP","name":"Cirque One Bedroom Premium Residence"},{"code":"C1BPA","name":"Mobility Accessible Cirque One Bedroom Premium Residence, Transfer Tub"},{"code":"C2B","name":"Cirque Two Bedroom Residence"},{"code":"C2BD","name":"Cirque Two Bedroom Den Residence"},{"code":"C2BP","name":"Cirque Two Bedroom Premium Residence"},{"code":"C2BPA","name":"Mobility Accessible Cirque Two Bedroom Premium Residence, Transfer Tub"},{"code":"C2BPHL","name":"Cirque Two Bedroom Penthouse Loft"},{"code":"C3BPHA","name":"Mobility Accessible Cirque Three Bedroom Den Penthouse, Roll-in Shower"},{"code":"C3BPHD","name":"Cirque Three Bedroom Den Penthouse"},{"code":"C4BPHE","name":"Cirque Four Bedroom Penthouse East"},{"code":"C4BPHW","name":"Cirque Four Bedroom Penthouse West"},{"code":"CSTA","name":"Mobility Accessible Cirque Studio King, Transfer Shower"},{"code":"CSTUDK","name":"Cirque Studio King Residence"},{"code":"CSTUDQ","name":"Cirque Studio Queen/Queen Residence"},{"code":"CTUDQ","name":"Cirque Studio Queen/Queen Residence"},{"code":"STADA","name":"Mobility Accessible Pinnacle Studio King Roll-in Shower"},{"code":"STUDK","name":"Pinnacle Studio Residence One King"},{"code":"STUDQQ","name":"Pinnacle Studio Residence Two Queens"},{"code":"V4BR","name":"Pinnacle Four Bedroom Connecting Residence"},{"code":"V4BRPH","name":"H-Four Bedroom Multi-level Penthouse"}],"display_brand":"Viceroy"}]}
+{
+ "properties": [
+  {
+   "key": "orchard_carneros",
+   "name": "Timbers The Orchard at Carneros, Napa",
+   "brand": "—",
+   "units": [
+    {
+     "code": "IOR",
+     "name": "Carneros Residence 2 King"
+    }
+   ],
+   "display_brand": "Timbers"
+  },
+  {
+   "key": "fairmont_telluride",
+   "name": "Fairmont Heritage Place Franz Klammer, Telluride",
+   "brand": "Accor",
+   "units": [
+    {
+     "code": "AGG_2_bedroom_residence",
+     "name": "2 Bedroom Residence"
+    },
+    {
+     "code": "AGG_3_bedroom_residence",
+     "name": "3 Bedroom Residence"
+    }
+   ],
+   "display_brand": "Fairmont Heritage Place"
+  },
+  {
+   "key": "fairmont_mayakoba",
+   "name": "Fairmont Heritage Place Mayakoba",
+   "brand": "Accor",
+   "units": [
+    {
+     "code": "V3A",
+     "name": "3 bedroom villa penthouse"
+    },
+    {
+     "code": "V3B",
+     "name": "3 bedroom villa with garden"
+    },
+    {
+     "code": "V3C",
+     "name": "3 bedroom villa on the middle floor"
+    },
+    {
+     "code": "V4A",
+     "name": "4 Bedroom Penthouse Villa"
+    }
+   ],
+   "display_brand": "Fairmont Heritage Place"
+  },
+  {
+   "key": "the_little_nell",
+   "name": "The Little Nell Aspen",
+   "brand": "Aspen Hospitality",
+   "units": [
+    {
+     "code": "AGG_2_bedroom_residence",
+     "name": "2 Bedroom Residence"
+    },
+    {
+     "code": "AGG_3_bedroom_residence",
+     "name": "3 Bedroom Residence"
+    },
+    {
+     "code": "AGG_4_bedroom_residence",
+     "name": "4 Bedroom Residence"
+    }
+   ],
+   "display_brand": "The Little Nell"
+  },
+  {
+   "key": "auberge_chileno_bay",
+   "name": "Auberge Chileno Bay",
+   "brand": "Auberge",
+   "units": [
+    {
+     "code": "BF6V",
+     "name": "Brisa Del Mar Six Bedroom Oceanfront Villa"
+    },
+    {
+     "code": "GV2V",
+     "name": "Two Bedroom Garden View Villa"
+    },
+    {
+     "code": "OV3PV",
+     "name": "Three Bedroom Oceanview Villa with Pool"
+    },
+    {
+     "code": "PNT3V",
+     "name": "Three Bedroom Sky Villa"
+    },
+    {
+     "code": "VBF3",
+     "name": "Three Bedroom Oceanfront Villa"
+    },
+    {
+     "code": "VBF3P",
+     "name": "Three Bedroom Oceanfront Villa with Pool"
+    },
+    {
+     "code": "VBF4",
+     "name": "Four Bedroom Oceanfront Villa"
+    },
+    {
+     "code": "VBF4P",
+     "name": "Four Bedroom Oceanfront Villa with Pool"
+    },
+    {
+     "code": "VGV1",
+     "name": "One Bedroom Garden View Villa with Hot Tub"
+    },
+    {
+     "code": "VGV1P",
+     "name": "One Bedroom Pool View Villa"
+    },
+    {
+     "code": "VGV2P",
+     "name": "Two Bedroom Garden View Villa with Pool"
+    },
+    {
+     "code": "VGV3",
+     "name": "Three Bedroom Garden View Villa"
+    },
+    {
+     "code": "VGV3P",
+     "name": "Three Bedroom Pool View Villa"
+    },
+    {
+     "code": "VGV4",
+     "name": "Four Bedroom Garden View Villa"
+    },
+    {
+     "code": "VGV4P",
+     "name": "Four Bedroom Pool View Villa"
+    },
+    {
+     "code": "VGVD3P",
+     "name": "Three Bedroom Loft Villa with Pool"
+    },
+    {
+     "code": "VGVD4P",
+     "name": "Four Bedroom Loft Villa with Pool"
+    },
+    {
+     "code": "VJV2",
+     "name": "Two Bedroom Garden View Villa with Hot Tub"
+    },
+    {
+     "code": "VJV2P",
+     "name": "Two Bedroom Pool View Villa with Hot Tub"
+    },
+    {
+     "code": "VOV3",
+     "name": "Three Bedroom Oceanview Villa"
+    },
+    {
+     "code": "VOV4",
+     "name": "Four Bedroom Oceanview Villa"
+    },
+    {
+     "code": "VOV4P",
+     "name": "Four Bedroom Oceanview Villa with Pool"
+    },
+    {
+     "code": "VPNT4",
+     "name": "Four Bedroom Sky Villa"
+    },
+    {
+     "code": "VPNT5R",
+     "name": "Five Bedroom Signature Sky Villa"
+    }
+   ],
+   "display_brand": "Auberge"
+  },
+  {
+   "key": "auberge_element52",
+   "name": "Auberge Element 52, Telluride",
+   "brand": "Auberge",
+   "units": [
+    {
+     "code": "AGG_2_bedroom_residence_riverside",
+     "name": "Riverside 2 Bedroom Residence"
+    },
+    {
+     "code": "AGG_2_bedroom_residence_slopeside",
+     "name": "Slopeside 2 Bedroom Residence"
+    },
+    {
+     "code": "AGG_3_bedroom_house_river_slopeside",
+     "name": "Slopeside 3 Bedroom River House"
+    },
+    {
+     "code": "AGG_3_bedroom_residence_riverside",
+     "name": "Riverside 3 Bedroom Residence"
+    },
+    {
+     "code": "AGG_3_bedroom_residence_slopeside",
+     "name": "Slopeside 3 Bedroom Residence"
+    },
+    {
+     "code": "AGG_4_bedroom_residence_slopeside",
+     "name": "Slopeside 4 Bedroom Residence"
+    },
+    {
+     "code": "AGG_5_bedroom_residence_riverside",
+     "name": "Riverside 5 Bedroom Residence"
+    },
+    {
+     "code": "AGG_5_bedroom_residence_slopeside",
+     "name": "Slopeside 5 Bedroom Residence"
+    },
+    {
+     "code": "AGG_6_bedroom_residence_slopeside",
+     "name": "Slopeside 6 Bedroom Residence"
+    }
+   ],
+   "display_brand": "Auberge"
+  },
+  {
+   "key": "auberge_esperanza",
+   "name": "Auberge Esperanza",
+   "brand": "Auberge",
+   "units": [
+    {
+     "code": "F2EOK",
+     "name": "Two Bedroom Oceanview Villa"
+    },
+    {
+     "code": "F2GJ",
+     "name": "Two Bedroom Garden View Villa with Plunge Pool"
+    },
+    {
+     "code": "F2GK",
+     "name": "Two Bedroom Garden View Villa"
+    },
+    {
+     "code": "F2OJ",
+     "name": "Two Bedroom Oceanview Villa with Plunge Pool"
+    },
+    {
+     "code": "F3EOK",
+     "name": "Three Bedroom Oceanview Villa"
+    },
+    {
+     "code": "F3GJ",
+     "name": "Three Bedroom Garden View Villa with Pool"
+    },
+    {
+     "code": "F3GK",
+     "name": "Three Bedroom Garden View Villa"
+    },
+    {
+     "code": "F3OJ",
+     "name": "Three Bedroom Oceanview Villa with Plunge Pool"
+    },
+    {
+     "code": "F4GP",
+     "name": "Four Bedroom Garden View Villa with Hot Tub"
+    },
+    {
+     "code": "F4OJ",
+     "name": "Four Bedroom Oceanview Villa with Hot Tub"
+    },
+    {
+     "code": "H2SBK",
+     "name": "Two Bedroom Oceanfront Villa with Pool and Hot Tub"
+    },
+    {
+     "code": "H3SBK",
+     "name": "Three Bedroom Oceanfront Villa with Pool"
+    }
+   ],
+   "display_brand": "Auberge"
+  },
+  {
+   "key": "auberge_goldener_hirsch",
+   "name": "Auberge Goldener Hirsch, Deer Valley",
+   "brand": "Auberge",
+   "units": [
+    {
+     "code": "AGG_accessible_bedroom_goldener_king_mobility_one_queen_residence_two_two",
+     "name": "Goldener Two Bedroom Residence Mobility Accessible | One King Two Queen"
+    },
+    {
+     "code": "AGG_bedroom_goldener_king_one_one_residence",
+     "name": "Goldener One Bedroom Residence | One King"
+    },
+    {
+     "code": "AGG_bedroom_goldener_king_one_queen_residence_two_two",
+     "name": "Goldener Two Bedroom Residence | One King Two Queen"
+    },
+    {
+     "code": "AGG_bedroom_goldener_king_queen_residence_three_two_two",
+     "name": "Goldener Three Bedroom Residence | Two King Two Queen"
+    },
+    {
+     "code": "AGG_bedroom_goldener_king_residence_three_three",
+     "name": "Goldener Three Bedroom Residence | Three King"
+    },
+    {
+     "code": "AGG_bedroom_goldener_king_residence_two_two",
+     "name": "Goldener Two Bedroom Residence | Two King"
+    },
+    {
+     "code": "R1BDK",
+     "name": "Goldener One Bedroom Residence | One King"
+    },
+    {
+     "code": "R2B2K",
+     "name": "Goldener Two Bedroom Residence | Two King"
+    },
+    {
+     "code": "R2BK2Q",
+     "name": "Goldener Two Bedroom Residence | One King Two Queen"
+    },
+    {
+     "code": "R32K2Q",
+     "name": "Goldener Three Bedroom Residence  | Two King Two Queen"
+    },
+    {
+     "code": "R32K2QL",
+     "name": "Goldener Three Bedroom Residence  | Two King Two Queen"
+    },
+    {
+     "code": "R32K2QN",
+     "name": "Goldener Three Bedroom Residence  | Two King Two Queen"
+    },
+    {
+     "code": "R3B3K",
+     "name": "Goldener Three Bedroom Residence | Three King"
+    }
+   ],
+   "display_brand": "Auberge"
+  },
+  {
+   "key": "auberge_madeline",
+   "name": "Auberge Madeline, Telluride",
+   "brand": "Auberge",
+   "units": [
+    {
+     "code": "1BC",
+     "name": "Classic One Bedroom Residence"
+    },
+    {
+     "code": "1BCV",
+     "name": "Classic One Bedroom Residence Village View"
+    },
+    {
+     "code": "2BC",
+     "name": "Classic Two Bedroom Residence"
+    },
+    {
+     "code": "2BCM",
+     "name": "Classic Two Bedroom Residence Mountain View"
+    },
+    {
+     "code": "2BCV",
+     "name": "Classic Two Bedroom Residence Village View"
+    },
+    {
+     "code": "2BV",
+     "name": "Two Bedroom Residence Village View"
+    },
+    {
+     "code": "4BC",
+     "name": "Classic Four Bedroom Residence Mountain View"
+    },
+    {
+     "code": "Q1B",
+     "name": "One Bedroom Residence"
+    },
+    {
+     "code": "Q2B",
+     "name": "Two Bedroom Residence Mountain View"
+    },
+    {
+     "code": "Q2BA",
+     "name": "2 Bedroom Residence Mobility/Hearing Accessible w/RI Shower"
+    },
+    {
+     "code": "Q3B",
+     "name": "Three Bedroom Residence Mountain View"
+    }
+   ],
+   "display_brand": "Auberge"
+  },
+  {
+   "key": "auberge_mauna_lani",
+   "name": "Auberge Mauna Lani",
+   "brand": "Auberge",
+   "units": [
+    {
+     "code": "OF2BDB",
+     "name": "Oceanfront Two-Bedroom Residence"
+    },
+    {
+     "code": "OV2BDB",
+     "name": "Ocean View Two-Bedroom Residence"
+    }
+   ],
+   "display_brand": "Auberge"
+  },
+  {
+   "key": "auberge_stanly_ranch",
+   "name": "Auberge Stanly Ranch, Napa",
+   "brand": "Auberge",
+   "units": [
+    {
+     "code": "V1KQ",
+     "name": "Two Bedroom Terrace Villa"
+    },
+    {
+     "code": "V2KQ",
+     "name": "Two Bedroom Sky Villa"
+    }
+   ],
+   "display_brand": "Auberge"
+  },
+  {
+   "key": "AXA708",
+   "name": "Four Seasons Anguilla",
+   "brand": "Four Seasons",
+   "units": [
+    {
+     "code": "an1ov",
+     "name": "One-Bedroom Ocean-View Residence"
+    },
+    {
+     "code": "an2ov",
+     "name": "Two-Bedroom Ocean-View Residence"
+    },
+    {
+     "code": "an3oft",
+     "name": "Three-Bedroom Oceanfront Townhome"
+    },
+    {
+     "code": "an3ov",
+     "name": "Three-Bedroom Ocean-View Residence"
+    },
+    {
+     "code": "an3ovp",
+     "name": "Three-Bedroom Ocean-View Penthouse"
+    },
+    {
+     "code": "an4bf",
+     "name": "Four-Bedroom Beachfront Villa"
+    },
+    {
+     "code": "an4of",
+     "name": "Four-Bedroom Oceanfront Villa"
+    },
+    {
+     "code": "an4oft",
+     "name": "Four-Bedroom Oceanfront Townhome"
+    },
+    {
+     "code": "an4ov",
+     "name": "Four-Bedroom Ocean-View Villa"
+    },
+    {
+     "code": "an4ovh",
+     "name": "Four-Bedroom Ocean-View Hilltop Villa"
+    },
+    {
+     "code": "an5bf",
+     "name": "Five-Bedroom Beachfront Villa"
+    }
+   ],
+   "display_brand": "Four Seasons"
+  },
+  {
+   "key": "SAN633",
+   "name": "Four Seasons Aviara",
+   "brand": "Four Seasons",
+   "units": [
+    {
+     "code": "av1",
+     "name": "Aviara One Bedroom Resort Residence"
+    },
+    {
+     "code": "av1p",
+     "name": "Aviara One Bedroom Premier Resort Residence"
+    },
+    {
+     "code": "av2",
+     "name": "Aviara Two Bedroom Resort Residence"
+    }
+   ],
+   "display_brand": "Four Seasons"
+  },
+  {
+   "key": "SJD245",
+   "name": "Four Seasons Cabo Del Sol",
+   "brand": "Four Seasons",
+   "units": [
+    {
+     "code": "cd2r",
+     "name": "Ocean-View Two-Bedroom Residence"
+    },
+    {
+     "code": "cd4v",
+     "name": "Ocean-View Four-Bedroom Villa"
+    },
+    {
+     "code": "cd4vr",
+     "name": "Ocean-View Four-Bedroom Rooftop Villa"
+    },
+    {
+     "code": "cd5rp",
+     "name": "Oceanfront Five-Bedroom Residence with Pool"
+    },
+    {
+     "code": "cd5rpp",
+     "name": "Oceanfront Five-Bedroom Residence with Plunge Pool"
+    },
+    {
+     "code": "cd5v",
+     "name": "Ocean-View Five-Bedroom Rooftop Villa"
+    },
+    {
+     "code": "cd6e",
+     "name": "Ocean-View Six-Bedroom Estate"
+    },
+    {
+     "code": "cd7e",
+     "name": "Ocean-View Seven-Bedroom Estate"
+    }
+   ],
+   "display_brand": "Four Seasons"
+  },
+  {
+   "key": "JAC980",
+   "name": "Four Seasons Jackson Hole",
+   "brand": "Four Seasons",
+   "units": [
+    {
+     "code": "jh2m",
+     "name": "Jackson Hole Two-Bedroom Resort Residence Mountain View"
+    },
+    {
+     "code": "jh2m_q",
+     "name": "Two-Bedroom Resort Residence – Mountain View (alt)"
+    },
+    {
+     "code": "jh2v",
+     "name": "Jackson Hole Two-Bedroom Resort Residence Valley View"
+    },
+    {
+     "code": "jh2v_q",
+     "name": "Two-Bedroom Resort Residence – Valley View (alt)"
+    },
+    {
+     "code": "jh3m",
+     "name": "Jackson Hole Three-Bedroom Resort Residence Mountain View"
+    },
+    {
+     "code": "jh3v",
+     "name": "Jackson Hole Three-Bedroom Resort Residence Valley View"
+    }
+   ],
+   "display_brand": "Four Seasons"
+  },
+  {
+   "key": "UKY640",
+   "name": "Four Seasons Kyoto",
+   "brand": "Four Seasons",
+   "units": [
+    {
+     "code": "ky1",
+     "name": "One-Bedroom Residence"
+    },
+    {
+     "code": "ky1_d",
+     "name": "One-Bedroom Residence (Double)"
+    },
+    {
+     "code": "ky1hg",
+     "name": "One-Bedroom Heritage Garden Residence"
+    },
+    {
+     "code": "ky1hg_d",
+     "name": "One-Bedroom Heritage Garden Residence (Double)"
+    },
+    {
+     "code": "ky2hg",
+     "name": "Two-Bedroom Heritage Garden Residence"
+    },
+    {
+     "code": "ky2ky",
+     "name": "Two-Bedroom Kyoto Residence"
+    },
+    {
+     "code": "ky2ta",
+     "name": "Two-Bedroom Tatami Residence"
+    }
+   ],
+   "display_brand": "Four Seasons"
+  },
+  {
+   "key": "SJD694",
+   "name": "Four Seasons Los Cabos",
+   "brand": "Four Seasons",
+   "units": [
+    {
+     "code": "lc_mr2",
+     "name": "Marina Ocean-View Two-Bedroom Residence"
+    },
+    {
+     "code": "lc_mr3",
+     "name": "Marina Ocean-View Three-Bedroom Residence"
+    },
+    {
+     "code": "lc_mr4",
+     "name": "Marina Ocean-View Four-Bedroom Residence"
+    },
+    {
+     "code": "lc_ov3",
+     "name": "Ocean-View Three-Bedroom Residence"
+    },
+    {
+     "code": "lc_ov4",
+     "name": "Ocean-View Four-Bedroom Residence"
+    }
+   ],
+   "display_brand": "Four Seasons"
+  },
+  {
+   "key": "LIR646",
+   "name": "Four Seasons Papagayo",
+   "brand": "Four Seasons",
+   "units": [
+    {
+     "code": "pp2",
+     "name": "Papagayo Two-Bedroom Canopy Villa"
+    },
+    {
+     "code": "pp3",
+     "name": "Papagayo Three-Bedroom Canopy Villa"
+    }
+   ],
+   "display_brand": "Four Seasons"
+  },
+  {
+   "key": "SJU662",
+   "name": "Four Seasons Puerto Rico",
+   "brand": "Four Seasons",
+   "units": [
+    {
+     "code": "pr3of",
+     "name": "Three-Bedroom Oceanfront Residence"
+    },
+    {
+     "code": "pr3ofp",
+     "name": "Three-Bedroom Oceanfront Residence with Pool"
+    },
+    {
+     "code": "pr4od",
+     "name": "Four-Bedroom Ocean Drive Residence"
+    },
+    {
+     "code": "pr4of",
+     "name": "Four-Bedroom Oceanfront Residence"
+    },
+    {
+     "code": "pr4ofip",
+     "name": "Four-Bedroom Oceanfront Infinity Pool Residence"
+    },
+    {
+     "code": "pr4ofrp",
+     "name": "Four-Bedroom Oceanfront Rooftop Pool Residence"
+    },
+    {
+     "code": "pr5pp",
+     "name": "Five-Bedroom Penthouse with Pool"
+    }
+   ],
+   "display_brand": "Four Seasons"
+  },
+  {
+   "key": "PVR380",
+   "name": "Four Seasons Punta Mita",
+   "brand": "Four Seasons",
+   "units": [
+    {
+     "code": "pm3",
+     "name": "Punta Mita Ocean Residence Three Bedroom"
+    },
+    {
+     "code": "pm4",
+     "name": "Punta Mita Ocean Penthouse Four Bedroom"
+    }
+   ],
+   "display_brand": "Four Seasons"
+  },
+  {
+   "key": "NEV526",
+   "name": "Four Seasons Resort Nevis",
+   "brand": "Four Seasons",
+   "units": [
+    {
+     "code": "nv4pb",
+     "name": "Four-Bedroom Pinney's Beach Villa"
+    },
+    {
+     "code": "nv3pb",
+     "name": "Three-Bedroom Pinney's Beach Villa"
+    }
+   ]
+  },
+  {
+   "key": "YWS199",
+   "name": "Four Seasons Whistler",
+   "brand": "Four Seasons",
+   "units": [
+    {
+     "code": "ws2",
+     "name": "Two-Bedroom Resort Residence"
+    },
+    {
+     "code": "ws3",
+     "name": "Three-Bedroom Resort Residence"
+    },
+    {
+     "code": "ws3d",
+     "name": "Three-Bedroom and Den Resort Residence"
+    },
+    {
+     "code": "ws4d",
+     "name": "Four-Bedroom and Den Resort Residence"
+    }
+   ],
+   "display_brand": "Four Seasons"
+  },
+  {
+   "key": "six_senses_condao",
+   "name": "Six Senses Con Dao",
+   "brand": "IHG",
+   "units": [
+    {
+     "code": "beachfront_four_bedroom_pool_villa",
+     "name": "Beachfront Four-Bedroom Pool Villa"
+    },
+    {
+     "code": "beachfront_three_bedroom_pool_villa",
+     "name": "Beachfront Three-Bedroom Pool Villa"
+    },
+    {
+     "code": "ocean_view_four_bedroom_pool_villa",
+     "name": "Ocean View Four-Bedroom Pool Villa"
+    },
+    {
+     "code": "ocean_view_three_bedroom_pool_villa",
+     "name": "Ocean View Three-Bedroom Pool Villa"
+    }
+   ],
+   "display_brand": "Six Senses"
+  },
+  {
+   "key": "six_senses_courchevel",
+   "name": "Six Senses Courchevel",
+   "brand": "IHG",
+   "units": [
+    {
+     "code": "five_bedroom_prestige_penthouse",
+     "name": "Five-Bedroom Prestige Penthouse"
+    },
+    {
+     "code": "five_bedroom_prestige_residence",
+     "name": "Five-Bedroom Prestige Residence"
+    },
+    {
+     "code": "four_bedroom_deluxe_residence",
+     "name": "Four-Bedroom Deluxe Residence"
+    },
+    {
+     "code": "four_bedroom_prestige_residence",
+     "name": "Four-Bedroom Prestige Residence"
+    },
+    {
+     "code": "three_bedroom_deluxe_family_apartment",
+     "name": "Three-Bedroom Deluxe Family Apartment"
+    },
+    {
+     "code": "three_bedroom_prestige_apartment",
+     "name": "Three-Bedroom Prestige Apartment"
+    },
+    {
+     "code": "three_bedroom_prestige_family_apartment",
+     "name": "Three-Bedroom Prestige Family Apartment"
+    },
+    {
+     "code": "three_bedroom_prestige_residence",
+     "name": "Three-Bedroom Prestige Residence"
+    },
+    {
+     "code": "two_bedroom_apartment_courtyard_view",
+     "name": "Two-Bedroom Apartment Courtyard View"
+    },
+    {
+     "code": "two_bedroom_apartment_mountain_view",
+     "name": "Two-Bedroom Apartment Mountain View"
+    }
+   ],
+   "display_brand": "Six Senses"
+  },
+  {
+   "key": "six_senses_fiji",
+   "name": "Six Senses Fiji",
+   "brand": "IHG",
+   "units": [
+    {
+     "code": "five_bedroom_beachfront_pool_residence",
+     "name": "Five-Bedroom Beachfront Pool Residence"
+    },
+    {
+     "code": "five_bedroom_marina_pool_residence",
+     "name": "Five-Bedroom Marina Pool Residence"
+    },
+    {
+     "code": "five_bedroom_oceanview_pool_residence",
+     "name": "Five-Bedroom Oceanview Pool Residence"
+    },
+    {
+     "code": "four_bedroom_beachfront_pool_residence",
+     "name": "Four-Bedroom Beachfront Pool Residence"
+    },
+    {
+     "code": "four_bedroom_oceanview_pool_residence",
+     "name": "Four-Bedroom Oceanview Pool Residence"
+    },
+    {
+     "code": "six_bedroom_beachfront_pool_residence",
+     "name": "Six-Bedroom Beachfront Pool Residence"
+    },
+    {
+     "code": "three_bedroom_beachfront_pool_residence",
+     "name": "Three-Bedroom Beachfront Pool Residence"
+    },
+    {
+     "code": "three_bedroom_marina_pool_residence",
+     "name": "Three-Bedroom Marina Pool Residence"
+    }
+   ],
+   "display_brand": "Six Senses"
+  },
+  {
+   "key": "phoenician",
+   "name": "Luxury Collection The Phoenician, Scottsdale",
+   "brand": "Marriott",
+   "units": [
+    {
+     "code": "2 Bedroom Residence",
+     "name": "2 Bedroom Residence"
+    },
+    {
+     "code": "3 Bedroom Residence",
+     "name": "3 Bedroom Residence"
+    }
+   ],
+   "display_brand": "The Luxury Collection"
+  },
+  {
+   "key": "grand_res_tahoe",
+   "name": "Marriott Grand Residence Club Lake Tahoe",
+   "brand": "Marriott",
+   "units": [
+    {
+     "code": "1 Bedroom Residence",
+     "name": "1 Bedroom Residence"
+    },
+    {
+     "code": "2 Bedroom Residence",
+     "name": "2 Bedroom Residence"
+    }
+   ],
+   "display_brand": "Marriott"
+  },
+  {
+   "key": "grand_res_mayfair",
+   "name": "Marriott Grand Residences London (47 Park Street)",
+   "brand": "Marriott",
+   "units": [
+    {
+     "code": "AGG_1_bedroom_executive_suite",
+     "name": "1 Bedroom Executive Suite"
+    },
+    {
+     "code": "AGG_deluxe",
+     "name": "Deluxe"
+    },
+    {
+     "code": "AGG_premium",
+     "name": "Premium"
+    }
+   ],
+   "display_brand": "Marriott"
+  },
+  {
+   "key": "kapalua_bay",
+   "name": "Marriott Kapalua Bay",
+   "brand": "Marriott",
+   "units": [
+    {
+     "code": "AGG_1_bedroom_garden_view",
+     "name": "Garden View 1 Bedroom"
+    },
+    {
+     "code": "AGG_1_bedroom_ocean_view",
+     "name": "Ocean View 1 Bedroom"
+    },
+    {
+     "code": "AGG_2_bedroom_garden_view",
+     "name": "Garden View 2 Bedroom"
+    },
+    {
+     "code": "AGG_2_bedroom_ocean_premier",
+     "name": "Premier Ocean 2 Bedroom"
+    },
+    {
+     "code": "AGG_2_bedroom_ocean_view",
+     "name": "Ocean View 2 Bedroom"
+    },
+    {
+     "code": "AGG_3_bedroom_garden_grand",
+     "name": "Garden Grand 3 Bedroom"
+    },
+    {
+     "code": "AGG_3_bedroom_garden_pool",
+     "name": "Garden 3 Bedroom & Pool"
+    },
+    {
+     "code": "AGG_3_bedroom_garden_view",
+     "name": "Garden View 3 Bedroom"
+    },
+    {
+     "code": "AGG_3_bedroom_grand_ocean",
+     "name": "Ocean Grand 3 Bedroom"
+    },
+    {
+     "code": "AGG_3_bedroom_ocean_premier",
+     "name": "Premier Ocean 3 Bedroom"
+    },
+    {
+     "code": "AGG_3_bedroom_ocean_view",
+     "name": "Ocean View 3 Bedroom"
+    },
+    {
+     "code": "AGG_4_bedroom_grand",
+     "name": "Grand 4 Bedroom"
+    },
+    {
+     "code": "AGG_4_bedroom_ocean_premier",
+     "name": "Premier Ocean 4 Bedroom"
+    }
+   ],
+   "display_brand": "Marriott"
+  },
+  {
+   "key": "rc_dorado",
+   "name": "Residences at Dorado Beach, a Ritz-Carlton Reserve",
+   "brand": "Marriott",
+   "units": [
+    {
+     "code": "2 BR Ground Flr with Den",
+     "name": "2 BR Ground Flr with Den"
+    },
+    {
+     "code": "2 BR Mid Flr",
+     "name": "2 BR Mid Flr"
+    },
+    {
+     "code": "2 BR Mid Flr with Den",
+     "name": "2 BR Mid Flr with Den"
+    },
+    {
+     "code": "2 BR Penthouse with Den",
+     "name": "2 BR Penthouse with Den"
+    },
+    {
+     "code": "3 BR Ground Flr",
+     "name": "3 BR Ground Flr"
+    },
+    {
+     "code": "3 BR Mid Flr",
+     "name": "3 BR Mid Flr"
+    },
+    {
+     "code": "4 BR Penthouse",
+     "name": "4 BR Penthouse"
+    },
+    {
+     "code": "5 BR East Beach House",
+     "name": "5 BR East Beach House"
+    },
+    {
+     "code": "5 Bedroom Villa",
+     "name": "5 Bedroom Villa"
+    }
+   ]
+  },
+  {
+   "key": "rc_zadun",
+   "name": "Residences at Zadun, a Ritz-Carlton Reserve",
+   "brand": "Marriott",
+   "units": [
+    {
+     "code": "5 Bedroom Residence",
+     "name": "5 Bedroom Residence"
+    },
+    {
+     "code": "6 Bedroom Residence",
+     "name": "6 Bedroom Residence"
+    }
+   ]
+  },
+  {
+   "key": "rc_bachelor_gulch",
+   "name": "Ritz-Carlton Bachelor Gulch",
+   "brand": "Marriott",
+   "units": [
+    {
+     "code": "AGG_1_bedroom_residential_suite",
+     "name": "1 Bedroom Residential Suite"
+    },
+    {
+     "code": "AGG_2_bedroom_residential_suite",
+     "name": "2 Bedroom Residential Suite"
+    },
+    {
+     "code": "AGG_3_bedroom_penthouse_suite",
+     "name": "3 Bedroom Penthouse Suite"
+    },
+    {
+     "code": "AGG_4_bedroom_penthouse_suite",
+     "name": "4 Bedroom Penthouse Suite"
+    }
+   ],
+   "display_brand": "Ritz-Carlton"
+  },
+  {
+   "key": "rc_tahoe",
+   "name": "Ritz-Carlton Club Lake Tahoe",
+   "brand": "Marriott",
+   "units": [
+    {
+     "code": "AGG_2_bedroom_residence",
+     "name": "2 Bedroom Residence"
+    },
+    {
+     "code": "AGG_3_bedroom_residence",
+     "name": "3 Bedroom Residence"
+    },
+    {
+     "code": "AGG_4_bedroom_residence",
+     "name": "4 Bedroom Residence"
+    }
+   ],
+   "display_brand": "Ritz-Carlton"
+  },
+  {
+   "key": "rc_vail",
+   "name": "Ritz-Carlton Club Vail",
+   "brand": "Marriott",
+   "units": [
+    {
+     "code": "2 Bedroom Residence",
+     "name": "2 Bedroom Residence"
+    },
+    {
+     "code": "3 Bedroom Residence",
+     "name": "3 Bedroom Residence"
+    }
+   ],
+   "display_brand": "Ritz-Carlton"
+  },
+  {
+   "key": "rc_kapalua_res",
+   "name": "Ritz-Carlton Kapalua",
+   "brand": "Marriott",
+   "units": [
+    {
+     "code": "1 Bedroom Residential Suite",
+     "name": "1 Bedroom Residential Suite"
+    },
+    {
+     "code": "2 Bedroom Residential Suite",
+     "name": "2 Bedroom Residential Suite"
+    }
+   ],
+   "display_brand": "Ritz-Carlton"
+  },
+  {
+   "key": "rc_orlando",
+   "name": "Ritz-Carlton Orlando Grande Lakes",
+   "brand": "Marriott",
+   "units": [
+    {
+     "code": "3 Bedroom Residence",
+     "name": "3 Bedroom Residence"
+    },
+    {
+     "code": "4 Bedroom Residence",
+     "name": "4 Bedroom Residence"
+    }
+   ],
+   "display_brand": "Ritz-Carlton"
+  },
+  {
+   "key": "rc_waikiki",
+   "name": "Ritz-Carlton Residences Waikiki",
+   "brand": "Marriott",
+   "units": [
+    {
+     "code": "AGG_2_bedroom_deluxe_ocean",
+     "name": "2-Bedroom Deluxe Ocean"
+    },
+    {
+     "code": "AGG_2_bedroom_grand_ocean",
+     "name": "2-Bedroom Grand Ocean"
+    },
+    {
+     "code": "AGG_2_bedroom_ocean_premier",
+     "name": "2-Bedroom Premier Ocean"
+    },
+    {
+     "code": "AGG_3_bedroom_grand_ocean",
+     "name": "3-Bedroom Grand Ocean"
+    },
+    {
+     "code": "AGG_3_bedroom_ocean_premier",
+     "name": "3-Bedroom Premier Ocean"
+    },
+    {
+     "code": "AGG_carlton_ritz_suite_the",
+     "name": "The Ritz-Carlton Suite"
+    },
+    {
+     "code": "AGG_city_corner_ocean",
+     "name": "City Ocean Corner"
+    },
+    {
+     "code": "AGG_corner_ocean_suite_view",
+     "name": "Ocean View Corner Suite"
+    },
+    {
+     "code": "AGG_deluxe_ocean_suite_view",
+     "name": "Deluxe Ocean View Suite"
+    },
+    {
+     "code": "AGG_deluxe_ocean_view",
+     "name": "Deluxe Ocean View"
+    },
+    {
+     "code": "AGG_grand_ocean_suite_view",
+     "name": "Grand Ocean View Suite"
+    },
+    {
+     "code": "AGG_grand_ocean_view",
+     "name": "Grand Ocean View"
+    },
+    {
+     "code": "AGG_ocean_view",
+     "name": "Ocean View"
+    }
+   ],
+   "display_brand": "Ritz-Carlton"
+  },
+  {
+   "key": "rc_turks",
+   "name": "Ritz-Carlton Turks & Caicos",
+   "brand": "Marriott",
+   "units": [
+    {
+     "code": "AGG_1_bedroom_residence",
+     "name": "1 Bedroom Residence"
+    },
+    {
+     "code": "AGG_2_bedroom_residence",
+     "name": "2 Bedroom Residence"
+    },
+    {
+     "code": "AGG_3_bedroom_residence",
+     "name": "3 Bedroom Residence"
+    }
+   ],
+   "display_brand": "Ritz-Carlton"
+  },
+  {
+   "key": "st_regis_aspen",
+   "name": "St. Regis Residence Club Aspen",
+   "brand": "Marriott",
+   "units": [
+    {
+     "code": "2 Bedroom Residence",
+     "name": "2 Bedroom Residence"
+    },
+    {
+     "code": "3 Bedroom Residence",
+     "name": "3 Bedroom Residence"
+    }
+   ],
+   "display_brand": "St. Regis"
+  },
+  {
+   "key": "fifth_and_55th",
+   "name": "St. Regis Residence Club New York/5th & 55th",
+   "brand": "Marriott",
+   "units": [
+    {
+     "code": "1BDSG",
+     "name": "One Bedroom Signature Residence"
+    },
+    {
+     "code": "2BDSG",
+     "name": "Two Bedroom Signature Residence"
+    },
+    {
+     "code": "STDDLX",
+     "name": "Studio Deluxe"
+    }
+   ],
+   "display_brand": "St. Regis"
+  },
+  {
+   "key": "montage_big_sky",
+   "name": "Montage Big Sky",
+   "brand": "Montage Int'l",
+   "units": [
+    {
+     "code": "AGG_accessible_bedroom_four_inn_residence_view_vista",
+     "name": "Inn Accessible Vista View Four Bedroom Residence"
+    },
+    {
+     "code": "AGG_accessible_bedroom_inn_residence_resort_three_view",
+     "name": "Inn Accessible Resort View Three Bedroom Residence"
+    },
+    {
+     "code": "AGG_accessible_bedroom_inn_residence_resort_two_view",
+     "name": "Inn Accessible Resort View Two Bedroom Residence"
+    },
+    {
+     "code": "AGG_accessible_bedroom_inn_residence_three_view_vista",
+     "name": "Inn Accessible Vista View Three Bedroom Residence"
+    },
+    {
+     "code": "AGG_bedroom_deluxe_four_grand_inn_residence_view_vista",
+     "name": "Inn Vista View Grand Deluxe  Four Bedroom Residence"
+    },
+    {
+     "code": "AGG_bedroom_deluxe_four_inn_residence_view_vista",
+     "name": "Inn Vista View Deluxe Four Bedroom Residence"
+    },
+    {
+     "code": "AGG_bedroom_deluxe_inn_residence_three_view_vista",
+     "name": "Inn Vista View Deluxe Three Bedroom Residence"
+    },
+    {
+     "code": "AGG_bedroom_five_grand_peak_residence",
+     "name": "Peak Five Bedroom Grand Residence"
+    },
+    {
+     "code": "AGG_bedroom_five_grand_residence_vista",
+     "name": "Vista Five Bedroom Grand Residence"
+    },
+    {
+     "code": "AGG_bedroom_five_peak_residence",
+     "name": "Peak Five Bedroom Residence"
+    },
+    {
+     "code": "AGG_bedroom_five_residence_vista",
+     "name": "Vista Five Bedroom Residence"
+    },
+    {
+     "code": "AGG_bedroom_four_grand_peak_residence",
+     "name": "Peak Four Bedroom Grand Residence"
+    },
+    {
+     "code": "AGG_bedroom_four_grand_residence_vista",
+     "name": "Vista Four Bedroom Grand Residence"
+    },
+    {
+     "code": "AGG_bedroom_four_inn_residence_resort_view",
+     "name": "Inn Resort View Four Bedroom Residence"
+    },
+    {
+     "code": "AGG_bedroom_four_inn_residence_view_vista",
+     "name": "Inn Vista View Four Bedroom Residence"
+    },
+    {
+     "code": "AGG_bedroom_four_peak_residence",
+     "name": "Peak Four Bedroom Residence"
+    },
+    {
+     "code": "AGG_bedroom_four_residence_vista",
+     "name": "Vista Four Bedroom Residence"
+    },
+    {
+     "code": "AGG_bedroom_grand_peak_residence_six",
+     "name": "Peak Six Bedroom Grand Residence"
+    },
+    {
+     "code": "AGG_bedroom_grand_peak_residence_three",
+     "name": "Peak Three Bedroom Grand Residence"
+    },
+    {
+     "code": "AGG_bedroom_grand_peak_residence_two",
+     "name": "Peak Two Bedroom Grand Residence"
+    },
+    {
+     "code": "AGG_bedroom_grand_residence_six_vista",
+     "name": "Vista Six-Bedroom Grand Residence"
+    },
+    {
+     "code": "AGG_bedroom_grand_residence_three_vista",
+     "name": "Vista Three Bedroom Grand Residence"
+    },
+    {
+     "code": "AGG_bedroom_grand_residence_two_vista",
+     "name": "Vista Two Bedroom Grand Residence"
+    },
+    {
+     "code": "AGG_bedroom_inn_residence_resort_three_view",
+     "name": "Inn Resort View Three Bedroom Residence"
+    },
+    {
+     "code": "AGG_bedroom_inn_residence_resort_two_view",
+     "name": "Inn Resort View Two Bedroom Residence"
+    },
+    {
+     "code": "AGG_bedroom_inn_residence_three_view_vista",
+     "name": "Inn Vista View Three Bedroom Residence"
+    },
+    {
+     "code": "AGG_bedroom_inn_residence_two_view_vista",
+     "name": "Inn Vista View Two Bedroom Residence"
+    },
+    {
+     "code": "AGG_bedroom_one_residence_vista",
+     "name": "Vista One Bedroom Residence"
+    },
+    {
+     "code": "AGG_bedroom_peak_residence_three",
+     "name": "Peak Three Bedroom Residence"
+    },
+    {
+     "code": "AGG_bedroom_peak_residence_two",
+     "name": "Peak Two Bedroom Residence"
+    },
+    {
+     "code": "AGG_bedroom_residence_six_vista",
+     "name": "Vista Six-Bedroom Residence"
+    },
+    {
+     "code": "AGG_bedroom_residence_three_vista",
+     "name": "Vista Three Bedroom Residence"
+    },
+    {
+     "code": "AGG_bedroom_residence_two_vista",
+     "name": "Vista Two Bedroom Residence"
+    }
+   ],
+   "display_brand": "Montage"
+  },
+  {
+   "key": "montage_deer_valley",
+   "name": "Montage Deer Valley",
+   "brand": "Montage Int'l",
+   "units": [
+    {
+     "code": "AGG_bedroom_four_peak_residence_view",
+     "name": "Peak View Four Bedroom Residence"
+    },
+    {
+     "code": "AGG_bedroom_four_penthouse_residence_summit_view",
+     "name": "Summit View Four Bedroom Penthouse Residence"
+    },
+    {
+     "code": "AGG_bedroom_four_residence_resort_view",
+     "name": "Resort View Four Bedroom Residence"
+    },
+    {
+     "code": "AGG_bedroom_four_residence_view_vista",
+     "name": "Vista View Four Bedroom Residence"
+    },
+    {
+     "code": "AGG_bedroom_one_residence_view_vista",
+     "name": "Vista View One Bedroom Residence"
+    },
+    {
+     "code": "AGG_bedroom_peak_residence_three_view",
+     "name": "Peak View Three Bedroom Residence"
+    },
+    {
+     "code": "AGG_bedroom_peak_residence_two_view",
+     "name": "Peak View Two Bedroom Residence"
+    },
+    {
+     "code": "AGG_bedroom_residence_resort_three_view",
+     "name": "Resort View Three Bedroom Residence"
+    },
+    {
+     "code": "AGG_bedroom_residence_resort_two_view",
+     "name": "Resort View Two Bedroom Residence"
+    },
+    {
+     "code": "AGG_bedroom_residence_three_view_vista",
+     "name": "Vista View Three Bedroom Residence"
+    },
+    {
+     "code": "AGG_bedroom_residence_two_view_vista",
+     "name": "Vista View Two Bedroom Residence"
+    }
+   ],
+   "display_brand": "Montage"
+  },
+  {
+   "key": "montage_healdsburg",
+   "name": "Montage Healdsburg",
+   "brand": "Montage Int'l",
+   "units": [
+    {
+     "code": "R3RE",
+     "name": "Harvest Home Residence 3 Bedroom"
+    },
+    {
+     "code": "R4REX",
+     "name": "Harvest Home Residence 4 Bedroom"
+    }
+   ],
+   "display_brand": "Montage"
+  },
+  {
+   "key": "montage_laguna",
+   "name": "Montage Laguna Beach",
+   "brand": "Montage Int'l",
+   "units": [
+    {
+     "code": "AGG_laguna-three-bedroom-villa",
+     "name": "Three Bedroom Villa"
+    }
+   ]
+  },
+  {
+   "key": "montage_los_cabos",
+   "name": "Montage Los Cabos",
+   "brand": "Montage Int'l",
+   "units": [
+    {
+     "code": "R1CP",
+     "name": "Coastal View One Bedroom Residence with Pool"
+    },
+    {
+     "code": "R1OV",
+     "name": "Ocean View One Bedroom Residence"
+    },
+    {
+     "code": "R2CB",
+     "name": "Coastal View Two Bedroom Residence with Pool - One King and Bunks"
+    },
+    {
+     "code": "R2CP",
+     "name": "Coastal View Two Bedroom King Residence with Pool"
+    },
+    {
+     "code": "R2CQ",
+     "name": "Coastal View Two Bedroom Residence"
+    },
+    {
+     "code": "R2OB",
+     "name": "Ocean View Two Bedroom Residence with One King and Bunks"
+    },
+    {
+     "code": "R2OQ",
+     "name": "Ocean View Two Bedroom Queen Residence"
+    },
+    {
+     "code": "R2OV",
+     "name": "Ocean View Two Bedroom Residence"
+    },
+    {
+     "code": "R3CB",
+     "name": "Coastal View Three Bedroom Residence with Pool - Two Kings and Bunks"
+    },
+    {
+     "code": "R3CP",
+     "name": "Coastal View Three Bedroom Residence with Pool"
+    },
+    {
+     "code": "R3OB",
+     "name": "Ocean View Three Bedroom Residence with Two Kings and Bunks"
+    },
+    {
+     "code": "R3OV",
+     "name": "Ocean View Three Bedroom Residence"
+    }
+   ],
+   "display_brand": "Montage"
+  },
+  {
+   "key": "pendry_park_city",
+   "name": "Pendry Park City",
+   "brand": "Montage Int'l",
+   "units": [
+    {
+     "code": "AP2B",
+     "name": "Two Bedroom Peak King/Bunks Accessible Residence"
+    },
+    {
+     "code": "AP3B",
+     "name": "Accessible Three Bedroom Peak 2 King/Bunk Residence"
+    },
+    {
+     "code": "AP4B",
+     "name": "Accessible Four Bedroom Peak Residence with 3 Kings and 2 Bunks"
+    },
+    {
+     "code": "AP4BX",
+     "name": "Four Bedroom Peak 3 Kings/Bunks Accessible Residence"
+    },
+    {
+     "code": "AR1R",
+     "name": "One Bedroom Resort Accessible Residence"
+    },
+    {
+     "code": "AR3B",
+     "name": "Accessible Three Bedroom Resort Residence with 2 Kings and 2 Bunks"
+    },
+    {
+     "code": "AR3BX",
+     "name": "Three Bedroom Resort 2 Kings/Bunks Accessible Residence"
+    },
+    {
+     "code": "AV1R",
+     "name": "One Bedroom Vista Accessible Residence"
+    },
+    {
+     "code": "AV2R",
+     "name": "Accessible Two Bedroom Vista King Residence"
+    },
+    {
+     "code": "AV2RX",
+     "name": "Two Bedroom Vista King Accessible Residence"
+    },
+    {
+     "code": "P1DR",
+     "name": "One Bedroom Deluxe Peak Residence"
+    },
+    {
+     "code": "P1RE",
+     "name": "One Bedroom Peak King Residence"
+    },
+    {
+     "code": "P2BR",
+     "name": "Two Bedroom Peak King/Bunks Residence"
+    },
+    {
+     "code": "P2DR",
+     "name": "Two Bedroom Deluxe Peak King Residence"
+    },
+    {
+     "code": "P2DRX",
+     "name": "Two Bedroom Deluxe Peak Residence"
+    },
+    {
+     "code": "P2PH",
+     "name": "Penthouse Residence"
+    },
+    {
+     "code": "P2PHX",
+     "name": "Penthouse Residence"
+    },
+    {
+     "code": "P2RE",
+     "name": "Two Bedroom Peak King Residence"
+    },
+    {
+     "code": "P2REX",
+     "name": "Two Bedroom Peak King Residence"
+    },
+    {
+     "code": "P3BR",
+     "name": "Three Bedroom Peak 2 Kings/Bunks Residence"
+    },
+    {
+     "code": "P3BRX",
+     "name": "Three Bedroom Peak 2 Kings/Bunks Residence"
+    },
+    {
+     "code": "P3QB",
+     "name": "Three Bedroom Peak Residence with 1 King 1 Double and 2 Bunks"
+    },
+    {
+     "code": "P3RE",
+     "name": "Three Bedroom Peak King Residence"
+    },
+    {
+     "code": "P4BKX",
+     "name": "Four Bedroom Peak 3 Kings/Bunks Residence"
+    },
+    {
+     "code": "P4BR",
+     "name": "Four Bedroom Peak Residence with 3 Kings and 2 Bunks"
+    },
+    {
+     "code": "P4BRX",
+     "name": "Four Bedroom Peak 3 Kings/Bunks Residence"
+    },
+    {
+     "code": "PEND",
+     "name": "The Pendry Residence (Two Bedroom)"
+    },
+    {
+     "code": "PENDX",
+     "name": "The Pendry Residence (Four Bedroom)"
+    },
+    {
+     "code": "R1RE",
+     "name": "One Bedroom Resort King Residence"
+    },
+    {
+     "code": "R2BR",
+     "name": "Two Bedroom Resort King/Bunks Residence"
+    },
+    {
+     "code": "R2DRX",
+     "name": "Two Bedroom Resort King/Doubles Residence"
+    },
+    {
+     "code": "R2QR",
+     "name": "Two Bedroom Resort Residence with 1 King and 2 Doubles"
+    },
+    {
+     "code": "R2RE",
+     "name": "Two Bedroom Resort King Residence"
+    },
+    {
+     "code": "R2REX",
+     "name": "Two Bedroom Resort King Residence"
+    },
+    {
+     "code": "R3BR",
+     "name": "Three Bedroom Resort 2 King/Bunks Residence"
+    },
+    {
+     "code": "R3BRX",
+     "name": "Three Bedroom Resort 2 Kings/Bunks Residence"
+    },
+    {
+     "code": "R3DBX",
+     "name": "Three Bedroom Resort 1 King/2 Doubles/Bunks Residence"
+    },
+    {
+     "code": "R4DBX",
+     "name": "Four Bedroom Resort 2 Kings/2 Doubles/Bunks Residence"
+    },
+    {
+     "code": "R4QB",
+     "name": "Four Bedroom Resort Residence with 2 Kings 2 Doubles and 2 Bunks"
+    },
+    {
+     "code": "RJ1S",
+     "name": "Resort Junior One Bedroom Residence"
+    },
+    {
+     "code": "V1RE",
+     "name": "One Bedroom Vista King Residence"
+    },
+    {
+     "code": "V2BR",
+     "name": "Two Bedroom Vista King/Bunks Residence"
+    },
+    {
+     "code": "V2DRX",
+     "name": "Two Bedroom Vista King/Doubles Residence"
+    },
+    {
+     "code": "V3BR",
+     "name": "Three Bedroom Vista 2 Kings/Bunks Residence"
+    },
+    {
+     "code": "V3BRX",
+     "name": "Three Bedroom Vista 2 Kings/Bunks Residence"
+    },
+    {
+     "code": "V4BR",
+     "name": "Four Bedroom Vista Residence with 3 Kings and 2 Bunks"
+    },
+    {
+     "code": "V4BRX",
+     "name": "Four Bedroom Vista 3 Kings/Bunks Residence"
+    }
+   ],
+   "display_brand": "Pendry"
+  },
+  {
+   "key": "nobu_los_cabos",
+   "name": "Nobu Los Cabos",
+   "brand": "Nobu",
+   "units": [
+    {
+     "code": "PZ3G2",
+     "name": "Asahi - Two Bedrooms at Nobu Residences"
+    },
+    {
+     "code": "PZ3S2",
+     "name": "Asahi - Two Bedrooms w/pool at Nobu Residences"
+    },
+    {
+     "code": "RZ5G3",
+     "name": "Sakyu - Three Bedrooms at Nobu Residences"
+    },
+    {
+     "code": "SK1G1",
+     "name": "Hikari - One Bedroom at Nobu Residences"
+    },
+    {
+     "code": "VZ7O4",
+     "name": "Kogane Penthouse - Four bedrooms at Nobu Residences"
+    }
+   ],
+   "display_brand": "Nobu"
+  },
+  {
+   "key": "stein_eriksen_residences",
+   "name": "Stein Eriksen Deer Valley",
+   "brand": "Stein Collection",
+   "units": [
+    {
+     "code": "10",
+     "name": "Platinum Junior Two Bedroom"
+    },
+    {
+     "code": "11",
+     "name": "Resort Two Bedroom"
+    },
+    {
+     "code": "12",
+     "name": "Premium Two Bedroom"
+    },
+    {
+     "code": "13",
+     "name": "Platinum Two Bedroom"
+    },
+    {
+     "code": "14",
+     "name": "Two Bedroom Penthouse"
+    },
+    {
+     "code": "15",
+     "name": "Premium Junior Three Bedroom"
+    },
+    {
+     "code": "17",
+     "name": "Resort Three Bedroom Suite"
+    },
+    {
+     "code": "19",
+     "name": "Platinum Three Bedroom"
+    },
+    {
+     "code": "20",
+     "name": "Three Bedroom Penthouse"
+    },
+    {
+     "code": "21",
+     "name": "Platinum Four Bedroom Suite"
+    },
+    {
+     "code": "22",
+     "name": "Four Bedroom Penthouse"
+    },
+    {
+     "code": "23",
+     "name": "Premium Five Bedroom Suite"
+    },
+    {
+     "code": "25",
+     "name": "Five Bedroom Penthouse"
+    },
+    {
+     "code": "32",
+     "name": "Premium Three Bedroom"
+    },
+    {
+     "code": "36",
+     "name": "Premium Two Bedroom Suite"
+    },
+    {
+     "code": "38",
+     "name": "Premium Three Bedroom Suite"
+    },
+    {
+     "code": "39",
+     "name": "Premium Three Bedroom Suite with Three Twins"
+    },
+    {
+     "code": "40",
+     "name": "Premium Three Bedroom Suite with Two Twins"
+    },
+    {
+     "code": "41",
+     "name": "Platinum Four Bedroom Suite with 2 Bunks"
+    },
+    {
+     "code": "42",
+     "name": "Premium Five Bedroom King Suite"
+    },
+    {
+     "code": "44",
+     "name": "Resort Three Bedroom Queen Suite"
+    },
+    {
+     "code": "49",
+     "name": "Resort One Bedroom"
+    },
+    {
+     "code": "57",
+     "name": "Premium Two Bedroom Private Suite"
+    },
+    {
+     "code": "9",
+     "name": "Premium One Bedroom"
+    }
+   ],
+   "display_brand": "Stein Eriksen"
+  },
+  {
+   "key": "timbers_jupiter",
+   "name": "Timbers Jupiter",
+   "brand": "Timbers",
+   "units": [
+    {
+     "code": "TJUP2B",
+     "name": "Two Bedroom Residence"
+    },
+    {
+     "code": "TJUP4B",
+     "name": "Four Bedroom Residence"
+    }
+   ],
+   "display_brand": "Timbers"
+  },
+  {
+   "key": "timbers_kauai",
+   "name": "Timbers Kaua'i (Hokuala)",
+   "brand": "Timbers",
+   "units": [
+    {
+     "code": "TK3DSG",
+     "name": "Kaiholo 3-Bedroom Ocean Front Residence"
+    },
+    {
+     "code": "TK3SG",
+     "name": "Kaiholo 3-Bedroom Signature Residence"
+    },
+    {
+     "code": "TK3SP",
+     "name": "Kaiholo 3-Bedroom Superior Residence"
+    },
+    {
+     "code": "TK4SG",
+     "name": "Kaiholo 4-Bedroom Signature Residence"
+    },
+    {
+     "code": "TK4SP",
+     "name": "Kaiholo 4-Bedroom Superior Residence"
+    },
+    {
+     "code": "TL3SG",
+     "name": "Laola 3-Bedroom Townhouse"
+    },
+    {
+     "code": "TL4SG",
+     "name": "Laola 4-Bedroom Townhouse"
+    },
+    {
+     "code": "TLN4SG",
+     "name": "Laola Nani 4-Bedroom Signature Residence"
+    },
+    {
+     "code": "TM2SG",
+     "name": "Maliula 2-Bedroom Signature Residence"
+    },
+    {
+     "code": "TM2SP",
+     "name": "Maliula 2-Bedroom Superior Residence"
+    },
+    {
+     "code": "TM3P",
+     "name": "Maliula 3-Bedroom Premier Residence"
+    },
+    {
+     "code": "TM3SG",
+     "name": "Maliula 3-Bedroom Signature Residence"
+    },
+    {
+     "code": "TM3SP",
+     "name": "Maliula 3-Bedroom Superior Residence"
+    },
+    {
+     "code": "TMO3SG",
+     "name": "Maliula 3-Bedroom Owner Designed Residence"
+    }
+   ],
+   "display_brand": "Timbers"
+  },
+  {
+   "key": "timbers_sebastian_vail",
+   "name": "Timbers The Sebastian, Vail",
+   "brand": "Timbers",
+   "units": [
+    {
+     "code": "O1",
+     "name": "One Bedroom Residence"
+    },
+    {
+     "code": "O1B1A",
+     "name": "One Bedroom Residence"
+    },
+    {
+     "code": "O2",
+     "name": "Two Bedroom Residence"
+    },
+    {
+     "code": "O2B2A",
+     "name": "Two Bedroom Residence"
+    },
+    {
+     "code": "O3",
+     "name": "Three Bedroom Residence"
+    },
+    {
+     "code": "O3B3A",
+     "name": "Three Bedroom Residence"
+    },
+    {
+     "code": "O4",
+     "name": "Four Bedroom Residence"
+    },
+    {
+     "code": "O4B4A",
+     "name": "Four Bedroom Residence"
+    }
+   ],
+   "display_brand": "Timbers"
+  },
+  {
+   "key": "viceroy_snowmass",
+   "name": "Viceroy Snowmass",
+   "brand": "Viceroy",
+   "units": [
+    {
+     "code": "1BR",
+     "name": "Pinnacle One Bedroom Residence"
+    },
+    {
+     "code": "1BRADA",
+     "name": "Mobility Accessible Pinnacle One Bedroom Residence Roll-in Shower"
+    },
+    {
+     "code": "1BRD",
+     "name": "Pinnacle One Bedroom plus Den Residence"
+    },
+    {
+     "code": "1BRPH",
+     "name": "One Bedroom Penthouse"
+    },
+    {
+     "code": "2BR",
+     "name": "Pinnacle Two Bedroom Residence with King & Queen"
+    },
+    {
+     "code": "2BRADA",
+     "name": "Mobility Accessible Pinnacle Two Bedroom Residence with King & Queen"
+    },
+    {
+     "code": "2BRPH",
+     "name": "Pinnacle Two Bedroom Premium Residence"
+    },
+    {
+     "code": "2BRT",
+     "name": "Pinnacle Two Bedroom Residence, King & 2 Twin Beds"
+    },
+    {
+     "code": "3BR",
+     "name": "Pinnacle Three Bedroom Residence"
+    },
+    {
+     "code": "3BRPHB",
+     "name": "Three Bedroom Penthouse with bunk beds"
+    },
+    {
+     "code": "3BRPHT",
+     "name": "Pinnacle Three Bedroom Penthouse"
+    },
+    {
+     "code": "C1BP",
+     "name": "Cirque One Bedroom Premium Residence"
+    },
+    {
+     "code": "C1BPA",
+     "name": "Mobility Accessible Cirque One Bedroom Premium Residence, Transfer Tub"
+    },
+    {
+     "code": "C2B",
+     "name": "Cirque Two Bedroom Residence"
+    },
+    {
+     "code": "C2BD",
+     "name": "Cirque Two Bedroom Den Residence"
+    },
+    {
+     "code": "C2BP",
+     "name": "Cirque Two Bedroom Premium Residence"
+    },
+    {
+     "code": "C2BPA",
+     "name": "Mobility Accessible Cirque Two Bedroom Premium Residence, Transfer Tub"
+    },
+    {
+     "code": "C2BPHL",
+     "name": "Cirque Two Bedroom Penthouse Loft"
+    },
+    {
+     "code": "C3BPHA",
+     "name": "Mobility Accessible Cirque Three Bedroom Den Penthouse, Roll-in Shower"
+    },
+    {
+     "code": "C3BPHD",
+     "name": "Cirque Three Bedroom Den Penthouse"
+    },
+    {
+     "code": "C4BPHE",
+     "name": "Cirque Four Bedroom Penthouse East"
+    },
+    {
+     "code": "C4BPHW",
+     "name": "Cirque Four Bedroom Penthouse West"
+    },
+    {
+     "code": "CSTA",
+     "name": "Mobility Accessible Cirque Studio King, Transfer Shower"
+    },
+    {
+     "code": "CSTUDK",
+     "name": "Cirque Studio King Residence"
+    },
+    {
+     "code": "CSTUDQ",
+     "name": "Cirque Studio Queen/Queen Residence"
+    },
+    {
+     "code": "CTUDQ",
+     "name": "Cirque Studio Queen/Queen Residence"
+    },
+    {
+     "code": "STADA",
+     "name": "Mobility Accessible Pinnacle Studio King Roll-in Shower"
+    },
+    {
+     "code": "STUDK",
+     "name": "Pinnacle Studio Residence One King"
+    },
+    {
+     "code": "STUDQQ",
+     "name": "Pinnacle Studio Residence Two Queens"
+    },
+    {
+     "code": "V4BR",
+     "name": "Pinnacle Four Bedroom Connecting Residence"
+    },
+    {
+     "code": "V4BRPH",
+     "name": "H-Four Bedroom Multi-level Penthouse"
+    }
+   ],
+   "display_brand": "Viceroy"
+  }
+ ]
+}
