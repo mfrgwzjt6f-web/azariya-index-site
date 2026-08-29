@@ -6,8 +6,8 @@
 <title>Register — Azariya Index</title>
 <meta name="description" content="Request access to nightly rental performance for branded residences around the world.">
 <meta name="robots" content="noindex">
-<link rel="stylesheet" href="/assets/fonts.css?v=15">
-<link rel="stylesheet" href="/assets/nav.css?v=15">
+<link rel="stylesheet" href="/assets/fonts.css?v=16">
+<link rel="stylesheet" href="/assets/nav.css?v=16">
 <link rel="icon" href="assets/favicon.svg">
 <link rel="alternate icon" href="assets/favicon-32.png">
 <style>
@@ -625,9 +625,23 @@
     render();
   }
 
+    /* THREE PROPERTIES REPORT NO INVENTORY (29 Aug 2026): the Six Senses booking engine
+       publishes rate, availability and minimum stay but never a unit count. Every metric built
+       on inventory — sold-out depth, oversold, observed bookings and releases — cannot exist
+       there, and a buyer must learn that AT CHECKOUT, not after paying. The note renders only
+       while one of these properties is selected. (A price concession for these is under
+       consideration; the copy makes no promise either way.) */
+    var NO_INVENTORY = { six_senses_condao: 1, six_senses_courchevel: 1, six_senses_fiji: 1 };
+    var NO_INV_NOTE = 'Please note: this property\u2019s booking system does not publish unit counts. ' +
+      'Your dashboard will include nightly rates, availability, rate movement, minimum-stay ' +
+      'restrictions and the in-property rate comparison \u2014 but not sold-out depth, oversold ' +
+      'nights, or observed booking and release counts, which require unit counts.';
   function setUnits(){
     var i = $('prop').value, u = $('units');
     if (i === '' || !props[i]) { u.innerHTML = ''; render(); return; }
+      var _pk = props[i] && props[i].key;
+      $('prop-hint').textContent = (_pk && NO_INVENTORY[_pk]) ? NO_INV_NOTE : '';
+      $('prop-hint').style.color = (_pk && NO_INVENTORY[_pk]) ? '#e0b64a' : '';
     u.innerHTML = props[i].units.map(function(x){
       return '<option value="'+x.code+'">'+x.name+'</option>';
     }).join('');
